@@ -5,6 +5,8 @@ on:
     # market closed; the second attempt is a no-op if the first succeeded.
     - cron: '30 15 * * 1-5'
     - cron: '0 18 * * 1-5'
+    # Weekends: history only (EODHD's free quota resets every calendar day).
+    - cron: '0 12 * * 6,0'
   workflow_dispatch:
 permissions:
   contents: write
@@ -22,7 +24,8 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Fetch prices
-        run: npm run pipeline
+        run: |
+          if [ "$(date -u +%u)" -ge 6 ]; then npm run pipeline -- --backfill-only; else npm run pipeline; fi
         env:
           KOBO_API_KEY: ${{ secrets.KOBO_API_KEY }}
           EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}

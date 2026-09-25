@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { EodhdLimitError, EodhdUnavailableError } from '../src/eodhd.js';
 import { ValidationError } from '../src/kobo.js';
-import { runDaily, type RunDeps } from '../src/run.js';
+import { runBackfillOnly, runDaily, type RunDeps } from '../src/run.js';
 import { DataStore, formatHistory } from '../src/store.js';
 
 const sample = JSON.parse(readFileSync(new URL('./fixtures/kobo-sample.json', import.meta.url), 'utf8'));
@@ -143,6 +143,51 @@ describe('runDaily', () => {
     const stocks = await readJson('stocks.json');
     expect(stocks.stocks.every((s: { backfill: string }) => s.backfill === 'failed')).toBe(true);
     expect((await readJson('report.json')).backfill.failed[0].error).toMatch(/no prices/);
+  });
+});
+
+describe('runBackfillOnly (weekend history run)', () => {
+  const weekend = (iso: string, over: Partial<RunDeps> = {}) => deps({
+    fetchKobo: async () => { throw new Error('Kobo must not be called on a history-only run'); },
+    now: () => new Date(iso),
+    ...over,
+  });
+
+  it("backfills stocks first seen on an earlier day without touching today's prices", async () => {
+    await runDaily(on(DAY1)); // Friday
+    const summaryBefore = await readJson('summary.json');
+    const r = await runBackfillOnly(weekend('2026-09-26T12:00:00Z')); // Saturday
+    expect(r.outcome).toBe('backfill-only');
+    expect(r.tradeDate).toBe(DAY1);
+    expect(eodCalls.sort()).toEqual(['DANGCEM', 'MTNN', 'NB', 'STERLINGNG']);
+    expect((await readJson('history/MTNN.json')).bars.map((b: { date: string }) => b.date)).toEqual(['2026-09-23', '2026-09-24', DAY1]);
+    const summary = await readJson('summary.json');
+    expect(summary.asOf).toBe(DAY1);
+    expect(summary.market).toEqual(summaryBefore.market);
+    expect(summary.stocks.find((s: { symbol: string }) => s.symbol === 'MTNN').changes.day).toBe(0.94);
+    expect((await readJson('stocks.json')).stocks.every((s: { backfill: string }) => s.backfill === 'done')).toBe(true);
+  });
+
+  it('does nothing on the same day a stock was first seen', async () => {
+    await runDaily(on(DAY1));
+    const before = await readFile(join(dir, 'history/MTNN.json'), 'utf8');
+    const r = await runBackfillOnly(weekend('2026-09-25T20:00:00Z'));
+    expect(r.backfill.ok).toEqual([]);
+    expect(eodCalls).toEqual([]);
+    expect(await readFile(join(dir, 'history/MTNN.json'), 'utf8')).toBe(before);
+  });
+
+  it('does nothing before tracking has started', async () => {
+    const r = await runBackfillOnly(weekend('2026-09-26T12:00:00Z'));
+    expect(r.outcome).toBe('backfill-only');
+    expect(eodCalls).toEqual([]);
+    expect(await readdir(dir)).toEqual([]);
+  });
+
+  it('respects the per-run limit', async () => {
+    await runDaily(on(DAY1));
+    await runBackfillOnly(weekend('2026-09-26T12:00:00Z', { backfillPerRun: 1 }));
+    expect(eodCalls).toEqual(['MTNN']);
   });
 });
 

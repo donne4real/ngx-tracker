@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { fetchEodhd } from './eodhd.js';
 import { fetchKobo } from './kobo.js';
-import { runDaily } from './run.js';
+import { runBackfillOnly, runDaily } from './run.js';
 import { DataStore } from './store.js';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -22,23 +22,26 @@ function readDotEnv(path: string): Record<string, string> {
 }
 
 async function main() {
-  const { values } = parseArgs({ options: { 'data-dir': { type: 'string' }, backfill: { type: 'string' } } });
+  const { values } = parseArgs({ options: { 'data-dir': { type: 'string' }, backfill: { type: 'string' }, 'backfill-only': { type: 'boolean' } } });
   const env: Record<string, string | undefined> = { ...readDotEnv(resolve(repoRoot, '.env')), ...process.env };
   const koboKey = env.KOBO_API_KEY;
   const eodKey = env.EODHD_API_KEY;
-  if (!koboKey || !eodKey) {
+  const backfillOnly = values['backfill-only'] === true;
+  if (!eodKey || (!backfillOnly && !koboKey)) {
     throw new Error('KOBO_API_KEY and EODHD_API_KEY must be set (in .env locally, or as GitHub secrets)');
   }
   const dataDir = values['data-dir'] ? resolve(process.cwd(), values['data-dir']) : resolve(repoRoot, 'data');
   const backfillPerRun = values.backfill !== undefined ? Number(values.backfill) : undefined;
 
-  const report = await runDaily({
-    fetchKobo: () => fetchKobo(koboKey),
-    fetchEodhd: (symbol, from, to) => fetchEodhd(symbol, from, to, eodKey),
+  const common = {
+    fetchEodhd: (symbol: string, from: string, to: string) => fetchEodhd(symbol, from, to, eodKey),
     store: new DataStore(dataDir),
     now: () => new Date(),
     backfillPerRun,
-  });
+  };
+  const report = backfillOnly
+    ? await runBackfillOnly(common)
+    : await runDaily({ ...common, fetchKobo: () => fetchKobo(koboKey as string) });
 
   console.log(`Outcome: ${report.outcome} (trade date ${report.tradeDate})`);
   const bf = report.backfill;

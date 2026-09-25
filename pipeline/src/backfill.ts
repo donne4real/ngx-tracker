@@ -5,8 +5,9 @@ export const BACKFILL_PER_RUN = 18;
 export const MAX_BACKFILL_ATTEMPTS = 3;
 
 /**
- * Stocks first seen on `tradeDate` wait a day: EODHD usually doesn't have the
- * previous trading day yet, and a backfill marked done would miss it for good.
+ * Stocks first seen on or after `tradeDate` (a trade date, or today on a weekend
+ * run) wait: EODHD usually doesn't have the previous trading day yet, and a
+ * backfill marked done would miss it for good.
  */
 export function pickBackfills(file: StocksFile, limit = BACKFILL_PER_RUN, tradeDate?: string): StockMeta[] {
   return file.stocks

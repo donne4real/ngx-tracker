@@ -3,7 +3,7 @@
 A private website showing every Nigerian Exchange (NGX) stock's latest end-of-day close, day/week/month changes, top gainers and losers, and price history.
 
 - **Data:** Kobo Terminal (free Personal plan) for the daily all-stocks close; EODHD (free plan) for about a year of history before tracking began. Both free plans are for **personal use**: keep the site private.
-- **How it runs:** a GitHub Actions job on weekdays (15:30 and 18:00 UTC) saves the day's prices once Kobo reports the market closed, commits them to `data/`, and deploys the static site to Cloudflare Pages behind Cloudflare Access.
+- **How it runs:** a GitHub Actions job on weekdays (15:30 and 18:00 UTC) saves the day's prices once Kobo reports the market closed, commits them to `data/`, and deploys the static site to Cloudflare Pages behind Cloudflare Access. On weekends (12:00 UTC) it only fills in more EODHD history (`--backfill-only`), since the free quota resets every calendar day.
 - **Design:** `docs/superpowers/specs/2026-09-25-ngx-tracker-design.md`
 
 ## Local setup

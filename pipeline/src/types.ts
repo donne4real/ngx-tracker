@@ -107,7 +107,7 @@ export interface Summary {
   coverage: Record<Horizon, { eligible: number; total: number }>;
 }
 
-export type RunOutcome = 'appended' | 'duplicate-date' | 'market-open' | 'not-final';
+export type RunOutcome = 'appended' | 'duplicate-date' | 'market-open' | 'not-final' | 'backfill-only';
 
 export interface Report {
   runAt: string;

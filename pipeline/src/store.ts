@@ -15,6 +15,10 @@ export class DataStore {
     return (await this.readJson<StocksFile>('stocks.json')) ?? { lastTradeDate: null, stocks: [] };
   }
 
+  readSummary(): Promise<Summary | null> {
+    return this.readJson<Summary>('summary.json');
+  }
+
   async readHistories(symbols: Iterable<string>): Promise<Map<string, History>> {
     const map = new Map<string, History>();
     for (const s of symbols) {
