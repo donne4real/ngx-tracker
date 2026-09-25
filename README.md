@@ -32,4 +32,4 @@ In the Cloudflare dashboard: **Zero Trust → Access → Applications → Add an
 - `data/stocks.json`: tracked stocks, status (active/inactive) and backfill progress
 - `data/report.json`: the last run's outcome, backfill results and warnings
 
-A run where Kobo says the market is still open, or the trade date is already stored, changes nothing. GitHub emails you if a run fails.
+A run where Kobo says the market is still open, or the trade date is already stored, changes nothing. GitHub emails you if a run fails. If a deploy fails, start the workflow by hand (Actions → Daily prices → Run workflow): a manual run always rebuilds and redeploys.

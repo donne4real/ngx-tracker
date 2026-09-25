@@ -38,11 +38,13 @@ jobs:
           git add data
           git commit -m "data: prices for $(node -p "require('./data/summary.json').asOf")"
           git push
+      # A manual run always rebuilds and redeploys, so a failed deploy can be retried
+      # even though the data was already committed.
       - name: Build site
-        if: steps.diff.outputs.changed == 'true'
+        if: steps.diff.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: npm run build
       - name: Deploy to Cloudflare Pages
-        if: steps.diff.outputs.changed == 'true'
+        if: steps.diff.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: npx wrangler pages deploy web/dist --project-name ngx-tracker --branch main --commit-dirty=true
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
