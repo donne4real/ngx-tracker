@@ -21,6 +21,8 @@ const eodRows = [
   { date: '2026-09-23', close: 850, volume: 1000 },
   { date: '2026-09-24', close: 855, volume: 900 },
 ];
+const DAY1 = '2026-09-25';
+const DAY2 = '2026-09-28';
 
 let dir: string;
 let eodCalls: string[];
@@ -41,6 +43,7 @@ const deps = (over: Partial<RunDeps> = {}): RunDeps => ({
   minStocks: 1,
   ...over,
 });
+const on = (date: string, over: Partial<RunDeps> = {}) => deps({ fetchKobo: async () => kobo('closed', date), ...over });
 const readJson = async (rel: string) => JSON.parse(await readFile(join(dir, rel), 'utf8'));
 
 describe('runDaily', () => {
@@ -71,47 +74,60 @@ describe('runDaily', () => {
     expect(await readdir(dir)).toEqual([]);
   });
 
-  it('appends, backfills and writes every file on the first run', async () => {
-    const r = await runDaily(deps());
+  it("appends on a stock's first day but waits a day to backfill (EODHD lags)", async () => {
+    const r = await runDaily(on(DAY1));
+    expect(r.outcome).toBe('appended');
+    expect(eodCalls).toEqual([]);
+    expect((await readJson('history/MTNN.json')).bars.map((b: { date: string }) => b.date)).toEqual([DAY1]);
+    expect((await readJson('stocks.json')).stocks.every((s: { backfill: string }) => s.backfill === 'pending')).toBe(true);
+    expect((await readJson('summary.json')).asOf).toBe(DAY1);
+  });
+
+  it('backfills on the next day and writes every file', async () => {
+    await runDaily(on(DAY1));
+    const r = await runDaily(on(DAY2));
     expect(r.outcome).toBe('appended');
     expect(r.backfill.ok).toHaveLength(4);
     const hist = await readJson('history/MTNN.json');
-    expect(hist.bars.map((b: { date: string }) => b.date)).toEqual(['2026-09-23', '2026-09-24', '2026-09-25']);
+    expect(hist.bars.map((b: { date: string }) => b.date)).toEqual(['2026-09-23', '2026-09-24', DAY1, DAY2]);
     const summary = await readJson('summary.json');
-    expect(summary.asOf).toBe('2026-09-25');
-    expect(summary.stocks.find((s: { symbol: string }) => s.symbol === 'MTNN').changes.day).toBe(0.94);
+    expect(summary.asOf).toBe(DAY2);
     const stocks = await readJson('stocks.json');
     expect(stocks.stocks.every((s: { backfill: string }) => s.backfill === 'done')).toBe(true);
     expect((await readJson('report.json')).outcome).toBe('appended');
   });
 
   it('backfills at most the per-run limit, largest market cap first', async () => {
-    await runDaily(deps({ backfillPerRun: 2 }));
+    await runDaily(on(DAY1));
+    await runDaily(on(DAY2, { backfillPerRun: 2 }));
     expect(eodCalls).toEqual(['MTNN', 'DANGCEM']);
   });
 
   it('stops backfilling at the EODHD limit without failing the run', async () => {
-    const r = await runDaily(deps({ fetchEodhd: async () => { throw new EodhdLimitError('EODHD daily limit reached (HTTP 429)'); } }));
+    await runDaily(on(DAY1));
+    const limited = { fetchEodhd: async () => { throw new EodhdLimitError('EODHD daily limit reached (HTTP 429)'); } };
+    const r = await runDaily(on(DAY2, limited));
     expect(r.outcome).toBe('appended');
     expect(r.backfill.stoppedEarly).toMatch(/limit/);
     const stocks = await readJson('stocks.json');
-    expect(stocks.stocks.every((s: { backfill: string }) => s.backfill === 'pending')).toBe(true);
+    expect(stocks.stocks.every((s: { backfill: string; backfillAttempts: number }) => s.backfill === 'pending' && s.backfillAttempts === 0)).toBe(true);
   });
 
   it('does nothing on a second run for the same trade date', async () => {
-    await runDaily(deps());
+    await runDaily(on(DAY1));
+    await runDaily(on(DAY2));
     const before = await readFile(join(dir, 'history/MTNN.json'), 'utf8');
     eodCalls = [];
-    const r = await runDaily(deps());
+    const r = await runDaily(on(DAY2));
     expect(r.outcome).toBe('duplicate-date');
     expect(eodCalls).toEqual([]);
     expect(await readFile(join(dir, 'history/MTNN.json'), 'utf8')).toBe(before);
   });
 
   it('marks a backfill failed after 3 unsuccessful attempts', async () => {
-    const empty = deps({ fetchEodhd: async () => [] });
-    for (const date of ['2026-09-25', '2026-09-28', '2026-09-29']) {
-      await runDaily({ ...empty, fetchKobo: async () => kobo('closed', date) });
+    const empty = { fetchEodhd: async () => [] };
+    for (const date of [DAY1, DAY2, '2026-09-29', '2026-09-30']) {
+      await runDaily(on(date, empty));
     }
     const stocks = await readJson('stocks.json');
     expect(stocks.stocks.every((s: { backfill: string }) => s.backfill === 'failed')).toBe(true);

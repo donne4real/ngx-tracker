@@ -27,6 +27,13 @@ describe('pickBackfills', () => {
   });
 });
 
+describe("pickBackfills on a stock's first day", () => {
+  it('skips stocks first seen on the given trade date', () => {
+    const file = { lastTradeDate: '2026-09-25', stocks: [meta('OLD', 1, { firstKoboDate: '2026-09-24' }), meta('NEW', 99, { firstKoboDate: '2026-09-25' })] };
+    expect(pickBackfills(file, 18, '2026-09-25').map((s) => s.symbol)).toEqual(['OLD']);
+  });
+});
+
 describe('backfillRange', () => {
   it('covers a year plus a week before the first Kobo day', () => {
     expect(backfillRange('2026-09-25')).toEqual({ from: '2025-09-18', to: '2026-09-24' });

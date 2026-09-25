@@ -4,9 +4,14 @@ import type { Bar, History, StockMeta, StocksFile } from './types.js';
 export const BACKFILL_PER_RUN = 18;
 export const MAX_BACKFILL_ATTEMPTS = 3;
 
-export function pickBackfills(file: StocksFile, limit = BACKFILL_PER_RUN): StockMeta[] {
+/**
+ * Stocks first seen on `tradeDate` wait a day: EODHD usually doesn't have the
+ * previous trading day yet, and a backfill marked done would miss it for good.
+ */
+export function pickBackfills(file: StocksFile, limit = BACKFILL_PER_RUN, tradeDate?: string): StockMeta[] {
   return file.stocks
     .filter((s) => s.status === 'active' && s.backfill === 'pending' && s.firstKoboDate !== null)
+    .filter((s) => tradeDate === undefined || (s.firstKoboDate as string) < tradeDate)
     .sort((a, b) => b.marketCap - a.marketCap || a.symbol.localeCompare(b.symbol))
     .slice(0, limit);
 }

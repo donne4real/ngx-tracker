@@ -39,7 +39,7 @@ export async function runDaily(deps: RunDeps): Promise<Report> {
   const histories = await deps.store.readHistories(symbols);
   file = appendSnapshot(file, histories, snap);
 
-  for (const meta of pickBackfills(file, deps.backfillPerRun ?? BACKFILL_PER_RUN)) {
+  for (const meta of pickBackfills(file, deps.backfillPerRun ?? BACKFILL_PER_RUN, snap.tradeDate)) {
     const first = meta.firstKoboDate as string;
     const { from, to } = backfillRange(first);
     try {
