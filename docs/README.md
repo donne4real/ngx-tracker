@@ -35,6 +35,8 @@ Every weekday, ~16:30 Lagos time                 Weekends, 13:00 Lagos time
 
 ## Other documents
 
+- **Word version** of these guides: [`NGX-Tracker-Handbook.docx`](NGX-Tracker-Handbook.docx) — regenerate with `node docs/build-handbook.cjs` after editing the Markdown, then update fields in Word.
+- **Web version** (private page): https://claude.ai/artifact/PPRbVSY3ohF4QbCSM83mxM
 - Design specification: [`superpowers/specs/2026-09-25-ngx-tracker-design.md`](superpowers/specs/2026-09-25-ngx-tracker-design.md)
 - Original implementation plan: [`superpowers/plans/2026-09-25-ngx-tracker.md`](superpowers/plans/2026-09-25-ngx-tracker.md)
 - Project README (quick setup): [`../README.md`](../README.md)
