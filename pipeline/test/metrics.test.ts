@@ -65,6 +65,13 @@ describe('buildSummary', () => {
     expect(s.movers.day.losers.map((r) => r.symbol)).toEqual(['B']);
   });
 
+  it("reports how many traded stocks each horizon's movers are based on", () => {
+    const s = setup();
+    // traded active stocks today: A, B, F. F has no previous bar yet.
+    expect(s.coverage.day).toEqual({ eligible: 2, total: 3 });
+    expect(s.coverage.week).toEqual({ eligible: 0, total: 3 });
+  });
+
   it('flags moves beyond ±10% but still lists them', () => {
     const s = setup();
     expect(s.movers.day.losers[0]).toMatchObject({ symbol: 'B', change: -50, largeMove: true });

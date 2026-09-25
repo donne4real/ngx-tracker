@@ -66,11 +66,16 @@ export function buildSummary(
     });
   }
   const noTrade = rows.filter((r) => r.status === 'active' && !r.traded).length;
+  const tradedToday = rows.filter((r) => r.status === 'active' && r.traded);
+  const coverage = Object.fromEntries(
+    HORIZONS.map((h) => [h, { eligible: tradedToday.filter((r) => r.changes[h] !== null).length, total: tradedToday.length }]),
+  ) as Summary['coverage'];
   return {
     asOf,
     generatedAt,
     market: { ...market, noTrade },
     stocks: rows,
     movers: Object.fromEntries(HORIZONS.map((h) => [h, movers(rows, h)])) as Record<Horizon, Movers>,
+    coverage,
   };
 }

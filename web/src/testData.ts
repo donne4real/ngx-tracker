@@ -14,6 +14,11 @@ export function makeSummary(rows: SummaryRow[]): Summary {
     generatedAt: '2026-09-25T16:00:00.000Z',
     market: { asi: 252471.31, pctChange: 0.13, advancers: 34, decliners: 25, unchanged: 5, status: 'closed', noTrade: 15 },
     stocks: rows,
+    coverage: {
+      day: { eligible: 131, total: 131 },
+      week: { eligible: 131, total: 131 },
+      month: { eligible: 131, total: 131 },
+    },
     movers: {
       day: { gainers: [], losers: [] },
       week: { gainers: [], losers: [] },

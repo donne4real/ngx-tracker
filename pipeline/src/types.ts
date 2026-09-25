@@ -103,6 +103,8 @@ export interface Summary {
   market: MarketInfo & { noTrade: number };
   stocks: SummaryRow[];
   movers: Record<Horizon, Movers>;
+  /** of the active stocks that traded today, how many have enough history for each horizon */
+  coverage: Record<Horizon, { eligible: number; total: number }>;
 }
 
 export type RunOutcome = 'appended' | 'duplicate-date' | 'market-open' | 'not-final';

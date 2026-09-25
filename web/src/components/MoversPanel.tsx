@@ -33,8 +33,12 @@ function MoverList({ title, rows }: { title: string; rows: MoverRow[] }) {
   );
 }
 
-export function MoversPanel({ movers }: { movers: Summary['movers'] }) {
+/** Below this share of traded stocks, the lists get a 'based on N of M' note. */
+const FULL_COVERAGE = 0.9;
+
+export function MoversPanel({ movers, coverage }: { movers: Summary['movers']; coverage: Summary['coverage'] }) {
   const [tab, setTab] = useState<Horizon>('day');
+  const cov = coverage[tab];
   return (
     <section className="card">
       <h2>Top movers</h2>
@@ -45,6 +49,11 @@ export function MoversPanel({ movers }: { movers: Summary['movers'] }) {
           </button>
         ))}
       </div>
+      {cov.total > 0 && cov.eligible < cov.total * FULL_COVERAGE && (
+        <p className="muted">
+          Based on {cov.eligible} of {cov.total} stocks that traded: price history for the rest is still loading.
+        </p>
+      )}
       <div className="movers">
         <MoverList title="Gainers" rows={movers[tab].gainers} />
         <MoverList title="Losers" rows={movers[tab].losers} />
