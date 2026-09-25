@@ -18,7 +18,7 @@ function NotFound({ symbol }: { symbol: string }) {
   );
 }
 
-const pctClass = (n: number | null) => (n === null ? 'muted' : n > 0 ? 'up' : n < 0 ? 'down' : '');
+const pctClass = (n: number | null | undefined) => (n == null ? 'muted' : n > 0 ? 'up' : n < 0 ? 'down' : '');
 
 export function StockPage({ summary, symbol }: { summary: Summary; symbol: string }) {
   const row = summary.stocks.find((s) => s.symbol === symbol);

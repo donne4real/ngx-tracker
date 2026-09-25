@@ -7,5 +7,6 @@ describe('formatPct', () => {
     expect(formatPct(-1.3)).toBe('-1.30%');
     expect(formatPct(0)).toBe('0.00%');
     expect(formatPct(null)).toBe('—');
+    expect(formatPct(undefined)).toBe('—'); // period missing from an older summary.json
   });
 });

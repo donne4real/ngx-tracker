@@ -11,6 +11,16 @@ const rows = [
 ];
 const bodyRows = () => within(screen.getByRole('table')).getAllByRole('row').slice(1);
 
+describe('StockTable with an older summary.json', () => {
+  it('shows a dash for periods the data file does not have yet, without crashing', () => {
+    const old = makeRow({ symbol: 'OLD' });
+    old.changes = { day: 1, week: 2, month: 3 } as unknown as typeof old.changes;
+    render(<StockTable rows={[old]} />);
+    expect(screen.getByRole('link', { name: 'OLD' })).toBeInTheDocument();
+    expect(screen.getAllByText('—').length).toBeGreaterThanOrEqual(4);
+  });
+});
+
 describe('StockTable longer periods', () => {
   it('has sortable 3M, 6M, YTD and 1Y columns', () => {
     render(<StockTable rows={rows} />);

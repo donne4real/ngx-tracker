@@ -46,6 +46,10 @@ td.num, th.num { text-align: right; }
 tr.inactive td { opacity: 0.55; }
 .chart { height: 320px; }
 .range { display: flex; gap: 6px; margin-bottom: 8px; }
+/* Sector has its own filter above the table, so it goes first when space is short. */
+@media (max-width: 1300px) {
+  .hide-md { display: none; }
+}
 @media (max-width: 640px) {
   .movers { grid-template-columns: 1fr; }
   .hide-sm { display: none; }

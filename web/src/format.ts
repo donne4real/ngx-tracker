@@ -3,7 +3,8 @@ const compact = new Intl.NumberFormat('en-NG', { notation: 'compact', maximumFra
 
 export const formatNaira = (n: number) => naira.format(n);
 export const formatVolume = (n: number) => compact.format(n);
-export const formatPct = (n: number | null) => (n === null ? '—' : `${n > 0 ? '+' : ''}${n.toFixed(2)}%`);
+/** Missing (null, or absent from an older data file) shows as a dash. */
+export const formatPct = (n: number | null | undefined) => (n == null ? '—' : `${n > 0 ? '+' : ''}${n.toFixed(2)}%`);
 
 export function formatDate(iso: string): string {
   const [y, m, d] = iso.split('-').map(Number);

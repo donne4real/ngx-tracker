@@ -34,7 +34,9 @@ const FULL_COVERAGE = 0.9;
 
 export function MoversPanel({ movers, coverage }: { movers: Summary['movers']; coverage: Summary['coverage'] }) {
   const [tab, setTab] = useState<Horizon>('day');
-  const cov = coverage[tab];
+  // A summary.json written before a period existed has no entry for it.
+  const cov = coverage[tab] ?? { eligible: 0, total: 0 };
+  const lists = movers[tab] ?? { gainers: [], losers: [] };
   return (
     <section className="card">
       <h2>Top movers</h2>
@@ -51,8 +53,8 @@ export function MoversPanel({ movers, coverage }: { movers: Summary['movers']; c
         </p>
       )}
       <div className="movers">
-        <MoverList title="Gainers" rows={movers[tab].gainers} />
-        <MoverList title="Losers" rows={movers[tab].losers} />
+        <MoverList title="Gainers" rows={lists.gainers} />
+        <MoverList title="Losers" rows={lists.losers} />
       </div>
       <p className="muted small">
         Price changes only: dividends aren't included, and bonus issues or splits can distort longer periods.

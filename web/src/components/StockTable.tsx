@@ -4,10 +4,10 @@ import { filterSort, sectorsOf, TEXT_KEYS, type SortKey, type TableQuery } from 
 import { formatNaira, formatPct, formatVolume } from '../format';
 import { stockHref } from '../route';
 
-const COLUMNS: Array<{ key: SortKey; label: string; num?: boolean; hideSm?: boolean }> = [
+const COLUMNS: Array<{ key: SortKey; label: string; num?: boolean; hideSm?: boolean; hideMd?: boolean }> = [
   { key: 'symbol', label: 'Symbol' },
   { key: 'name', label: 'Name', hideSm: true },
-  { key: 'sector', label: 'Sector', hideSm: true },
+  { key: 'sector', label: 'Sector', hideSm: true, hideMd: true },
   { key: 'close', label: 'Last close', num: true },
   { key: 'day', label: 'Day', num: true },
   { key: 'week', label: 'Week', num: true, hideSm: true },
@@ -19,7 +19,7 @@ const COLUMNS: Array<{ key: SortKey; label: string; num?: boolean; hideSm?: bool
   { key: 'volume', label: 'Volume', num: true, hideSm: true },
 ];
 
-const pctClass = (n: number | null) => (n === null ? 'num muted' : n > 0 ? 'num up' : n < 0 ? 'num down' : 'num');
+const pctClass = (n: number | null | undefined) => (n == null ? 'num muted' : n > 0 ? 'num up' : n < 0 ? 'num down' : 'num');
 
 export function StockTable({ rows }: { rows: SummaryRow[] }) {
   const [q, setQ] = useState<TableQuery>({ search: '', sector: '', sortKey: 'symbol', sortDir: 'asc', showInactive: false });
@@ -63,7 +63,7 @@ export function StockTable({ rows }: { rows: SummaryRow[] }) {
               {COLUMNS.map((c) => (
                 <th
                   key={c.key}
-                  className={[c.num ? 'num' : '', c.hideSm ? 'hide-sm' : ''].join(' ').trim()}
+                  className={[c.num ? 'num' : '', c.hideSm ? 'hide-sm' : '', c.hideMd ? 'hide-md' : ''].join(' ').trim()}
                   aria-sort={q.sortKey === c.key ? (q.sortDir === 'asc' ? 'ascending' : 'descending') : undefined}
                 >
                   <button onClick={() => sortBy(c.key)}>{c.label}{arrow(c.key)}</button>
@@ -76,7 +76,7 @@ export function StockTable({ rows }: { rows: SummaryRow[] }) {
               <tr key={r.symbol} className={r.status === 'inactive' ? 'inactive' : undefined}>
                 <td><a href={stockHref(r.symbol)}>{r.symbol}</a></td>
                 <td className="hide-sm">{r.name}</td>
-                <td className="hide-sm">{r.sector}</td>
+                <td className="hide-sm hide-md">{r.sector}</td>
                 <td className="num">{formatNaira(r.close)}</td>
                 <td className={pctClass(r.changes.day)}>{formatPct(r.changes.day)}</td>
                 <td className={`${pctClass(r.changes.week)} hide-sm`}>{formatPct(r.changes.week)}</td>

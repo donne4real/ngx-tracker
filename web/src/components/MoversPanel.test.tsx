@@ -18,6 +18,17 @@ describe('MoversPanel coverage note', () => {
   });
 });
 
+describe('MoversPanel with an older summary.json', () => {
+  it('treats a period missing from the data file as having no history yet', async () => {
+    const s = makeSummary([]);
+    delete (s.movers as Partial<typeof s.movers>).ytd;
+    delete (s.coverage as Partial<typeof s.coverage>).ytd;
+    render(<MoversPanel movers={s.movers} coverage={s.coverage} />);
+    await userEvent.click(screen.getByRole('tab', { name: 'YTD' }));
+    expect(screen.getAllByText(/not enough history yet/i)).toHaveLength(2);
+  });
+});
+
 describe('MoversPanel longer periods', () => {
   it("has a tab for every period and shows that period's lists", async () => {
     const s = makeSummary([]);

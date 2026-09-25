@@ -21,7 +21,7 @@ function valueOf(r: SummaryRow, k: SortKey): string | number | null {
     case '6m':
     case 'ytd':
     case '1y':
-      return r.changes[k];
+      return r.changes[k] ?? null; // absent in an older summary.json
     case 'close':
       return r.close;
     case 'volume':
