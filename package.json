@@ -1,12 +1,20 @@
 {
   "name": "ngx-tracker",
   "private": true,
-  "workspaces": ["pipeline", "web"],
-  "engines": { "node": ">=22" },
+  "workspaces": [
+    "pipeline",
+    "web"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "test": "npm run test --workspaces --if-present",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "pipeline": "npm run daily -w pipeline --",
     "build": "npm run build -w web"
+  },
+  "devDependencies": {
+    "wrangler": "^4.140.0"
   }
 }

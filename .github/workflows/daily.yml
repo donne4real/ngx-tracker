@@ -1,0 +1,49 @@
+name: Daily prices
+on:
+  schedule:
+    # Weekdays. Two attempts: the run only saves prices once Kobo reports the
+    # market closed; the second attempt is a no-op if the first succeeded.
+    - cron: '30 15 * * 1-5'
+    - cron: '0 18 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: daily-prices
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Fetch prices
+        run: npm run pipeline
+        env:
+          KOBO_API_KEY: ${{ secrets.KOBO_API_KEY }}
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+      - name: Detect new data
+        id: diff
+        run: |
+          if [ -n "$(git status --porcelain data)" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; else echo "changed=false" >> "$GITHUB_OUTPUT"; fi
+      - name: Commit data
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "ngx-tracker bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "data: prices for $(node -p "require('./data/summary.json').asOf")"
+          git push
+      - name: Build site
+        if: steps.diff.outputs.changed == 'true'
+        run: npm run build
+      - name: Deploy to Cloudflare Pages
+        if: steps.diff.outputs.changed == 'true'
+        run: npx wrangler pages deploy web/dist --project-name ngx-tracker --branch main --commit-dirty=true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
