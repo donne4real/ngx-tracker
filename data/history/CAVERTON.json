@@ -1,0 +1,6 @@
+{
+  "symbol": "CAVERTON",
+  "bars": [
+    {"date":"2026-09-25","close":4,"volume":2224565,"traded":true,"source":"kobo"}
+  ]
+}

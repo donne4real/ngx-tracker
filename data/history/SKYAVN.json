@@ -1,0 +1,6 @@
+{
+  "symbol": "SKYAVN",
+  "bars": [
+    {"date":"2026-09-25","close":171.2,"volume":1060,"traded":true,"source":"kobo"}
+  ]
+}

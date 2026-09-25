@@ -1,0 +1,6 @@
+{
+  "symbol": "DANGCEM",
+  "bars": [
+    {"date":"2026-09-25","close":1066.7,"volume":213034,"traded":true,"source":"kobo"}
+  ]
+}

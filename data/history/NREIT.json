@@ -1,0 +1,6 @@
+{
+  "symbol": "NREIT",
+  "bars": [
+    {"date":"2026-09-25","close":113,"volume":302102,"traded":true,"source":"kobo"}
+  ]
+}

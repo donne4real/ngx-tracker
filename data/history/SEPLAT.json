@@ -1,0 +1,6 @@
+{
+  "symbol": "SEPLAT",
+  "bars": [
+    {"date":"2026-09-25","close":16000.1,"volume":559663,"traded":true,"source":"kobo"}
+  ]
+}

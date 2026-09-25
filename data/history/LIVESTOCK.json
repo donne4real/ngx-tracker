@@ -1,0 +1,6 @@
+{
+  "symbol": "LIVESTOCK",
+  "bars": [
+    {"date":"2026-09-25","close":8.15,"volume":1119996,"traded":true,"source":"kobo"}
+  ]
+}

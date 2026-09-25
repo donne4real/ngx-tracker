@@ -1,0 +1,6 @@
+{
+  "symbol": "LEGENDINT",
+  "bars": [
+    {"date":"2026-09-25","close":3.5,"volume":4949226,"traded":true,"source":"kobo"}
+  ]
+}

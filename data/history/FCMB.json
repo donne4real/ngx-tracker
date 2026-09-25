@@ -1,0 +1,6 @@
+{
+  "symbol": "FCMB",
+  "bars": [
+    {"date":"2026-09-25","close":11.2,"volume":15834427,"traded":true,"source":"kobo"}
+  ]
+}

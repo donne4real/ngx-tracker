@@ -1,0 +1,6 @@
+{
+  "symbol": "BERGER",
+  "bars": [
+    {"date":"2026-09-25","close":147.6,"volume":6440,"traded":true,"source":"kobo"}
+  ]
+}

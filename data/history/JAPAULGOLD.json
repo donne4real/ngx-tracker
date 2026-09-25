@@ -1,0 +1,6 @@
+{
+  "symbol": "JAPAULGOLD",
+  "bars": [
+    {"date":"2026-09-25","close":2.65,"volume":16121162,"traded":true,"source":"kobo"}
+  ]
+}

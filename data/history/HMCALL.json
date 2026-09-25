@@ -1,0 +1,6 @@
+{
+  "symbol": "HMCALL",
+  "bars": [
+    {"date":"2026-09-25","close":3,"volume":415622,"traded":true,"source":"kobo"}
+  ]
+}

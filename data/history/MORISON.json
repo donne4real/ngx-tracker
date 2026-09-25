@@ -1,0 +1,6 @@
+{
+  "symbol": "MORISON",
+  "bars": [
+    {"date":"2026-09-25","close":10.4,"volume":102,"traded":true,"source":"kobo"}
+  ]
+}

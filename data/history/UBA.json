@@ -1,0 +1,6 @@
+{
+  "symbol": "UBA",
+  "bars": [
+    {"date":"2026-09-25","close":45.1,"volume":21844964,"traded":true,"source":"kobo"}
+  ]
+}

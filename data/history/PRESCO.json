@@ -1,0 +1,6 @@
+{
+  "symbol": "PRESCO",
+  "bars": [
+    {"date":"2026-09-25","close":2045.3,"volume":61529,"traded":true,"source":"kobo"}
+  ]
+}

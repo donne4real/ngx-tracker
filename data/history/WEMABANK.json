@@ -1,0 +1,6 @@
+{
+  "symbol": "WEMABANK",
+  "bars": [
+    {"date":"2026-09-25","close":30.75,"volume":1241367,"traded":true,"source":"kobo"}
+  ]
+}

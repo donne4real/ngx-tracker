@@ -1,0 +1,6 @@
+{
+  "symbol": "UHOMREIT",
+  "bars": [
+    {"date":"2026-09-25","close":70,"volume":27621,"traded":true,"source":"kobo"}
+  ]
+}

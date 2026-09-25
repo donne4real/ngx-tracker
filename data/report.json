@@ -1,0 +1,11 @@
+{
+  "runAt": "2026-09-25T16:06:09.975Z",
+  "outcome": "appended",
+  "tradeDate": "2026-09-25",
+  "backfill": {
+    "ok": [],
+    "failed": [],
+    "stoppedEarly": null
+  },
+  "warnings": []
+}

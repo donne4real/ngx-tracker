@@ -1,0 +1,6 @@
+{
+  "symbol": "ETI",
+  "bars": [
+    {"date":"2026-09-25","close":70,"volume":6856975,"traded":true,"source":"kobo"}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "symbol": "CWG",
+  "bars": [
+    {"date":"2026-09-25","close":18,"volume":298228,"traded":true,"source":"kobo"}
+  ]
+}

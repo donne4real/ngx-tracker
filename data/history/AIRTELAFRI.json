@@ -1,0 +1,6 @@
+{
+  "symbol": "AIRTELAFRI",
+  "bars": [
+    {"date":"2026-09-25","close":6300,"volume":12625,"traded":true,"source":"kobo"}
+  ]
+}

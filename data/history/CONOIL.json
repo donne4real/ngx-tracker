@@ -1,0 +1,6 @@
+{
+  "symbol": "CONOIL",
+  "bars": [
+    {"date":"2026-09-25","close":210,"volume":2932,"traded":true,"source":"kobo"}
+  ]
+}

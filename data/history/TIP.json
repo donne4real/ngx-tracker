@@ -1,0 +1,6 @@
+{
+  "symbol": "TIP",
+  "bars": [
+    {"date":"2026-09-25","close":26.9,"volume":3349581,"traded":true,"source":"kobo"}
+  ]
+}

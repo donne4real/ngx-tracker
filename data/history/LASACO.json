@@ -1,0 +1,6 @@
+{
+  "symbol": "LASACO",
+  "bars": [
+    {"date":"2026-09-25","close":1.72,"volume":1900221,"traded":true,"source":"kobo"}
+  ]
+}

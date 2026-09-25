@@ -1,0 +1,6 @@
+{
+  "symbol": "NIDF",
+  "bars": [
+    {"date":"2026-09-25","close":147.7,"volume":31025,"traded":true,"source":"kobo"}
+  ]
+}

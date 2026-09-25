@@ -1,0 +1,6 @@
+{
+  "symbol": "CHAMS",
+  "bars": [
+    {"date":"2026-09-25","close":3.31,"volume":30119896,"traded":true,"source":"kobo"}
+  ]
+}

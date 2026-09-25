@@ -1,0 +1,6 @@
+{
+  "symbol": "GUINNESS",
+  "bars": [
+    {"date":"2026-09-25","close":384.8,"volume":84033,"traded":true,"source":"kobo"}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "symbol": "ABCTRANS",
+  "bars": [
+    {"date":"2026-09-25","close":5.1,"volume":1363439,"traded":true,"source":"kobo"}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "symbol": "UPDC",
+  "bars": [
+    {"date":"2026-09-25","close":3.85,"volume":7013921,"traded":true,"source":"kobo"}
+  ]
+}

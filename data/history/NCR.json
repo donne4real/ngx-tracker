@@ -1,0 +1,6 @@
+{
+  "symbol": "NCR",
+  "bars": [
+    {"date":"2026-09-25","close":161.2,"volume":1300,"traded":true,"source":"kobo"}
+  ]
+}

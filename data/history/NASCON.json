@@ -1,0 +1,6 @@
+{
+  "symbol": "NASCON",
+  "bars": [
+    {"date":"2026-09-25","close":188.5,"volume":575880,"traded":true,"source":"kobo"}
+  ]
+}
