@@ -27,7 +27,7 @@ accounts, intraday prices, adjusting for corporate actions.
 One private GitHub repository, `ngx-tracker`, with three parts:
 
 ```
-GitHub Actions (weekdays ~15:00 UTC = 16:00 Lagos, after the 14:30 close)
+GitHub Actions (weekdays ~15:30 and ~18:00 UTC; saves only once Kobo reports the market closed)
    │
    ├─ pipeline/  (Node + TypeScript)
    │     Kobo Terminal ── all-stocks snapshot (1 request) ──┐
@@ -138,14 +138,32 @@ TradingView `lightweight-charts` (Apache-2.0).
 - **Pre-schedule dry run:** run the pipeline locally once with real keys and
   check the output before enabling the schedule.
 
-## 7. Open items resolved during implementation
+## 7. Open items — resolved Sep 25, 2026 by real requests
 
-- **Kobo response format:** exact field names, and whether sector, volume
-  and open/high/low are included. Confirmed by the first real request; if
-  sector is missing, the sector column and filter are hidden.
-- **EODHD free-plan history depth:** assumed about 1 year, based on the
-  existing screener cache (about 248 bars per stock). Confirmed on the first
-  backfill.
+- **Kobo response format** (`GET https://koboterminal.com/api/ngxdata/stocks`,
+  header `X-API-Key`): `{ stocks[146], total, total_stocks, as_of, stale_after, market }`.
+  - Each stock has `symbol, name, current_price, previous_close,
+    change_percent, official_change_percent (null or number),
+    pct_change_7d, volume, market_cap, shares_outstanding, sector,
+    market (board), trade_date ("YYYY-MM-DDT00:00:00")`.
+  - **There is no open/high/low**, so bars store close and volume only, and
+    the chart is a close-price line.
+  - `sector` is present (13 values), so the sector filter stays.
+  - `market` has `asi, pct_change, advancers, decliners, unchanged,
+    trade_date, market_status ("open"…)`. The home-page market summary uses
+    these counts plus the ASI.
+- **Market-status guard (new requirement):** at 13:46 UTC Kobo still
+  reported `market_status: "open"`. The daily run must only append a bar
+  when `market_status` is not `"open"`; otherwise it exits without error and
+  the next scheduled attempt retries. The schedule gets two attempts per
+  weekday, around 15:30 and 18:00 UTC.
+- **"Didn't trade"** = `volume === 0` (15 of 146 on Sep 25).
+  `official_change_percent` is null for many stocks that did trade, so it
+  isn't used for this.
+- **EODHD free-plan history depth:** confirmed at exactly 1 year (MTNN:
+  247 bars, 2025-09-25 → 2026-09-23, keys `date, open, high, low, close,
+  adjusted_close, volume`). EODHD's last `close` (855) matched Kobo's
+  `previous_close` (855), confirming the unadjusted prices line up.
 - **Accounts the owner creates:** Kobo Terminal (free Personal key) and
   Cloudflare. The existing EODHD key is reused as a GitHub secret. The key
   currently sits in `ngx-screener/config.json` in plain text and is never
