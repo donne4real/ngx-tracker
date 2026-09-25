@@ -11,6 +11,13 @@ const rows = [
 ];
 const bodyRows = () => within(screen.getByRole('table')).getAllByRole('row').slice(1);
 
+describe('StockTable longer periods', () => {
+  it('has sortable 3M, 6M, YTD and 1Y columns', () => {
+    render(<StockTable rows={rows} />);
+    for (const label of ['3M', '6M', 'YTD', '1Y']) expect(screen.getByRole('button', { name: label })).toBeInTheDocument();
+  });
+});
+
 describe('StockTable', () => {
   it('filters as you type and links each symbol to its page', async () => {
     render(<StockTable rows={rows} />);

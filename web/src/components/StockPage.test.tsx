@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { makeRow, makeSummary } from '../testData';
+import { changes, makeRow, makeSummary } from '../testData';
 import { StockPage } from './StockPage';
 
 vi.mock('./PriceChart', () => ({ PriceChart: () => <div data-testid="chart" /> }));
@@ -27,10 +27,13 @@ describe('StockPage', () => {
       { date: '2026-09-24', close: 855, volume: 10, traded: true, source: 'eodhd' },
       { date: '2026-09-25', close: 863, volume: 20, traded: true, source: 'kobo' },
     ] });
-    const row = makeRow({ symbol: 'MTNN', name: 'MTN Nigeria Communications Plc', close: 863, historyStart: '2026-09-24', largeMove: true, changes: { day: 0.94, week: null, month: null } });
+    const row = makeRow({ symbol: 'MTNN', name: 'MTN Nigeria Communications Plc', close: 863, historyStart: '2026-09-24', largeMove: true, changes: changes({ day: 0.94, '1y': 12.5 }) });
     render(<StockPage summary={makeSummary([row])} symbol="MTNN" />);
     expect(screen.getByRole('heading', { name: /MTN Nigeria Communications Plc/ })).toBeInTheDocument();
     expect(screen.getByText('+0.94%')).toBeInTheDocument();
+    expect(screen.getByText('1Y', { selector: '.label' })).toBeInTheDocument();
+    expect(screen.getByText('+12.50%')).toBeInTheDocument();
+    expect(screen.getByText('YTD')).toBeInTheDocument();
     expect(screen.getByText(/history starts/i)).toBeInTheDocument();
     expect(screen.getByText(/possibly a bonus issue or split/i)).toBeInTheDocument();
     expect(await screen.findByTestId('chart')).toBeInTheDocument();

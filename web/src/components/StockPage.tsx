@@ -3,6 +3,7 @@ import type { History, Summary } from '../../../pipeline/src/types';
 import { loadHistory } from '../api';
 import { formatDate, formatNaira, formatPct, formatVolume } from '../format';
 import { barsInRange, RANGES, stockStats, type Range } from '../stats';
+import { HORIZON_TABS } from '../horizons';
 import { LARGE_MOVE_TITLE } from './MoversPanel';
 import { PriceChart } from './PriceChart';
 
@@ -55,10 +56,10 @@ export function StockPage({ summary, symbol }: { summary: Summary; symbol: strin
         </p>
         <div className="stats">
           <div className="stat"><span className="label">Last close ({formatDate(row.lastDate)})</span><span className="value">{formatNaira(row.close)}</span></div>
-          {(['day', 'week', 'month'] as const).map((h) => (
-            <div className="stat" key={h}>
-              <span className="label">{h[0].toUpperCase() + h.slice(1)}</span>
-              <span className={`value ${pctClass(row.changes[h])}`}>{formatPct(row.changes[h])}</span>
+          {HORIZON_TABS.map(({ key, label }) => (
+            <div className="stat" key={key}>
+              <span className="label">{label}</span>
+              <span className={`value ${pctClass(row.changes[key])}`}>{formatPct(row.changes[key])}</span>
             </div>
           ))}
         </div>

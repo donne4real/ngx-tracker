@@ -18,6 +18,23 @@ describe('MoversPanel coverage note', () => {
   });
 });
 
+describe('MoversPanel longer periods', () => {
+  it("has a tab for every period and shows that period's lists", async () => {
+    const s = makeSummary([]);
+    s.movers.ytd.gainers = [{ symbol: 'GTCO', name: 'Guaranty Trust', close: 90, change: 45.5, largeMove: false }];
+    render(<MoversPanel movers={s.movers} coverage={s.coverage} />);
+    expect(screen.getAllByRole('tab').map((t) => t.textContent)).toEqual(['Day', 'Week', 'Month', '3M', '6M', 'YTD', '1Y']);
+    await userEvent.click(screen.getByRole('tab', { name: 'YTD' }));
+    expect(screen.getByText('GTCO')).toBeInTheDocument();
+    expect(screen.getByText('+45.50%')).toBeInTheDocument();
+  });
+  it('explains that changes are price-only', () => {
+    const s = makeSummary([]);
+    render(<MoversPanel movers={s.movers} coverage={s.coverage} />);
+    expect(screen.getByText(/price changes only/i)).toBeInTheDocument();
+  });
+});
+
 describe('MoversPanel', () => {
   it('switches horizons and explains empty lists', async () => {
     const s = makeSummary([]);

@@ -1,13 +1,9 @@
 import { useState } from 'react';
 import type { Horizon, MoverRow, Summary } from '../../../pipeline/src/types';
 import { formatPct } from '../format';
+import { HORIZON_TABS } from '../horizons';
 import { stockHref } from '../route';
 
-const TABS: Array<{ key: Horizon; label: string }> = [
-  { key: 'day', label: 'Day' },
-  { key: 'week', label: 'Week' },
-  { key: 'month', label: 'Month' },
-];
 
 export const LARGE_MOVE_TITLE = 'Moved more than ±10% in a day: possibly a bonus issue or split, since prices are not adjusted';
 
@@ -43,7 +39,7 @@ export function MoversPanel({ movers, coverage }: { movers: Summary['movers']; c
     <section className="card">
       <h2>Top movers</h2>
       <div role="tablist" aria-label="Period">
-        {TABS.map((t) => (
+        {HORIZON_TABS.map((t) => (
           <button key={t.key} role="tab" aria-selected={tab === t.key} onClick={() => setTab(t.key)}>
             {t.label}
           </button>
@@ -58,6 +54,9 @@ export function MoversPanel({ movers, coverage }: { movers: Summary['movers']; c
         <MoverList title="Gainers" rows={movers[tab].gainers} />
         <MoverList title="Losers" rows={movers[tab].losers} />
       </div>
+      <p className="muted small">
+        Price changes only: dividends aren't included, and bonus issues or splits can distort longer periods.
+      </p>
     </section>
   );
 }

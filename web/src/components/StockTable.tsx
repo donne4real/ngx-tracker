@@ -12,6 +12,10 @@ const COLUMNS: Array<{ key: SortKey; label: string; num?: boolean; hideSm?: bool
   { key: 'day', label: 'Day', num: true },
   { key: 'week', label: 'Week', num: true, hideSm: true },
   { key: 'month', label: 'Month', num: true, hideSm: true },
+  { key: '3m', label: '3M', num: true, hideSm: true },
+  { key: '6m', label: '6M', num: true, hideSm: true },
+  { key: 'ytd', label: 'YTD', num: true, hideSm: true },
+  { key: '1y', label: '1Y', num: true, hideSm: true },
   { key: 'volume', label: 'Volume', num: true, hideSm: true },
 ];
 
@@ -77,6 +81,10 @@ export function StockTable({ rows }: { rows: SummaryRow[] }) {
                 <td className={pctClass(r.changes.day)}>{formatPct(r.changes.day)}</td>
                 <td className={`${pctClass(r.changes.week)} hide-sm`}>{formatPct(r.changes.week)}</td>
                 <td className={`${pctClass(r.changes.month)} hide-sm`}>{formatPct(r.changes.month)}</td>
+                <td className={`${pctClass(r.changes['3m'])} hide-sm`}>{formatPct(r.changes['3m'])}</td>
+                <td className={`${pctClass(r.changes['6m'])} hide-sm`}>{formatPct(r.changes['6m'])}</td>
+                <td className={`${pctClass(r.changes.ytd)} hide-sm`}>{formatPct(r.changes.ytd)}</td>
+                <td className={`${pctClass(r.changes['1y'])} hide-sm`}>{formatPct(r.changes['1y'])}</td>
                 <td className="num hide-sm">{r.traded ? formatVolume(r.volume) : <span className="muted">no trades</span>}</td>
               </tr>
             ))}

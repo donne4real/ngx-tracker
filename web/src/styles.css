@@ -22,13 +22,14 @@ a:hover { text-decoration: underline; }
 .card h2 { margin: 0 0 10px; font-size: 17px; }
 .card h3 { margin: 0 0 6px; font-size: 14px; color: var(--muted); }
 .muted { color: var(--muted); }
+.small { font-size: 12px; margin: 10px 0 0; }
 .up { color: var(--up); }
 .down { color: var(--down); }
 .flag { margin-left: 4px; cursor: help; }
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
 .stat .label { display: block; color: var(--muted); font-size: 12px; }
 .stat .value { font-size: 18px; font-weight: 600; }
-[role="tablist"] { display: flex; gap: 6px; margin-bottom: 10px; }
+[role="tablist"] { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
 [role="tab"], .range button { border: 1px solid var(--border); background: transparent; color: var(--text); border-radius: 999px; padding: 4px 12px; cursor: pointer; font: inherit; }
 [role="tab"][aria-selected="true"], .range button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
 .movers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }

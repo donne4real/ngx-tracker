@@ -1,6 +1,6 @@
-import type { SummaryRow } from '../../pipeline/src/types';
+import type { Horizon, SummaryRow } from '../../pipeline/src/types';
 
-export type SortKey = 'symbol' | 'name' | 'sector' | 'close' | 'day' | 'week' | 'month' | 'volume';
+export type SortKey = 'symbol' | 'name' | 'sector' | 'close' | 'volume' | Horizon;
 export const TEXT_KEYS: SortKey[] = ['symbol', 'name', 'sector'];
 
 export interface TableQuery {
@@ -17,6 +17,10 @@ function valueOf(r: SummaryRow, k: SortKey): string | number | null {
     case 'day':
     case 'week':
     case 'month':
+    case '3m':
+    case '6m':
+    case 'ytd':
+    case '1y':
       return r.changes[k];
     case 'close':
       return r.close;
