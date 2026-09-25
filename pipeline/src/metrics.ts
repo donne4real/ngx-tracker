@@ -3,7 +3,7 @@ import type { Bar, Changes, History, Horizon, MarketInfo, MoverRow, Movers, Stoc
 
 export const LARGE_MOVE_PCT = 10;
 export const MOVERS_COUNT = 10;
-const HORIZONS: Horizon[] = ['day', 'week', 'month'];
+export const HORIZONS: Horizon[] = ['day', 'week', 'month', '3m', '6m', 'ytd', '1y'];
 
 const pct = (now: number, then: number) => Math.round((now / then - 1) * 10000) / 100;
 
@@ -15,14 +15,20 @@ export function closeOnOrBefore(bars: Bar[], date: string): Bar | undefined {
 
 export function computeChanges(bars: Bar[]): Changes {
   const last = bars.at(-1);
-  if (!last) return { day: null, week: null, month: null };
+  if (!last) return { day: null, week: null, month: null, '3m': null, '6m': null, ytd: null, '1y': null };
   const prev = bars.length > 1 ? bars[bars.length - 2] : undefined;
-  const week = closeOnOrBefore(bars, addDays(last.date, -7));
-  const month = closeOnOrBefore(bars, minusMonths(last.date, 1));
+  const vs = (base: Bar | undefined) => (base ? pct(last.close, base.close) : null);
+  const back = (months: number) => vs(closeOnOrBefore(bars, minusMonths(last.date, months)));
+  // YTD base: the last close of the previous calendar year.
+  const yearEnd = `${Number(last.date.slice(0, 4)) - 1}-12-31`;
   return {
-    day: prev ? pct(last.close, prev.close) : null,
-    week: week ? pct(last.close, week.close) : null,
-    month: month ? pct(last.close, month.close) : null,
+    day: vs(prev),
+    week: vs(closeOnOrBefore(bars, addDays(last.date, -7))),
+    month: back(1),
+    '3m': back(3),
+    '6m': back(6),
+    ytd: vs(closeOnOrBefore(bars, yearEnd)),
+    '1y': back(12),
   };
 }
 

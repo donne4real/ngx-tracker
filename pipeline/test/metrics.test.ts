@@ -17,9 +17,40 @@ describe('computeChanges', () => {
   });
 
   it('is null when history is too short', () => {
-    expect(computeChanges(bars([['2026-09-25', 863]]))).toEqual({ day: null, week: null, month: null });
+    const none = { day: null, week: null, month: null, '3m': null, '6m': null, ytd: null, '1y': null };
+    expect(computeChanges(bars([['2026-09-25', 863]]))).toEqual(none);
     expect(computeChanges(bars([['2026-09-24', 855], ['2026-09-25', 863]])).week).toBeNull();
-    expect(computeChanges([])).toEqual({ day: null, week: null, month: null });
+    expect(computeChanges([])).toEqual(none);
+  });
+
+  it('3M, 6M and 1Y use the last close on or before 3, 6 and 12 months earlier', () => {
+    const b = bars([
+      ['2025-09-24', 50], ['2025-09-25', 80], // 1Y base: on or before 2025-09-25
+      ['2026-03-20', 100], ['2026-03-26', 999], // 6M base: on or before 2026-03-25 -> 03-20
+      ['2026-06-25', 120], // 3M base: exactly 2026-06-25
+      ['2026-09-25', 150],
+    ]);
+    const c = computeChanges(b);
+    expect(c['3m']).toBe(25);
+    expect(c['6m']).toBe(50);
+    expect(c['1y']).toBe(87.5);
+  });
+
+  it('1Y is null when history is shorter than a year', () => {
+    const b = bars([['2025-10-01', 100], ['2026-09-25', 150]]);
+    expect(computeChanges(b)['1y']).toBeNull();
+    expect(computeChanges(b)['6m']).toBe(50);
+  });
+
+  it('YTD compares with the last close of the previous year', () => {
+    // Dec 31 had no trading: use Dec 30
+    const b = bars([['2025-12-30', 100], ['2026-01-02', 110], ['2026-09-25', 150]]);
+    expect(computeChanges(b).ytd).toBe(50);
+  });
+
+  it('YTD works early in January and is null without last year\'s close', () => {
+    expect(computeChanges(bars([['2025-12-31', 200], ['2026-01-05', 210]])).ytd).toBe(5);
+    expect(computeChanges(bars([['2026-01-02', 100], ['2026-01-05', 110]])).ytd).toBeNull();
   });
 
   it('week change uses the last close on or before 7 days earlier (holiday in between)', () => {

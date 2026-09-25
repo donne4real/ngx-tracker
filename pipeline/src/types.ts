@@ -65,7 +65,7 @@ export interface Snapshot {
   warnings: string[];
 }
 
-export type Horizon = 'day' | 'week' | 'month';
+export type Horizon = 'day' | 'week' | 'month' | '3m' | '6m' | 'ytd' | '1y';
 export type Changes = Record<Horizon, number | null>;
 
 export interface SummaryRow {
