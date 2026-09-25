@@ -1,6 +1,6 @@
 # NGX Tracker — Design
 
-**Date:** 2026-09-25 · **Status:** approved in conversation, awaiting written-spec review
+**Date:** 2026-09-25 · **Status:** approved by the owner, Sep 25, 2026
 
 ## 1. Goal
 
@@ -57,18 +57,20 @@ never in the repo or the published site.
 | Kobo Terminal `/api/ngxdata/stocks` | Personal (free, 100 req/day) | Daily close for all stocks | 1 request per run |
 | EODHD `/api/eod/<SYM>.XNSA` | Free (20 req/day) | ~1 year of history before the first Kobo day | ≤18 requests per run, until every stock is backfilled |
 
-The first implementation step makes a real Kobo request and records the
-response shape. Field names in this spec are placeholders until then (see §7).
+Both sources were checked with real requests on Sep 25, 2026 — the exact
+response formats are recorded in §7.
 
 ### 3.2 Daily run (idempotent)
 
 1. **Fetch Kobo snapshot.** Validate it: at least 100 stocks, each with a
-   symbol and a numeric close. If validation fails, exit with an error and
+   symbol and a numeric `current_price`. If validation fails, exit with an error and
    write nothing. GitHub emails the owner about the failed run.
+   If `market.market_status` is `"open"`, stop here without error; a later
+   scheduled attempt retries (see §7).
 2. **Trading-date check.** If the snapshot's trade date is already stored,
    skip appending (weekend, holiday, or a re-run).
-3. **Append** one bar per stock: date, close, and open/high/low/volume when
-   available. Stocks with zero volume are stored with `traded: false`.
+3. **Append** one bar per stock: date, close (`current_price`) and volume.
+   Stocks with zero volume are stored with `traded: false`.
 4. **Symbols.** New symbols are added to `stocks.json` automatically. A symbol
    missing from Kobo for 10 consecutive trading days is marked `inactive`,
    not deleted.
