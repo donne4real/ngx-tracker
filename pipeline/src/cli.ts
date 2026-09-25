@@ -43,6 +43,8 @@ async function main() {
   console.log(`Outcome: ${report.outcome} (trade date ${report.tradeDate})`);
   const bf = report.backfill;
   console.log(`Backfill: ${bf.ok.length} ok, ${bf.failed.length} failed${bf.stoppedEarly ? `; stopped early: ${bf.stoppedEarly}` : ''}`);
+  // Shows as a yellow annotation on the GitHub Actions run.
+  if (process.env.GITHUB_ACTIONS && bf.stoppedEarly) console.log(`::warning title=EODHD backfill paused::${bf.stoppedEarly}`);
   for (const w of report.warnings) console.log(`Warning: ${w}`);
   console.log(`Data directory: ${dataDir}`);
 }

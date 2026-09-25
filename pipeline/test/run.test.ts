@@ -3,7 +3,7 @@ import { mkdtemp, readdir, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { EodhdLimitError } from '../src/eodhd.js';
+import { EodhdLimitError, EodhdUnavailableError } from '../src/eodhd.js';
 import { ValidationError } from '../src/kobo.js';
 import { runDaily, type RunDeps } from '../src/run.js';
 import { DataStore, formatHistory } from '../src/store.js';
@@ -109,6 +109,17 @@ describe('runDaily', () => {
     const r = await runDaily(on(DAY2, limited));
     expect(r.outcome).toBe('appended');
     expect(r.backfill.stoppedEarly).toMatch(/limit/);
+    const stocks = await readJson('stocks.json');
+    expect(stocks.stocks.every((s: { backfill: string; backfillAttempts: number }) => s.backfill === 'pending' && s.backfillAttempts === 0)).toBe(true);
+  });
+
+  it('pauses backfilling without using up retries when EODHD rejects the key', async () => {
+    await runDaily(on(DAY1));
+    const rejected = { fetchEodhd: async () => { throw new EodhdUnavailableError('EODHD rejected the API key (HTTP 401)'); } };
+    const r = await runDaily(on(DAY2, rejected));
+    expect(r.outcome).toBe('appended');
+    expect(r.backfill.stoppedEarly).toMatch(/401/);
+    expect(r.backfill.failed).toEqual([]);
     const stocks = await readJson('stocks.json');
     expect(stocks.stocks.every((s: { backfill: string; backfillAttempts: number }) => s.backfill === 'pending' && s.backfillAttempts === 0)).toBe(true);
   });

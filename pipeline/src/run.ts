@@ -1,5 +1,5 @@
 import { BACKFILL_PER_RUN, MAX_BACKFILL_ATTEMPTS, backfillRange, mergeBackfill, pickBackfills } from './backfill.js';
-import { EodhdLimitError, parseEodhd } from './eodhd.js';
+import { EodhdLimitError, EodhdUnavailableError, parseEodhd } from './eodhd.js';
 import { isFinalSnapshot, parseKoboSnapshot } from './kobo.js';
 import { appendSnapshot, isNewTradeDate } from './merge.js';
 import { buildSummary } from './metrics.js';
@@ -50,7 +50,8 @@ export async function runDaily(deps: RunDeps): Promise<Report> {
       meta.backfill = 'done';
       report.backfill.ok.push(meta.symbol);
     } catch (err) {
-      if (err instanceof EodhdLimitError) {
+      // Quota, key or outage problems pause the backfill without using up retries.
+      if (err instanceof EodhdLimitError || err instanceof EodhdUnavailableError) {
         report.backfill.stoppedEarly = err.message;
         break;
       }

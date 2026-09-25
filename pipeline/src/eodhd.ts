@@ -5,6 +5,11 @@ export class EodhdLimitError extends Error {
   override name = 'EodhdLimitError';
 }
 
+/** The key was rejected or EODHD can't be reached: pause the whole backfill, not one stock. */
+export class EodhdUnavailableError extends Error {
+  override name = 'EodhdUnavailableError';
+}
+
 type Row = { date?: unknown; close?: unknown; volume?: unknown };
 
 export function parseEodhd(json: unknown): Bar[] {
@@ -35,7 +40,16 @@ export async function fetchEodhd(
   const url =
     `https://eodhd.com/api/eod/${encodeURIComponent(symbol)}.XNSA` +
     `?period=d&fmt=json&from=${from}&to=${to}&api_token=${encodeURIComponent(apiKey)}`;
-  const res = await fetchImpl(url);
+  let res: Response;
+  try {
+    res = await fetchImpl(url);
+  } catch {
+    throw new EodhdUnavailableError('EODHD could not be reached');
+  }
+  if (res.status === 401 || res.status === 403) {
+    throw new EodhdUnavailableError(`EODHD rejected the API key (HTTP ${res.status})`);
+  }
+  if (res.status >= 500) throw new EodhdUnavailableError(`EODHD is unavailable (HTTP ${res.status})`);
   if (res.status === 429 || res.status === 402) {
     throw new EodhdLimitError(`EODHD daily limit reached (HTTP ${res.status})`);
   }

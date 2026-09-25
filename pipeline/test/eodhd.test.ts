@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { EodhdLimitError, fetchEodhd, parseEodhd } from '../src/eodhd.js';
+import { EodhdLimitError, EodhdUnavailableError, fetchEodhd, parseEodhd } from '../src/eodhd.js';
 
 const respond = (status: number, body: unknown) =>
   (async () => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } })) as unknown as typeof fetch;
@@ -40,9 +40,23 @@ describe('fetchEodhd', () => {
     await expect(fetchEodhd('MTNN', 'a', 'b', 'k', respond(429, {}))).rejects.toBeInstanceOf(EodhdLimitError);
   });
 
+  it('treats a rejected key, a server error or no connection as EODHD being unavailable', async () => {
+    await expect(fetchEodhd('MTNN', 'a', 'b', 'k', respond(401, {}))).rejects.toBeInstanceOf(EodhdUnavailableError);
+    await expect(fetchEodhd('MTNN', 'a', 'b', 'k', respond(403, {}))).rejects.toBeInstanceOf(EodhdUnavailableError);
+    await expect(fetchEodhd('MTNN', 'a', 'b', 'k', respond(503, {}))).rejects.toBeInstanceOf(EodhdUnavailableError);
+    const offline = (async () => { throw new TypeError('fetch failed'); }) as unknown as typeof fetch;
+    await expect(fetchEodhd('MTNN', 'a', 'b', 'k', offline)).rejects.toBeInstanceOf(EodhdUnavailableError);
+  });
+
+  it('keeps an unknown symbol (404) as a per-stock failure', async () => {
+    const p = fetchEodhd('MTNN', 'a', 'b', 'k', respond(404, {}));
+    await expect(p).rejects.not.toBeInstanceOf(EodhdUnavailableError);
+  });
+
   it('reports other HTTP errors without the key', async () => {
-    const p = fetchEodhd('MTNN', 'a', 'b', 'secret-key', respond(500, {}));
-    await expect(p).rejects.toThrow('EODHD HTTP 500');
-    await expect(fetchEodhd('MTNN', 'a', 'b', 'secret-key', respond(500, {}))).rejects.not.toThrow(/secret-key/);
+    const p = fetchEodhd('MTNN', 'a', 'b', 'secret-key', respond(418, {}));
+    await expect(p).rejects.toThrow('EODHD HTTP 418');
+    await expect(fetchEodhd('MTNN', 'a', 'b', 'secret-key', respond(418, {}))).rejects.not.toThrow(/secret-key/);
+    await expect(fetchEodhd('MTNN', 'a', 'b', 'secret-key', respond(401, {}))).rejects.not.toThrow(/secret-key/);
   });
 });
