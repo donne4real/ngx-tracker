@@ -1,0 +1,19 @@
+{
+  "stocks": [
+    { "symbol": "MTNN", "name": "MTN Nigeria Communications Plc", "current_price": 863, "previous_close": 855, "change_percent": 0.94, "official_change_percent": 0.94, "pct_change_7d": 5.89, "volume": 4002657, "market_cap": 18119168368889, "shares_outstanding": 20995560103, "sector": "ICT", "market": "Premium Board", "trade_date": "2026-09-25T00:00:00" },
+    { "symbol": "DANGCEM", "name": "Dangote Cement Plc", "current_price": 1066.7, "previous_close": 1066.7, "change_percent": 0, "official_change_percent": null, "pct_change_7d": 3.16, "volume": 165406, "market_cap": 17999025653041.7, "shares_outstanding": 16873559251, "sector": "INDUSTRIAL GOODS", "market": "Premium Board", "trade_date": "2026-09-25T00:00:00" },
+    { "symbol": "STERLINGNG", "name": "Sterling Financial Holdings Company Plc", "current_price": 7.7, "previous_close": 7.7, "change_percent": 0, "official_change_percent": null, "pct_change_7d": 0.65, "volume": 0, "market_cap": 401300995587.8, "shares_outstanding": 52117012414, "sector": "FINANCIAL SERVICES", "market": "Main Board", "trade_date": "2026-09-25T00:00:00" },
+    { "symbol": "NB", "name": "Nigerian Breweries Plc", "current_price": 76, "previous_close": 77, "change_percent": -1.3, "official_change_percent": -1.3, "pct_change_7d": 0, "volume": 759198, "market_cap": 2354710045920, "shares_outstanding": 30983026920, "sector": "CONSUMER GOODS", "market": "Main Board", "trade_date": "2026-09-25T00:00:00" }
+  ],
+  "total": 4,
+  "total_stocks": 4,
+  "as_of": "2026-09-25T13:46:08.113Z",
+  "stale_after": "2026-09-25T14:06:08.113Z",
+  "market": {
+    "asi": 252471.31, "pct_change": 0.13, "volume": 460595518, "deals": 32009, "value": 21182414898.99,
+    "market_cap": 163887774535375.56, "advancers": 34, "decliners": 25, "unchanged": 5,
+    "trade_date": "2026-09-25T00:00:00", "updated_at": "2026-09-25T13:46:08.113Z",
+    "as_of": "2026-09-25T13:46:08.113Z", "stale_after": "2026-09-25T14:06:08.113Z",
+    "market_status": "open", "market_status_source": "mansaapi-calendar", "source": "NGX"
+  }
+}
