@@ -1,6 +1,6 @@
 import { BACKFILL_PER_RUN, MAX_BACKFILL_ATTEMPTS, backfillRange, mergeBackfill, pickBackfills } from './backfill.js';
 import { EodhdLimitError, parseEodhd } from './eodhd.js';
-import { parseKoboSnapshot } from './kobo.js';
+import { isFinalSnapshot, parseKoboSnapshot } from './kobo.js';
 import { appendSnapshot, isNewTradeDate } from './merge.js';
 import { buildSummary } from './metrics.js';
 import type { DataStore } from './store.js';
@@ -26,7 +26,10 @@ export async function runDaily(deps: RunDeps): Promise<Report> {
   };
 
   // Kobo's prices keep moving until the close; never store an intraday price.
-  if (snap.market.status === 'open') return { ...report, outcome: 'market-open' };
+  // Allow-list: only an explicit 'closed' counts, and the snapshot itself must
+  // postdate the close (the status comes from a calendar, not the feed).
+  if (snap.market.status !== 'closed') return { ...report, outcome: 'market-open' };
+  if (!isFinalSnapshot(snap)) return { ...report, outcome: 'not-final' };
 
   let file = await deps.store.readStocks();
   // Weekend, holiday or a second scheduled attempt: nothing new, and no EODHD calls.

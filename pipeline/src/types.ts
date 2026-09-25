@@ -58,6 +58,8 @@ export interface MarketInfo {
 
 export interface Snapshot {
   tradeDate: ISODate;
+  /** when Kobo took the snapshot (ISO timestamp), if it said */
+  asOf: string | null;
   stocks: KoboStock[];
   market: MarketInfo;
   warnings: string[];
@@ -103,7 +105,7 @@ export interface Summary {
   movers: Record<Horizon, Movers>;
 }
 
-export type RunOutcome = 'appended' | 'duplicate-date' | 'market-open';
+export type RunOutcome = 'appended' | 'duplicate-date' | 'market-open' | 'not-final';
 
 export interface Report {
   runAt: string;

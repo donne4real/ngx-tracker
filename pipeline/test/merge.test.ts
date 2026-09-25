@@ -4,6 +4,7 @@ import type { History, Snapshot, StocksFile } from '../src/types.js';
 
 const snap = (tradeDate: string, rows: Array<[string, number, number]>): Snapshot => ({
   tradeDate,
+  asOf: tradeDate + 'T15:20:00Z',
   stocks: rows.map(([symbol, close, volume]) => ({
     symbol, name: `${symbol} Plc`, close, volume, sector: 'ICT', board: 'Main Board', marketCap: 100,
   })),

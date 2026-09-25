@@ -9,8 +9,9 @@ import { runDaily, type RunDeps } from '../src/run.js';
 import { DataStore, formatHistory } from '../src/store.js';
 
 const sample = JSON.parse(readFileSync(new URL('./fixtures/kobo-sample.json', import.meta.url), 'utf8'));
-const kobo = (status = 'closed', date = '2026-09-25') => {
+const kobo = (status = 'closed', date = '2026-09-25', asOf = `${date}T15:20:00.000Z`) => {
   const j = structuredClone(sample);
+  j.as_of = asOf;
   j.market.market_status = status;
   j.market.trade_date = `${date}T00:00:00`;
   for (const s of j.stocks) s.trade_date = `${date}T00:00:00`;
@@ -46,6 +47,21 @@ describe('runDaily', () => {
   it('writes nothing while the market is open', async () => {
     const r = await runDaily(deps({ fetchKobo: async () => kobo('open') }));
     expect(r.outcome).toBe('market-open');
+    expect(await readdir(dir)).toEqual([]);
+    expect(eodCalls).toEqual([]);
+  });
+
+  it('writes nothing unless Kobo explicitly says closed', async () => {
+    for (const status of ['pre-open', 'Open', 'halted', 'unknown']) {
+      const r = await runDaily(deps({ fetchKobo: async () => kobo(status) }));
+      expect(r.outcome).toBe('market-open');
+    }
+    expect(await readdir(dir)).toEqual([]);
+  });
+
+  it('writes nothing when the snapshot was taken before the NGX close', async () => {
+    const r = await runDaily(deps({ fetchKobo: async () => kobo('closed', '2026-09-25', '2026-09-25T11:00:00.000Z') }));
+    expect(r.outcome).toBe('not-final');
     expect(await readdir(dir)).toEqual([]);
     expect(eodCalls).toEqual([]);
   });

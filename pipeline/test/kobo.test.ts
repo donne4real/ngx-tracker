@@ -15,6 +15,7 @@ describe('parseKoboSnapshot', () => {
     });
     expect(s.market).toEqual({ asi: 252471.31, pctChange: 0.13, advancers: 34, decliners: 25, unchanged: 5, status: 'open' });
     expect(s.warnings).toEqual([]);
+    expect(s.asOf).toBe('2026-09-25T13:46:08.113Z');
   });
 
   it('requires at least 100 valid stocks by default', () => {

@@ -61,8 +61,10 @@ export function parseKoboSnapshot(json: unknown, { minStocks = 100 }: { minStock
   if (stocks.length < minStocks) {
     throw new ValidationError(`Only ${stocks.length} valid stocks in the Kobo response (need at least ${minStocks})`);
   }
+  const asOf = typeof json.as_of === 'string' ? json.as_of : typeof m.updated_at === 'string' ? m.updated_at : null;
   return {
     tradeDate,
+    asOf,
     stocks,
     market: {
       asi: num(m.asi, 0),
@@ -74,6 +76,16 @@ export function parseKoboSnapshot(json: unknown, { minStocks = 100 }: { minStock
     },
     warnings,
   };
+}
+
+/** NGX's official close is 14:30 WAT = 13:30 UTC. */
+export const NGX_CLOSE_UTC = 'T13:30:00Z';
+
+/** A snapshot is final only if Kobo took it after the close of its own trade date. */
+export function isFinalSnapshot(snap: Snapshot): boolean {
+  if (!snap.asOf) return false;
+  const taken = Date.parse(snap.asOf);
+  return Number.isFinite(taken) && taken >= Date.parse(snap.tradeDate + NGX_CLOSE_UTC);
 }
 
 export async function fetchKobo(apiKey: string, fetchImpl: typeof fetch = fetch): Promise<unknown> {
