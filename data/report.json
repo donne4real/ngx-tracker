@@ -1,9 +1,28 @@
 {
-  "runAt": "2026-09-25T16:06:09.975Z",
-  "outcome": "appended",
+  "runAt": "2026-09-26T15:13:59.651Z",
+  "outcome": "backfill-only",
   "tradeDate": "2026-09-25",
   "backfill": {
-    "ok": [],
+    "ok": [
+      "AIRTELAFRI",
+      "MTNN",
+      "DANGCEM",
+      "BUAFOODS",
+      "BUACEMENT",
+      "SEPLAT",
+      "FIRSTHOLDCO",
+      "ARADEL",
+      "HBMNG",
+      "ZENITHBANK",
+      "GTCO",
+      "TRANSCOHOT",
+      "STANBIC",
+      "PRESCO",
+      "NB",
+      "NESTLE",
+      "GEREGU",
+      "UBA"
+    ],
     "failed": [],
     "stoppedEarly": null
   },
