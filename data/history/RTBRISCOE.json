@@ -1,6 +1,7 @@
 {
   "symbol": "RTBRISCOE",
   "bars": [
-    {"date":"2026-09-25","close":10.7,"volume":1559532,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":10.7,"volume":1559532,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":10.05,"volume":710473,"traded":true,"source":"kobo"}
   ]
 }

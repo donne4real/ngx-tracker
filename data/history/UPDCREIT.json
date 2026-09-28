@@ -1,6 +1,7 @@
 {
   "symbol": "UPDCREIT",
   "bars": [
-    {"date":"2026-09-25","close":18.75,"volume":2998293,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":18.75,"volume":2998293,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":19.95,"volume":2543282,"traded":true,"source":"kobo"}
   ]
 }

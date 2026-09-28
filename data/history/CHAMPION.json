@@ -1,6 +1,7 @@
 {
   "symbol": "CHAMPION",
   "bars": [
-    {"date":"2026-09-25","close":9.65,"volume":826972,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":9.65,"volume":826972,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":9.65,"volume":1260561,"traded":true,"source":"kobo"}
   ]
 }

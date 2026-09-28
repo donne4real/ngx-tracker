@@ -1,6 +1,7 @@
 {
   "symbol": "NNFM",
   "bars": [
-    {"date":"2026-09-25","close":79.4,"volume":4479,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":79.4,"volume":4479,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":79.4,"volume":644,"traded":true,"source":"kobo"}
   ]
 }

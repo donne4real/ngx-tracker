@@ -1,6 +1,7 @@
 {
   "symbol": "IKEJAHOTEL",
   "bars": [
-    {"date":"2026-09-25","close":44.5,"volume":31296,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":44.5,"volume":31296,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":44.5,"volume":256933,"traded":true,"source":"kobo"}
   ]
 }

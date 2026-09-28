@@ -1,6 +1,7 @@
 {
   "symbol": "FTNCOCOA",
   "bars": [
-    {"date":"2026-09-25","close":8,"volume":3598432,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":8,"volume":3598432,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":8,"volume":2081057,"traded":true,"source":"kobo"}
   ]
 }

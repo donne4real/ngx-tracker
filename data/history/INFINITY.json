@@ -1,6 +1,7 @@
 {
   "symbol": "INFINITY",
   "bars": [
-    {"date":"2026-09-25","close":11.25,"volume":502,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":11.25,"volume":502,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":11.25,"volume":2132,"traded":true,"source":"kobo"}
   ]
 }

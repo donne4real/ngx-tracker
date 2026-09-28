@@ -1,6 +1,7 @@
 {
   "symbol": "NPFMCRFBK",
   "bars": [
-    {"date":"2026-09-25","close":4,"volume":1339373,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":4,"volume":1339373,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":4,"volume":616764,"traded":true,"source":"kobo"}
   ]
 }

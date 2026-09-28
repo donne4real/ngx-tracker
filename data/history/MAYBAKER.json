@@ -1,6 +1,7 @@
 {
   "symbol": "MAYBAKER",
   "bars": [
-    {"date":"2026-09-25","close":41.3,"volume":440102,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":41.3,"volume":440102,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":41.3,"volume":409145,"traded":true,"source":"kobo"}
   ]
 }

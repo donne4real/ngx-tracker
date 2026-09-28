@@ -1,6 +1,7 @@
 {
   "symbol": "PRESTIGE",
   "bars": [
-    {"date":"2026-09-25","close":1.38,"volume":14622,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":1.38,"volume":14622,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":1.38,"volume":270935,"traded":true,"source":"kobo"}
   ]
 }

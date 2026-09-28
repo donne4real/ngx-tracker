@@ -1,6 +1,7 @@
 {
   "symbol": "ABBEYBANK",
   "bars": [
-    {"date":"2026-09-25","close":6.95,"volume":2596874,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":6.95,"volume":2596874,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":6.95,"volume":463608,"traded":true,"source":"kobo"}
   ]
 }

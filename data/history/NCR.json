@@ -1,6 +1,7 @@
 {
   "symbol": "NCR",
   "bars": [
-    {"date":"2026-09-25","close":161.2,"volume":1300,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":161.2,"volume":1300,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":161.2,"volume":679,"traded":true,"source":"kobo"}
   ]
 }

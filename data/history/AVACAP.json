@@ -1,6 +1,7 @@
 {
   "symbol": "AVACAP",
   "bars": [
-    {"date":"2026-09-25","close":5.5,"volume":1122907,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":5.5,"volume":1122907,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":5.25,"volume":3318763,"traded":true,"source":"kobo"}
   ]
 }

@@ -1,6 +1,7 @@
 {
   "symbol": "IMG",
   "bars": [
-    {"date":"2026-09-25","close":28,"volume":17646,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":28,"volume":17646,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":28,"volume":27562,"traded":true,"source":"kobo"}
   ]
 }

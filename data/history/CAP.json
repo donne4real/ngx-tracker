@@ -1,6 +1,7 @@
 {
   "symbol": "CAP",
   "bars": [
-    {"date":"2026-09-25","close":100,"volume":536766,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":100,"volume":536766,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":100,"volume":167880,"traded":true,"source":"kobo"}
   ]
 }

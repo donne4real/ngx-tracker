@@ -1,6 +1,7 @@
 {
   "symbol": "WAPIC",
   "bars": [
-    {"date":"2026-09-25","close":2.4,"volume":4645605,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":2.4,"volume":4645605,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":2.18,"volume":1555396,"traded":true,"source":"kobo"}
   ]
 }

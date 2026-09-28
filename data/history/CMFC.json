@@ -1,6 +1,7 @@
 {
   "symbol": "CMFC",
   "bars": [
-    {"date":"2026-09-25","close":3.26,"volume":6091376,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":3.26,"volume":6091376,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":3.58,"volume":22995110,"traded":true,"source":"kobo"}
   ]
 }

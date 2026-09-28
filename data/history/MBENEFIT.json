@@ -1,6 +1,7 @@
 {
   "symbol": "MBENEFIT",
   "bars": [
-    {"date":"2026-09-25","close":3.31,"volume":6534454,"traded":true,"source":"kobo"}
+    {"date":"2026-09-25","close":3.31,"volume":6534454,"traded":true,"source":"kobo"},
+    {"date":"2026-09-28","close":3.2,"volume":10046228,"traded":true,"source":"kobo"}
   ]
 }

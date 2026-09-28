@@ -1,6 +1,7 @@
 {
   "symbol": "RONCHESS",
   "bars": [
-    {"date":"2026-09-25","close":81,"volume":0,"traded":false,"source":"kobo"}
+    {"date":"2026-09-25","close":81,"volume":0,"traded":false,"source":"kobo"},
+    {"date":"2026-09-28","close":81,"volume":0,"traded":false,"source":"kobo"}
   ]
 }

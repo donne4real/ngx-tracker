@@ -1,6 +1,7 @@
 {
   "symbol": "MOFIREIF",
   "bars": [
-    {"date":"2026-09-25","close":100,"volume":0,"traded":false,"source":"kobo"}
+    {"date":"2026-09-25","close":100,"volume":0,"traded":false,"source":"kobo"},
+    {"date":"2026-09-28","close":100,"volume":0,"traded":false,"source":"kobo"}
   ]
 }
