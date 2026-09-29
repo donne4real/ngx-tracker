@@ -2,6 +2,7 @@
   "symbol": "JULI",
   "bars": [
     {"date":"2026-09-25","close":6.55,"volume":1330,"traded":true,"source":"kobo"},
-    {"date":"2026-09-28","close":6.55,"volume":10494,"traded":true,"source":"kobo"}
+    {"date":"2026-09-28","close":6.55,"volume":10494,"traded":true,"source":"kobo"},
+    {"date":"2026-09-29","close":6.55,"volume":32520,"traded":true,"source":"kobo"}
   ]
 }

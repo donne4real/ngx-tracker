@@ -2,6 +2,7 @@
   "symbol": "THOMASWY",
   "bars": [
     {"date":"2026-09-25","close":2.95,"volume":666089,"traded":true,"source":"kobo"},
-    {"date":"2026-09-28","close":2.97,"volume":291602,"traded":true,"source":"kobo"}
+    {"date":"2026-09-28","close":2.97,"volume":291602,"traded":true,"source":"kobo"},
+    {"date":"2026-09-29","close":2.96,"volume":1184460,"traded":true,"source":"kobo"}
   ]
 }

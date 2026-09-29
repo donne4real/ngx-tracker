@@ -2,6 +2,7 @@
   "symbol": "ACADEMY",
   "bars": [
     {"date":"2026-09-25","close":5.1,"volume":109841,"traded":true,"source":"kobo"},
-    {"date":"2026-09-28","close":5.1,"volume":190606,"traded":true,"source":"kobo"}
+    {"date":"2026-09-28","close":5.1,"volume":190606,"traded":true,"source":"kobo"},
+    {"date":"2026-09-29","close":5.1,"volume":86121,"traded":true,"source":"kobo"}
   ]
 }

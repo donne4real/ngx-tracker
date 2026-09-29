@@ -2,6 +2,7 @@
   "symbol": "LASACO",
   "bars": [
     {"date":"2026-09-25","close":1.72,"volume":1900221,"traded":true,"source":"kobo"},
-    {"date":"2026-09-28","close":1.77,"volume":2317181,"traded":true,"source":"kobo"}
+    {"date":"2026-09-28","close":1.77,"volume":2317181,"traded":true,"source":"kobo"},
+    {"date":"2026-09-29","close":1.77,"volume":1512124,"traded":true,"source":"kobo"}
   ]
 }

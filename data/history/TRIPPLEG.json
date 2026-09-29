@@ -2,6 +2,7 @@
   "symbol": "TRIPPLEG",
   "bars": [
     {"date":"2026-09-25","close":2.33,"volume":256940,"traded":true,"source":"kobo"},
-    {"date":"2026-09-28","close":2.33,"volume":132020,"traded":true,"source":"kobo"}
+    {"date":"2026-09-28","close":2.33,"volume":132020,"traded":true,"source":"kobo"},
+    {"date":"2026-09-29","close":2.33,"volume":297183,"traded":true,"source":"kobo"}
   ]
 }

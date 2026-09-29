@@ -2,6 +2,7 @@
   "symbol": "FTGINSURE",
   "bars": [
     {"date":"2026-09-25","close":2,"volume":163173,"traded":true,"source":"kobo"},
-    {"date":"2026-09-28","close":1.81,"volume":1210338,"traded":true,"source":"kobo"}
+    {"date":"2026-09-28","close":1.81,"volume":1210338,"traded":true,"source":"kobo"},
+    {"date":"2026-09-29","close":1.87,"volume":961766,"traded":true,"source":"kobo"}
   ]
 }

@@ -2,6 +2,7 @@
   "symbol": "DAARCOMM",
   "bars": [
     {"date":"2026-09-25","close":1.43,"volume":2997230,"traded":true,"source":"kobo"},
-    {"date":"2026-09-28","close":1.5,"volume":1823571,"traded":true,"source":"kobo"}
+    {"date":"2026-09-28","close":1.5,"volume":1823571,"traded":true,"source":"kobo"},
+    {"date":"2026-09-29","close":1.52,"volume":1229510,"traded":true,"source":"kobo"}
   ]
 }

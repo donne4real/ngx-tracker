@@ -2,6 +2,7 @@
   "symbol": "MEYER",
   "bars": [
     {"date":"2026-09-25","close":15.95,"volume":35302,"traded":true,"source":"kobo"},
-    {"date":"2026-09-28","close":15.95,"volume":25533,"traded":true,"source":"kobo"}
+    {"date":"2026-09-28","close":15.95,"volume":25533,"traded":true,"source":"kobo"},
+    {"date":"2026-09-29","close":15.95,"volume":42055,"traded":true,"source":"kobo"}
   ]
 }

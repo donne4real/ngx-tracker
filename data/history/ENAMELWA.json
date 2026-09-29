@@ -2,6 +2,7 @@
   "symbol": "ENAMELWA",
   "bars": [
     {"date":"2026-09-25","close":40.7,"volume":22,"traded":true,"source":"kobo"},
-    {"date":"2026-09-28","close":40.7,"volume":172,"traded":true,"source":"kobo"}
+    {"date":"2026-09-28","close":40.7,"volume":172,"traded":true,"source":"kobo"},
+    {"date":"2026-09-29","close":40.7,"volume":3,"traded":true,"source":"kobo"}
   ]
 }
