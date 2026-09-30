@@ -3,6 +3,7 @@
   "bars": [
     {"date":"2026-09-25","close":1.38,"volume":14622,"traded":true,"source":"kobo"},
     {"date":"2026-09-28","close":1.38,"volume":270935,"traded":true,"source":"kobo"},
-    {"date":"2026-09-29","close":1.36,"volume":1064330,"traded":true,"source":"kobo"}
+    {"date":"2026-09-29","close":1.36,"volume":1064330,"traded":true,"source":"kobo"},
+    {"date":"2026-09-30","close":1.38,"volume":1224915,"traded":true,"source":"kobo"}
   ]
 }
