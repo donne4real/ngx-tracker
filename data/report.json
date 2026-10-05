@@ -1,27 +1,11 @@
 {
-  "runAt": "2026-10-04T16:03:28.126Z",
-  "outcome": "backfill-only",
-  "tradeDate": "2026-10-02",
+  "runAt": "2026-10-05T22:05:38.084Z",
+  "outcome": "appended",
+  "tradeDate": "2026-10-05",
   "backfill": {
     "ok": [
-      "OMATEK",
-      "AFRINSURE",
-      "AVAIF",
-      "NSLTECH",
-      "PREMPAINTS",
-      "JOHNHOLT",
-      "ENAMELWA",
-      "EKOCORP",
-      "INTENEGINS",
-      "AUSTINLAZ",
-      "TRIPPLEG",
-      "MULTITREX",
-      "UPL",
-      "ALEX",
-      "TRANSEXPR",
-      "JULI",
-      "AFROMEDIA",
-      "THOMASWY"
+      "PHARMDEKO",
+      "BAPLC"
     ],
     "failed": [],
     "stoppedEarly": null
