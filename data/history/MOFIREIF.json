@@ -222,6 +222,7 @@
     {"date":"2026-09-29","close":100,"volume":0,"traded":false,"source":"kobo"},
     {"date":"2026-09-30","close":100,"volume":0,"traded":false,"source":"kobo"},
     {"date":"2026-10-02","close":100,"volume":0,"traded":false,"source":"kobo"},
-    {"date":"2026-10-05","close":100,"volume":0,"traded":false,"source":"kobo"}
+    {"date":"2026-10-05","close":100,"volume":0,"traded":false,"source":"kobo"},
+    {"date":"2026-10-06","close":100,"volume":0,"traded":false,"source":"kobo"}
   ]
 }

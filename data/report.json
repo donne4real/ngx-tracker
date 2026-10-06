@@ -1,12 +1,9 @@
 {
-  "runAt": "2026-10-05T22:05:38.084Z",
+  "runAt": "2026-10-06T20:25:34.487Z",
   "outcome": "appended",
-  "tradeDate": "2026-10-05",
+  "tradeDate": "2026-10-06",
   "backfill": {
-    "ok": [
-      "PHARMDEKO",
-      "BAPLC"
-    ],
+    "ok": [],
     "failed": [],
     "stoppedEarly": null
   },
