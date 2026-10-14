@@ -1,0 +1,6 @@
+{
+  "symbol": "UHREIT",
+  "bars": [
+    {"date":"2026-10-14","close":70,"volume":3100,"traded":true,"source":"kobo"}
+  ]
+}
