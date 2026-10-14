@@ -1,11 +1,13 @@
 {
-  "runAt": "2026-10-14T19:31:18.349Z",
-  "outcome": "appended",
+  "runAt": "2026-10-14T21:06:37.720Z",
+  "outcome": "duplicate-date",
   "tradeDate": "2026-10-14",
   "backfill": {
     "ok": [],
     "failed": [],
     "stoppedEarly": null
   },
-  "warnings": []
+  "warnings": [
+    "UHREIT: non-numeric market_cap coerced"
+  ]
 }
