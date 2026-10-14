@@ -10,7 +10,12 @@ export class ValidationError extends Error {
 
 type Obj = Record<string, unknown>;
 const isObj = (v: unknown): v is Obj => typeof v === 'object' && v !== null && !Array.isArray(v);
-const num = (v: unknown, fallback: number) => (typeof v === 'number' && Number.isFinite(v) ? v : fallback);
+const num = (v: unknown, fallback: number) => {
+  if (typeof v === 'number' && Number.isFinite(v)) return v;
+  // Kobo sometimes sends numerics as strings: coerce finite values, warn otherwise.
+  if (typeof v === 'string' && v.trim() !== '' && Number.isFinite(Number(v))) return Number(v);
+  return fallback;
+};
 const str = (v: unknown, fallback: string) => (typeof v === 'string' && v.trim() !== '' ? v.trim() : fallback);
 
 function isoOrNull(v: unknown): string | null {
@@ -35,22 +40,29 @@ export function parseKoboSnapshot(json: unknown, { minStocks = 100 }: { minStock
   const warnings: string[] = [];
   const stocks: KoboStock[] = [];
   for (const s of json.stocks) {
-    if (!isObj(s) || typeof s.symbol !== 'string' || !SYMBOL_RE.test(s.symbol)) {
+    if (!isObj(s) || typeof s.symbol !== 'string' || !SYMBOL_RE.test(s.symbol.trim())) {
       warnings.push(`Skipped a stock with an invalid symbol: ${JSON.stringify(isObj(s) ? s.symbol : s)}`);
       continue;
     }
+    const symbol = (s.symbol as string).trim();
     if (typeof s.current_price !== 'number' || !Number.isFinite(s.current_price) || s.current_price <= 0) {
-      warnings.push(`Skipped ${s.symbol}: no valid current_price`);
+      warnings.push(`Skipped ${symbol}: no valid current_price`);
       continue;
     }
     const own = isoOrNull(s.trade_date);
-    if (own !== null && own !== tradeDate) {
-      warnings.push(`Skipped ${s.symbol}: trade date ${own} differs from market date ${tradeDate}`);
+    if (s.trade_date !== undefined && own === null) {
+      warnings.push(`Skipped ${symbol}: unparseable trade_date ${JSON.stringify(s.trade_date)}`);
       continue;
     }
+    if (own !== null && own !== tradeDate) {
+      warnings.push(`Skipped ${symbol}: trade date ${own} differs from market date ${tradeDate}`);
+      continue;
+    }
+    if (typeof s.volume === 'number' && s.volume < 0) warnings.push(`${symbol}: negative volume coerced to 0`);
+    if (s.market_cap !== undefined && typeof s.market_cap !== 'number') warnings.push(`${symbol}: non-numeric market_cap coerced`);
     stocks.push({
-      symbol: s.symbol,
-      name: str(s.name, s.symbol),
+      symbol,
+      name: str(s.name, symbol),
       close: s.current_price,
       volume: Math.max(0, num(s.volume, 0)),
       sector: str(s.sector, 'Unclassified'),

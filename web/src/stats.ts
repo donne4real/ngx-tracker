@@ -12,17 +12,25 @@ export interface StockStats {
 }
 
 export function stockStats(bars: Bar[], asOf: string): StockStats | null {
+  const sorted = [...bars].sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
   const start = minusMonths(asOf, 12);
-  const window = bars.filter((b) => b.date > start && b.date <= asOf);
+  const window = sorted.filter((b) => b.date > start && b.date <= asOf);
   if (window.length === 0) return null;
-  const closes = window.map((b) => b.close);
+  let high = -Infinity;
+  let low = Infinity;
+  let vol = 0;
+  for (const b of window) {
+    if (b.close > high) high = b.close;
+    if (b.close < low) low = b.close;
+    vol += b.volume;
+  }
   return {
-    high: Math.max(...closes),
-    low: Math.min(...closes),
-    avgVolume: Math.round(window.reduce((s, b) => s + b.volume, 0) / window.length),
+    high,
+    low,
+    avgVolume: Math.round(vol / window.length),
     from: window[0].date,
     to: window[window.length - 1].date,
-    fullYear: bars[0].date <= start,
+    fullYear: sorted[0].date <= start,
   };
 }
 
@@ -31,7 +39,7 @@ export const RANGES: Range[] = ['1M', '3M', '6M', '1Y', 'All'];
 const MONTHS: Record<Exclude<Range, 'All'>, number> = { '1M': 1, '3M': 3, '6M': 6, '1Y': 12 };
 
 export function barsInRange(bars: Bar[], range: Range, asOf: string): Bar[] {
-  if (range === 'All') return bars;
+  if (range === 'All') return bars.filter((b) => b.date <= asOf);
   const start = minusMonths(asOf, MONTHS[range]);
-  return bars.filter((b) => b.date >= start);
+  return bars.filter((b) => b.date >= start && b.date <= asOf);
 }

@@ -5,7 +5,10 @@ export const LARGE_MOVE_PCT = 10;
 export const MOVERS_COUNT = 10;
 export const HORIZONS: Horizon[] = ['day', 'week', 'month', '3m', '6m', 'ytd', '1y'];
 
-const pct = (now: number, then: number) => Math.round((now / then - 1) * 10000) / 100;
+const pct = (now: number, then: number) => {
+  if (!(then > 0) || !Number.isFinite(now) || !Number.isFinite(then)) return null;
+  return Math.round((now / then - 1) * 10000) / 100;
+};
 
 /** Last bar dated on or before `date` (bars sorted ascending). */
 export function closeOnOrBefore(bars: Bar[], date: string): Bar | undefined {
@@ -17,12 +20,22 @@ export function computeChanges(bars: Bar[]): Changes {
   const last = bars.at(-1);
   if (!last) return { day: null, week: null, month: null, '3m': null, '6m': null, ytd: null, '1y': null };
   const prev = bars.length > 1 ? bars[bars.length - 2] : undefined;
+  // After a long absence a "day" move would actually span weeks: quarantine it.
+  let dayBase = prev;
+  if (prev) {
+    try {
+      const gapMs = Date.parse(last.date) - Date.parse(prev.date);
+      if (Number.isFinite(gapMs) && gapMs > 5 * 86400000) dayBase = undefined;
+    } catch {
+      // keep prev on unparseable dates
+    }
+  }
   const vs = (base: Bar | undefined) => (base ? pct(last.close, base.close) : null);
   const back = (months: number) => vs(closeOnOrBefore(bars, minusMonths(last.date, months)));
   // YTD base: the last close of the previous calendar year.
   const yearEnd = `${Number(last.date.slice(0, 4)) - 1}-12-31`;
   return {
-    day: vs(prev),
+    day: vs(dayBase),
     week: vs(closeOnOrBefore(bars, addDays(last.date, -7))),
     month: back(1),
     '3m': back(3),

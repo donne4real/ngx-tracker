@@ -16,6 +16,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -32,7 +33,12 @@ jobs:
       - name: Detect new data
         id: diff
         run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/summary.json','utf8')); JSON.parse(require('fs').readFileSync('data/stocks.json','utf8')); JSON.parse(require('fs').readFileSync('data/report.json','utf8'))"
           if [ -n "$(git status --porcelain data)" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; else echo "changed=false" >> "$GITHUB_OUTPUT"; fi
+      - name: Fail on rejected EODHD key
+        if: always()
+        run: |
+          node -e "const r=require('./data/report.json'); if (r.backfill && r.backfill.stoppedEarly && /40[13]/.test(r.backfill.stoppedEarly)) { console.error('EODHD key rejected: '+r.backfill.stoppedEarly); process.exit(1); }"
       - name: Commit data
         if: steps.diff.outputs.changed == 'true'
         run: |

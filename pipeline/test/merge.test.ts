@@ -36,12 +36,15 @@ describe('appendSnapshot', () => {
     expect(f.lastTradeDate).toBe('2026-09-28');
   });
 
-  it('never stores the same date twice for a stock', () => {
+  it('overwrites the same date with a correction and warns', () => {
     const h = new Map<string, History>();
-    let f = appendSnapshot(empty(), h, snap('2026-09-25', [['MTNN', 863, 1]]));
-    f = appendSnapshot(f, h, snap('2026-09-25', [['MTNN', 999, 1]]));
+    const s1 = snap('2026-09-25', [['MTNN', 863, 1]]);
+    let f = appendSnapshot(empty(), h, s1);
+    const s2 = snap('2026-09-25', [['MTNN', 999, 1]]);
+    f = appendSnapshot(f, h, s2);
     expect(h.get('MTNN')!.bars).toHaveLength(1);
-    expect(h.get('MTNN')!.bars[0].close).toBe(863);
+    expect(h.get('MTNN')!.bars[0].close).toBe(999);
+    expect(s2.warnings.join(' ')).toMatch(/Corrected MTNN/);
   });
 
   it(`marks a stock inactive after ${INACTIVE_AFTER} missing days and reactivates it`, () => {

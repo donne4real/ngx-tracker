@@ -3,8 +3,15 @@ import { useEffect, useState } from 'react';
 export type Route = { page: 'home' } | { page: 'stock'; symbol: string };
 
 export function parseRoute(hash: string): Route {
-  const m = /^#\/stock\/([^/?#]+)/.exec(hash);
-  return m ? { page: 'stock', symbol: decodeURIComponent(m[1]).toUpperCase() } : { page: 'home' };
+  const m = /^#\/stock\/([^/?#]+)\/?$/.exec(hash);
+  if (!m) return { page: 'home' };
+  try {
+    const symbol = decodeURIComponent(m[1]).toUpperCase();
+    if (!symbol) return { page: 'home' };
+    return { page: 'stock', symbol };
+  } catch {
+    return { page: 'home' };
+  }
 }
 
 export const stockHref = (symbol: string) => `#/stock/${encodeURIComponent(symbol)}`;

@@ -16,10 +16,10 @@ describe('StockPage', () => {
     expect(screen.getByRole('heading', { name: /stock not found/i })).toBeInTheDocument();
   });
 
-  it('shows "Stock not found" when the history file is missing (HTML fallback)', async () => {
+  it('shows "History not available" when the history file is missing (HTML fallback)', async () => {
     vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response('<html></html>', { status: 200, headers: { 'content-type': 'text/html' } }));
     render(<StockPage summary={makeSummary([makeRow({ symbol: 'MTNN' })])} symbol="MTNN" />);
-    expect(await screen.findByRole('heading', { name: /stock not found/i })).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { name: /history not available/i })).toBeInTheDocument();
   });
 
   it('shows price, changes, partial-history label, large-move flag and the chart', async () => {

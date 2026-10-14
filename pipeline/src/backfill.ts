@@ -9,9 +9,14 @@ export const MAX_BACKFILL_ATTEMPTS = 3;
  * run) wait: EODHD usually doesn't have the previous trading day yet, and a
  * backfill marked done would miss it for good.
  */
-export function pickBackfills(file: StocksFile, limit = BACKFILL_PER_RUN, tradeDate?: string): StockMeta[] {
+export function pickBackfills(
+  file: StocksFile,
+  limit = BACKFILL_PER_RUN,
+  tradeDate?: string,
+  opts: { includeFailed?: boolean } = {},
+): StockMeta[] {
   return file.stocks
-    .filter((s) => s.status === 'active' && s.backfill === 'pending' && s.firstKoboDate !== null)
+    .filter((s) => s.status === 'active' && (s.backfill === 'pending' || (opts.includeFailed && s.backfill === 'failed')) && s.firstKoboDate !== null)
     .filter((s) => tradeDate === undefined || (s.firstKoboDate as string) < tradeDate)
     .sort((a, b) => b.marketCap - a.marketCap || a.symbol.localeCompare(b.symbol))
     .slice(0, limit);

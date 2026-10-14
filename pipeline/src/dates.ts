@@ -1,9 +1,23 @@
-const ISO_RE = /^(\d{4})-(\d{2})-(\d{2})/;
+const ISO_RE = /^(\d{4})-(\d{2})-(\d{2})$/;
 
 /** Date part of an ISO date/timestamp: "2026-09-25T00:00:00" -> "2026-09-25". */
 export function toISODate(value: string): string {
-  const m = ISO_RE.exec(value);
+  const datePart = value.length >= 10 ? value.slice(0, 10) : value;
+  const m = ISO_RE.exec(datePart);
   if (!m) throw new Error(`Not an ISO date: ${JSON.stringify(value)}`);
+  const y = Number(m[1]);
+  const mo = Number(m[2]);
+  const d = Number(m[3]);
+  if (mo < 1 || mo > 12 || d < 1 || d > 31) throw new Error(`Not an ISO date: ${JSON.stringify(value)}`);
+  // Round-trip to reject rollovers like 2026-02-30 or 2026-13-40.
+  const dt = new Date(Date.UTC(y, mo - 1, d));
+  if (dt.getUTCFullYear() !== y || dt.getUTCMonth() !== mo - 1 || dt.getUTCDate() !== d) {
+    throw new Error(`Not an ISO date: ${JSON.stringify(value)}`);
+  }
+  // Reject trailing garbage: allow YYYY-MM-DD or YYYY-MM-DD[T ]...
+  if (value.length > 10 && value[10] !== 'T' && value[10] !== ' ') {
+    throw new Error(`Not an ISO date: ${JSON.stringify(value)}`);
+  }
   return `${m[1]}-${m[2]}-${m[3]}`;
 }
 

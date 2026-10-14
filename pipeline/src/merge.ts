@@ -1,4 +1,5 @@
 import type { Bar, History, Snapshot, StockMeta, StocksFile } from './types.js';
+import { weekdaysAfter } from './dates.js';
 
 export const INACTIVE_AFTER = 10;
 
@@ -30,16 +31,30 @@ export function appendSnapshot(file: StocksFile, histories: Map<string, History>
     });
 
     const h = histories.get(k.symbol) ?? { symbol: k.symbol, bars: [] };
-    if (!h.bars.some((b) => b.date === snap.tradeDate)) {
+    const existing = h.bars.find((b) => b.date === snap.tradeDate);
+    if (!existing) {
       h.bars.push({ date: snap.tradeDate, close: k.close, volume: k.volume, traded: k.volume > 0, source: 'kobo' });
       h.bars.sort(byDate);
+    } else if (existing.close !== k.close || existing.volume !== k.volume) {
+      snap.warnings.push(`Corrected ${k.symbol} ${snap.tradeDate} ${existing.close}→${k.close}`);
+      existing.close = k.close;
+      existing.volume = k.volume;
+      existing.traded = k.volume > 0;
+      existing.source = 'kobo';
     }
     histories.set(k.symbol, h);
   }
 
+  // Count actual weekdays missed, so a multi-day Kobo outage isn't undercounted.
+  let gap = 1;
+  try {
+    if (file.lastTradeDate) gap = Math.max(1, weekdaysAfter(file.lastTradeDate, snap.tradeDate));
+  } catch {
+    gap = 1;
+  }
   for (const [symbol, m] of bySymbol) {
     if (seen.has(symbol)) continue;
-    m.missingDays += 1;
+    m.missingDays += gap;
     if (m.missingDays >= INACTIVE_AFTER) m.status = 'inactive';
   }
 

@@ -13,20 +13,30 @@ export class EodhdUnavailableError extends Error {
 type Row = { date?: unknown; close?: unknown; volume?: unknown };
 
 export function parseEodhd(json: unknown): Bar[] {
+  return parseEodhdWithStats(json).bars;
+}
+
+/** Same as parseEodhd, but also reports how many rows were dropped. */
+export function parseEodhdWithStats(json: unknown): { bars: Bar[]; dropped: number } {
   if (!Array.isArray(json)) throw new Error('EODHD response is not a list');
   const out: Bar[] = [];
+  let dropped = 0;
   for (const r of json as Row[]) {
-    if (!r || typeof r.date !== 'string' || typeof r.close !== 'number' || !(r.close > 0)) continue;
+    if (!r || typeof r.date !== 'string' || typeof r.close !== 'number' || !(r.close > 0)) {
+      dropped++;
+      continue;
+    }
     let date: string;
     try {
       date = toISODate(r.date);
     } catch {
+      dropped++;
       continue;
     }
     const volume = typeof r.volume === 'number' && r.volume > 0 ? r.volume : 0;
     out.push({ date, close: r.close, volume, traded: volume > 0, source: 'eodhd' });
   }
-  return out;
+  return { bars: out, dropped };
 }
 
 /** Error messages never include the URL, because the URL carries the API key. */
@@ -53,6 +63,14 @@ export async function fetchEodhd(
   if (res.status === 429 || res.status === 402) {
     throw new EodhdLimitError(`EODHD daily limit reached (HTTP ${res.status})`);
   }
-  if (!res.ok) throw new Error(`EODHD HTTP ${res.status}`);
+  if (!res.ok) {
+    let snippet = '';
+    try {
+      snippet = `: ${(await res.text()).slice(0, 120)}`;
+    } catch {
+      // ignore body read errors
+    }
+    throw new Error(`EODHD HTTP ${res.status}${snippet}`);
+  }
   return res.json();
 }

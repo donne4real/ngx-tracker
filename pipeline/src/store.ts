@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import type { History, Report, StocksFile, Summary } from './types.js';
 
@@ -12,7 +12,11 @@ export class DataStore {
   constructor(readonly dir: string) {}
 
   async readStocks(): Promise<StocksFile> {
-    return (await this.readJson<StocksFile>('stocks.json')) ?? { lastTradeDate: null, stocks: [] };
+    const f = (await this.readJson<StocksFile>('stocks.json')) ?? { lastTradeDate: null, stocks: [] };
+    if (!Array.isArray((f as StocksFile).stocks)) {
+      throw new Error('stocks.json is corrupt: expected { lastTradeDate, stocks[] }');
+    }
+    return f;
   }
 
   readSummary(): Promise<Summary | null> {
@@ -21,10 +25,12 @@ export class DataStore {
 
   async readHistories(symbols: Iterable<string>): Promise<Map<string, History>> {
     const map = new Map<string, History>();
-    for (const s of symbols) {
-      const h = await this.readJson<History>(`history/${s}.json`);
-      if (h) map.set(s, h);
-    }
+    await Promise.all(
+      [...symbols].map(async (s) => {
+        const h = await this.readJson<History>(`history/${s}.json`);
+        if (h) map.set(s, h);
+      }),
+    );
     return map;
   }
 
@@ -54,6 +60,8 @@ export class DataStore {
   private async writeText(rel: string, text: string): Promise<void> {
     const p = join(this.dir, rel);
     await mkdir(dirname(p), { recursive: true });
-    await writeFile(p, text, 'utf8');
+    const tmp = `${p}.${process.pid}.tmp`;
+    await writeFile(tmp, text, 'utf8');
+    await rename(tmp, p);
   }
 }

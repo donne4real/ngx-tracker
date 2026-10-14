@@ -38,12 +38,22 @@ export function StockPage({ summary, symbol }: { summary: Summary; symbol: strin
     return () => {
       live = false;
     };
-  }, [symbol, row]);
+  }, [symbol, !!row]);
 
   const shownBars = useMemo(() => (history ? barsInRange(history.bars, range, summary.asOf) : []), [history, range, summary.asOf]);
+  const stats = useMemo(() => (history ? stockStats(history.bars, summary.asOf) : null), [history, summary.asOf]);
 
-  if (!row || history === null) return <NotFound symbol={symbol} />;
-  const stats = history ? stockStats(history.bars, summary.asOf) : null;
+  if (!row) return <NotFound symbol={symbol} />;
+  if (history === null) {
+    return (
+      <section className="card">
+        <h2>History not available</h2>
+        <p>
+          {symbol} is tracked, but its price history file is missing. <a href="#/">Back to all stocks</a>
+        </p>
+      </section>
+    );
+  }
 
   return (
     <>
@@ -75,7 +85,7 @@ export function StockPage({ summary, symbol }: { summary: Summary; symbol: strin
         </div>
         {error && <p role="alert">{error}</p>}
         {history === undefined && !error && <p className="muted">Loading history…</p>}
-        {history && <PriceChart bars={shownBars} />}
+        {history && (shownBars.length === 0 ? <p className="muted">No data in this range.</p> : <PriceChart bars={shownBars} />)}
       </section>
 
       {stats && (

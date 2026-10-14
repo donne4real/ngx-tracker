@@ -47,25 +47,25 @@ const on = (date: string, over: Partial<RunDeps> = {}) => deps({ fetchKobo: asyn
 const readJson = async (rel: string) => JSON.parse(await readFile(join(dir, rel), 'utf8'));
 
 describe('runDaily', () => {
-  it('writes nothing while the market is open', async () => {
+  it('writes only a report while the market is open', async () => {
     const r = await runDaily(deps({ fetchKobo: async () => kobo('open') }));
     expect(r.outcome).toBe('market-open');
-    expect(await readdir(dir)).toEqual([]);
+    expect(await readdir(dir)).toEqual(['report.json']);
     expect(eodCalls).toEqual([]);
   });
 
-  it('writes nothing unless Kobo explicitly says closed', async () => {
+  it('writes only a report unless Kobo explicitly says closed', async () => {
     for (const status of ['pre-open', 'Open', 'halted', 'unknown']) {
       const r = await runDaily(deps({ fetchKobo: async () => kobo(status) }));
       expect(r.outcome).toBe('market-open');
     }
-    expect(await readdir(dir)).toEqual([]);
+    expect(await readdir(dir)).toEqual(['report.json']);
   });
 
-  it('writes nothing when the snapshot was taken before the NGX close', async () => {
+  it('writes only a report when the snapshot was taken before the NGX close', async () => {
     const r = await runDaily(deps({ fetchKobo: async () => kobo('closed', '2026-09-25', '2026-09-25T11:00:00.000Z') }));
     expect(r.outcome).toBe('not-final');
-    expect(await readdir(dir)).toEqual([]);
+    expect(await readdir(dir)).toEqual(['report.json']);
     expect(eodCalls).toEqual([]);
   });
 

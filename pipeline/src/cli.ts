@@ -22,22 +22,36 @@ function readDotEnv(path: string): Record<string, string> {
 }
 
 async function main() {
-  const { values } = parseArgs({ options: { 'data-dir': { type: 'string' }, backfill: { type: 'string' }, 'backfill-only': { type: 'boolean' } } });
+  const { values } = parseArgs({
+    options: { 'data-dir': { type: 'string' }, backfill: { type: 'string' }, 'backfill-only': { type: 'boolean' }, 'retry-failed': { type: 'boolean' } },
+  });
   const env: Record<string, string | undefined> = { ...readDotEnv(resolve(repoRoot, '.env')), ...process.env };
   const koboKey = env.KOBO_API_KEY;
   const eodKey = env.EODHD_API_KEY;
   const backfillOnly = values['backfill-only'] === true;
   if (!eodKey || (!backfillOnly && !koboKey)) {
-    throw new Error('KOBO_API_KEY and EODHD_API_KEY must be set (in .env locally, or as GitHub secrets)');
+    throw new Error(
+      backfillOnly
+        ? 'EODHD_API_KEY must be set (in .env locally, or as GitHub secrets)'
+        : 'KOBO_API_KEY and EODHD_API_KEY must be set (in .env locally, or as GitHub secrets)',
+    );
   }
   const dataDir = values['data-dir'] ? resolve(process.cwd(), values['data-dir']) : resolve(repoRoot, 'data');
-  const backfillPerRun = values.backfill !== undefined ? Number(values.backfill) : undefined;
+  let backfillPerRun: number | undefined;
+  if (values.backfill !== undefined) {
+    const n = Number(values.backfill);
+    if (!Number.isInteger(n) || n < 0 || n > 100) {
+      throw new Error(`--backfill must be an integer 0-100, got ${JSON.stringify(values.backfill)}`);
+    }
+    backfillPerRun = n;
+  }
 
   const common = {
     fetchEodhd: (symbol: string, from: string, to: string) => fetchEodhd(symbol, from, to, eodKey),
     store: new DataStore(dataDir),
     now: () => new Date(),
     backfillPerRun,
+    retryFailed: values['retry-failed'] === true,
   };
   const report = backfillOnly
     ? await runBackfillOnly(common)

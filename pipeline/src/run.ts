@@ -1,5 +1,5 @@
 import { BACKFILL_PER_RUN, MAX_BACKFILL_ATTEMPTS, backfillRange, mergeBackfill, pickBackfills } from './backfill.js';
-import { EodhdLimitError, EodhdUnavailableError, parseEodhd } from './eodhd.js';
+import { EodhdLimitError, EodhdUnavailableError, parseEodhdWithStats } from './eodhd.js';
 import { isFinalSnapshot, parseKoboSnapshot } from './kobo.js';
 import { appendSnapshot, isNewTradeDate } from './merge.js';
 import { buildSummary } from './metrics.js';
@@ -13,6 +13,7 @@ export interface RunDeps {
   now: () => Date;
   minStocks?: number;
   backfillPerRun?: number;
+  retryFailed?: boolean;
 }
 
 export type BackfillDeps = Omit<RunDeps, 'fetchKobo' | 'minStocks'>;
@@ -30,7 +31,8 @@ async function backfillStocks(
     const first = meta.firstKoboDate as string;
     const { from, to } = backfillRange(first);
     try {
-      const bars = parseEodhd(await fetchEodhd(meta.symbol, from, to));
+      const { bars, dropped } = parseEodhdWithStats(await fetchEodhd(meta.symbol, from, to));
+      if (dropped > 0) report.warnings.push(`${meta.symbol}: dropped ${dropped} unusable EODHD rows`);
       if (bars.length === 0) throw new Error('EODHD returned no prices');
       const current = histories.get(meta.symbol) ?? { symbol: meta.symbol, bars: [] };
       histories.set(meta.symbol, mergeBackfill(current, bars, first));
@@ -62,18 +64,35 @@ export async function runDaily(deps: RunDeps): Promise<Report> {
   // Kobo's prices keep moving until the close; never store an intraday price.
   // Allow-list: only an explicit 'closed' counts, and the snapshot itself must
   // postdate the close (the status comes from a calendar, not the feed).
-  if (snap.market.status !== 'closed') return { ...report, outcome: 'market-open' };
-  if (!isFinalSnapshot(snap)) return { ...report, outcome: 'not-final' };
+  if (snap.market.status !== 'closed') {
+    const r = { ...report, outcome: 'market-open' as const };
+    await deps.store.writeReport(r);
+    return r;
+  }
+  if (!isFinalSnapshot(snap)) {
+    const r = { ...report, outcome: 'not-final' as const };
+    await deps.store.writeReport(r);
+    return r;
+  }
 
   let file = await deps.store.readStocks();
   // Weekend, holiday or a second scheduled attempt: nothing new, and no EODHD calls.
-  if (!isNewTradeDate(file, snap.tradeDate)) return { ...report, outcome: 'duplicate-date' };
+  if (!isNewTradeDate(file, snap.tradeDate)) {
+    const r = { ...report, outcome: 'duplicate-date' as const };
+    await deps.store.writeReport(r);
+    return r;
+  }
 
   const symbols = new Set([...file.stocks.map((s) => s.symbol), ...snap.stocks.map((s) => s.symbol)]);
   const histories = await deps.store.readHistories(symbols);
   file = appendSnapshot(file, histories, snap);
 
-  await backfillStocks(pickBackfills(file, deps.backfillPerRun ?? BACKFILL_PER_RUN, snap.tradeDate), histories, deps.fetchEodhd, report);
+  await backfillStocks(
+    pickBackfills(file, deps.backfillPerRun ?? BACKFILL_PER_RUN, snap.tradeDate, { includeFailed: deps.retryFailed === true }),
+    histories,
+    deps.fetchEodhd,
+    report,
+  );
 
   const summary = buildSummary(file, histories, snap.market, snap.tradeDate, report.runAt);
   for (const h of histories.values()) await deps.store.writeHistory(h);
