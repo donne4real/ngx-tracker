@@ -27,8 +27,9 @@ In the Cloudflare dashboard: **Zero Trust → Access → Applications → Add an
 
 ## Daily data
 
-- `data/summary.json`: everything the home page needs
+- `data/summary.json`: everything the home page needs (now with trailing-12m DPS and yield per stock)
 - `data/history/<SYMBOL>.json`: one file per stock, one bar per line
+- `data/dividends/<SYMBOL>.json`: dividend history per stock, refreshed ~20 stocks per run (free Kobo tier)
 - `data/stocks.json`: tracked stocks, status (active/inactive) and backfill progress
 - `data/report.json`: the last run's outcome, backfill results and warnings
 

@@ -3,7 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { fetchEodhd } from './eodhd.js';
-import { fetchKobo } from './kobo.js';
+import { fetchDividends, fetchKobo } from './kobo.js';
 import { runBackfillOnly, runDaily } from './run.js';
 import { DataStore } from './store.js';
 
@@ -23,7 +23,7 @@ function readDotEnv(path: string): Record<string, string> {
 
 async function main() {
   const { values } = parseArgs({
-    options: { 'data-dir': { type: 'string' }, backfill: { type: 'string' }, 'backfill-only': { type: 'boolean' }, 'retry-failed': { type: 'boolean' } },
+    options: { 'data-dir': { type: 'string' }, backfill: { type: 'string' }, 'backfill-only': { type: 'boolean' }, 'retry-failed': { type: 'boolean' }, dividends: { type: 'string' } },
   });
   const env: Record<string, string | undefined> = { ...readDotEnv(resolve(repoRoot, '.env')), ...process.env };
   const koboKey = env.KOBO_API_KEY;
@@ -45,13 +45,23 @@ async function main() {
     }
     backfillPerRun = n;
   }
+  let dividendsPerRun: number | undefined;
+  if (values.dividends !== undefined) {
+    const n = Number(values.dividends);
+    if (!Number.isInteger(n) || n < 0 || n > 100) {
+      throw new Error(`--dividends must be an integer 0-100, got ${JSON.stringify(values.dividends)}`);
+    }
+    dividendsPerRun = n;
+  }
 
   const common = {
     fetchEodhd: (symbol: string, from: string, to: string) => fetchEodhd(symbol, from, to, eodKey),
+    fetchDividends: koboKey ? (symbol: string) => fetchDividends(symbol, koboKey) : undefined,
     store: new DataStore(dataDir),
     now: () => new Date(),
     backfillPerRun,
     retryFailed: values['retry-failed'] === true,
+    dividendsPerRun,
   };
   const report = backfillOnly
     ? await runBackfillOnly(common)
@@ -60,6 +70,8 @@ async function main() {
   console.log(`Outcome: ${report.outcome} (trade date ${report.tradeDate})`);
   const bf = report.backfill;
   console.log(`Backfill: ${bf.ok.length} ok, ${bf.failed.length} failed${bf.stoppedEarly ? `; stopped early: ${bf.stoppedEarly}` : ''}`);
+  const dv = report.dividends;
+  console.log(`Dividends: ${dv.ok.length} ok, ${dv.failed.length} failed`);
   // Shows as a yellow annotation on the GitHub Actions run.
   if (process.env.GITHUB_ACTIONS && bf.stoppedEarly) console.log(`::warning title=EODHD backfill paused::${bf.stoppedEarly}`);
   for (const w of report.warnings) console.log(`Warning: ${w}`);

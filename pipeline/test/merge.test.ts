@@ -7,6 +7,7 @@ const snap = (tradeDate: string, rows: Array<[string, number, number]>): Snapsho
   asOf: tradeDate + 'T15:20:00Z',
   stocks: rows.map(([symbol, close, volume]) => ({
     symbol, name: `${symbol} Plc`, close, volume, sector: 'ICT', board: 'Main Board', marketCap: 100,
+    prevClose: null, changePct: null, change7d: null, sharesOutstanding: 0,
   })),
   market: { asi: 1, pctChange: 0, advancers: 0, decliners: 0, unchanged: 0, status: 'closed' },
   warnings: [],

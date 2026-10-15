@@ -45,7 +45,7 @@ describe('DataStore', () => {
 
   it('writes atomically (no .tmp left behind)', async () => {
     await store.writeStocks({ lastTradeDate: '2026-09-25', stocks: [] });
-    await store.writeReport({ runAt: '2026-09-25T16:00:00Z', outcome: 'appended', tradeDate: '2026-09-25', backfill: { ok: [], failed: [], stoppedEarly: null }, warnings: [] });
+    await store.writeReport({ runAt: '2026-09-25T16:00:00Z', outcome: 'appended', tradeDate: '2026-09-25', backfill: { ok: [], failed: [], stoppedEarly: null }, dividends: { ok: [], failed: [] }, warnings: [] });
     const { readdir } = await import('node:fs/promises');
     const all: string[] = [];
     const walk = async (d: string) => {

@@ -12,6 +12,7 @@ describe('parseKoboSnapshot', () => {
     expect(s.stocks[0]).toEqual({
       symbol: 'MTNN', name: 'MTN Nigeria Communications Plc', close: 863, volume: 4002657,
       sector: 'ICT', board: 'Premium Board', marketCap: 18119168368889,
+      prevClose: 855, changePct: 0.94, change7d: 5.89, sharesOutstanding: 20995560103,
     });
     expect(s.market).toEqual({ asi: 252471.31, pctChange: 0.13, advancers: 34, decliners: 25, unchanged: 5, status: 'open' });
     expect(s.warnings).toEqual([]);

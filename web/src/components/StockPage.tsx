@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import type { History, Summary } from '../../../pipeline/src/types';
-import { loadHistory } from '../api';
+import type { DividendHistory, History, Summary } from '../../../pipeline/src/types';
+import { loadDividends, loadHistory } from '../api';
 import { formatDate, formatNaira, formatPct, formatVolume } from '../format';
 import { barsInRange, RANGES, stockStats, type Range } from '../stats';
 import { HORIZON_TABS } from '../horizons';
@@ -23,17 +23,23 @@ const pctClass = (n: number | null | undefined) => (n == null ? 'muted' : n > 0 
 export function StockPage({ summary, symbol }: { summary: Summary; symbol: string }) {
   const row = summary.stocks.find((s) => s.symbol === symbol);
   const [history, setHistory] = useState<History | null | undefined>(undefined);
+  const [dividends, setDividends] = useState<DividendHistory | null | undefined>(undefined);
   const [error, setError] = useState<string | null>(null);
   const [range, setRange] = useState<Range>('1Y');
 
   useEffect(() => {
     let live = true;
     setHistory(undefined);
+    setDividends(undefined);
     setError(null);
     if (!row) return;
     loadHistory(symbol).then(
       (h) => live && setHistory(h),
       (e: Error) => live && setError(e.message),
+    );
+    loadDividends(symbol).then(
+      (d) => live && setDividends(d),
+      () => live && setDividends(null),
     );
     return () => {
       live = false;
@@ -95,6 +101,38 @@ export function StockPage({ summary, symbol }: { summary: Summary; symbol: strin
             <div className="stat"><span className="label">{stats.fullYear ? '52-week low' : `Low since ${formatDate(stats.from)}`}</span><span className="value">{formatNaira(stats.low)}</span></div>
             <div className="stat"><span className="label">Average daily volume</span><span className="value">{formatVolume(stats.avgVolume)}</span></div>
           </div>
+        </section>
+      )}
+
+      {(row.ttmDps != null || row.divYield != null || (dividends && dividends.records.length > 0)) && (
+        <section className="card">
+          <h3>Dividends</h3>
+          <div className="stats">
+            <div className="stat"><span className="label">TTM payout</span><span className="value">{row.ttmDps != null ? formatNaira(row.ttmDps) : '—'}</span></div>
+            <div className="stat"><span className="label">Yield</span><span className="value">{formatPct(row.divYield)}</span></div>
+            {dividends && dividends.latestExDate && (
+              <div className="stat"><span className="label">Latest ex-date</span><span className="value">{formatDate(dividends.latestExDate)}</span></div>
+            )}
+          </div>
+          {dividends && dividends.records.length > 0 && (
+            <div className="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Ex-date</th><th className="num">Per share</th><th>Type</th><th>Pay date</th></tr>
+                </thead>
+                <tbody>
+                  {dividends.records.slice(-4).reverse().map((d) => (
+                    <tr key={d.exDate + d.dps}>
+                      <td>{formatDate(d.exDate)}</td>
+                      <td className="num">{formatNaira(d.dps)}</td>
+                      <td>{d.kind ? d.kind[0].toUpperCase() + d.kind.slice(1) : '—'}</td>
+                      <td>{d.payDate ? formatDate(d.payDate) : '—'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </section>
       )}
     </>

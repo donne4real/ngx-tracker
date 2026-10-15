@@ -1,5 +1,5 @@
 import { toISODate } from './dates.js';
-import type { KoboStock, Snapshot } from './types.js';
+import type { DividendHistory, DividendRecord, KoboStock, Snapshot } from './types.js';
 
 export const KOBO_URL = 'https://koboterminal.com/api/ngxdata/stocks';
 const SYMBOL_RE = /^[A-Z0-9][A-Z0-9.]*$/;
@@ -16,6 +16,9 @@ const num = (v: unknown, fallback: number) => {
   if (typeof v === 'string' && v.trim() !== '' && Number.isFinite(Number(v))) return Number(v);
   return fallback;
 };
+/** Nullable numeric snapshot extra (previous_close, change_percent, …): null when absent. */
+const numOrNull = (v: unknown): number | null =>
+  (typeof v === 'number' && Number.isFinite(v) ? v : null);
 const str = (v: unknown, fallback: string) => (typeof v === 'string' && v.trim() !== '' ? v.trim() : fallback);
 
 function isoOrNull(v: unknown): string | null {
@@ -68,6 +71,10 @@ export function parseKoboSnapshot(json: unknown, { minStocks = 100 }: { minStock
       sector: str(s.sector, 'Unclassified'),
       board: str(s.market, ''),
       marketCap: num(s.market_cap, 0),
+      prevClose: numOrNull(s.previous_close),
+      changePct: numOrNull(s.official_change_percent ?? s.change_percent),
+      change7d: numOrNull(s.pct_change_7d),
+      sharesOutstanding: Math.max(0, num(s.shares_outstanding, 0)),
     });
   }
   if (stocks.length < minStocks) {
@@ -104,4 +111,79 @@ export async function fetchKobo(apiKey: string, fetchImpl: typeof fetch = fetch)
   const res = await fetchImpl(KOBO_URL, { headers: { 'X-API-Key': apiKey, Accept: 'application/json' } });
   if (!res.ok) throw new Error(`Kobo HTTP ${res.status}`);
   return res.json();
+}
+
+const DIV_URL = 'https://koboterminal.com/api/ngxdata/dividends';
+
+function dividendKind(text: unknown): string | null {
+  if (typeof text !== 'string') return null;
+  const t = text.toLowerCase();
+  if (t.includes('special')) return 'special';
+  if (t.includes('interim')) return 'interim';
+  if (t.includes('final')) return 'final';
+  return null;
+}
+
+/** Parse one /dividends/:symbol response into a DividendHistory (drops unusable rows). */
+export function parseDividends(symbol: string, json: unknown, fetchedAt: string): DividendHistory {
+  if (!isObj(json) || !Array.isArray(json.history)) {
+    throw new ValidationError(`Kobo dividends for ${symbol}: no history array`);
+  }
+  const records: DividendRecord[] = [];
+  for (const r of json.history) {
+    if (!isObj(r) || typeof r.ex_dividend_date !== 'string') continue;
+    let exDate: string;
+    try {
+      exDate = toISODate(r.ex_dividend_date);
+    } catch {
+      continue;
+    }
+    const dps = typeof r.dividend_per_share === 'number' && Number.isFinite(r.dividend_per_share) && r.dividend_per_share > 0
+      ? r.dividend_per_share
+      : null;
+    if (dps === null) continue;
+    let recordDate: string | null = null;
+    let payDate: string | null = null;
+    try {
+      recordDate = typeof r.record_date === 'string' ? toISODate(r.record_date) : null;
+    } catch {
+      recordDate = null;
+    }
+    try {
+      payDate = typeof r.pay_date === 'string' ? toISODate(r.pay_date) : null;
+    } catch {
+      payDate = null;
+    }
+    records.push({ exDate, recordDate, payDate, dps, kind: dividendKind(r.raw_declared_text) });
+  }
+  records.sort((a, b) => (a.exDate < b.exDate ? -1 : a.exDate > b.exDate ? 1 : 0));
+  let latestExDate: string | null = null;
+  try {
+    latestExDate = typeof json.latest_ex_dividend_date === 'string' ? toISODate(json.latest_ex_dividend_date) : records.at(-1)?.exDate ?? null;
+  } catch {
+    latestExDate = records.at(-1)?.exDate ?? null;
+  }
+  return { symbol, fetchedAt, latestExDate, records };
+}
+
+export async function fetchDividends(symbol: string, apiKey: string, fetchImpl: typeof fetch = fetch): Promise<unknown> {
+  const res = await fetchImpl(`${DIV_URL}/${encodeURIComponent(symbol)}`, { headers: { 'X-API-Key': apiKey, Accept: 'application/json' } });
+  if (!res.ok) throw new Error(`Kobo dividends HTTP ${res.status} for ${symbol}`);
+  return res.json();
+}
+
+/** Sum of cash DPS with ex-date in (asOf − 12 months, asOf]. */
+export function trailingDps(records: DividendRecord[], asOf: string): number | null {
+  if (records.length === 0) return null;
+  const y = Number(asOf.slice(0, 4));
+  const start = `${y - 1}${asOf.slice(4)}`;
+  let sum = 0;
+  let n = 0;
+  for (const r of records) {
+    if (r.exDate > start && r.exDate <= asOf) {
+      sum += r.dps;
+      n++;
+    }
+  }
+  return n > 0 ? Math.round(sum * 100) / 100 : null;
 }

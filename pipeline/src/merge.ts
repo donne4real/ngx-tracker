@@ -23,11 +23,13 @@ export function appendSnapshot(file: StocksFile, histories: Map<string, History>
       sector: k.sector,
       board: k.board,
       marketCap: k.marketCap,
+      sharesOutstanding: k.sharesOutstanding,
       status: 'active',
       missingDays: 0,
       firstKoboDate: prev?.firstKoboDate ?? snap.tradeDate,
       backfill: prev?.backfill ?? 'pending',
       backfillAttempts: prev?.backfillAttempts ?? 0,
+      dividendsAt: prev?.dividendsAt ?? null,
     });
 
     const h = histories.get(k.symbol) ?? { symbol: k.symbol, bars: [] };

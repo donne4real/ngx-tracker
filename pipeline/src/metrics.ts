@@ -1,5 +1,6 @@
 import { addDays, minusMonths } from './dates.js';
-import type { Bar, Changes, History, Horizon, MarketInfo, MoverRow, Movers, StocksFile, Summary, SummaryRow } from './types.js';
+import { trailingDps } from './kobo.js';
+import type { Bar, Changes, DividendHistory, History, Horizon, MarketInfo, MoverRow, Movers, StocksFile, Summary, SummaryRow } from './types.js';
 
 export const LARGE_MOVE_PCT = 10;
 export const MOVERS_COUNT = 10;
@@ -62,6 +63,7 @@ export function buildSummary(
   market: MarketInfo,
   asOf: string,
   generatedAt: string,
+  dividends: Map<string, DividendHistory> = new Map(),
 ): Summary {
   const rows: SummaryRow[] = [];
   for (const m of file.stocks) {
@@ -69,6 +71,8 @@ export function buildSummary(
     const last = bars.at(-1);
     if (!last) continue;
     const changes = computeChanges(bars);
+    const ttmDps = trailingDps(dividends.get(m.symbol)?.records ?? [], asOf);
+    const divYield = ttmDps !== null && last.close > 0 ? Math.round((ttmDps / last.close) * 10000) / 100 : null;
     rows.push({
       symbol: m.symbol,
       name: m.name,
@@ -82,6 +86,8 @@ export function buildSummary(
       historyStart: bars[0].date,
       changes,
       largeMove: changes.day !== null && Math.abs(changes.day) > LARGE_MOVE_PCT,
+      ttmDps,
+      divYield,
     });
   }
   const noTrade = rows.filter((r) => r.status === 'active' && !r.traded).length;

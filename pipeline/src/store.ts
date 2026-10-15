@@ -1,6 +1,6 @@
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
-import type { History, Report, StocksFile, Summary } from './types.js';
+import type { DividendHistory, History, Report, StocksFile, Summary } from './types.js';
 
 /** One bar per line, so daily git diffs show exactly the new rows. */
 export function formatHistory(h: History): string {
@@ -15,6 +15,11 @@ export class DataStore {
     const f = (await this.readJson<StocksFile>('stocks.json')) ?? { lastTradeDate: null, stocks: [] };
     if (!Array.isArray((f as StocksFile).stocks)) {
       throw new Error('stocks.json is corrupt: expected { lastTradeDate, stocks[] }');
+    }
+    // Forward-fill fields added after tracking began (old files lack them).
+    for (const s of f.stocks) {
+      s.sharesOutstanding ??= 0;
+      s.dividendsAt ??= null;
     }
     return f;
   }
@@ -39,6 +44,12 @@ export class DataStore {
   }
   writeHistory(h: History) {
     return this.writeText(`history/${h.symbol}.json`, formatHistory(h));
+  }
+  readDividends(symbol: string) {
+    return this.readJson<DividendHistory>(`dividends/${symbol}.json`);
+  }
+  writeDividends(d: DividendHistory) {
+    return this.writeText(`dividends/${d.symbol}.json`, JSON.stringify(d, null, 2) + '\n');
   }
   /** Compact: the website downloads this file on every visit. */
   writeSummary(s: Summary) {

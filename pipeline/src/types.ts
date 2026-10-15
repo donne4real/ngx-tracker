@@ -24,12 +24,16 @@ export interface StockMeta {
   sector: string;
   board: string;
   marketCap: number;
+  /** optional: absent from files written before Oct 2026 (forward-filled on read) */
+  sharesOutstanding?: number;
   status: 'active' | 'inactive';
   /** consecutive trading days missing from Kobo */
   missingDays: number;
   firstKoboDate: ISODate | null;
   backfill: BackfillState;
   backfillAttempts: number;
+  /** last date this stock's dividend history was refreshed (null/absent = never) */
+  dividendsAt?: ISODate | null;
 }
 
 export interface StocksFile {
@@ -45,6 +49,11 @@ export interface KoboStock {
   sector: string;
   board: string;
   marketCap: number;
+  /** all optional: present in the live snapshot, absent from old fixtures */
+  prevClose: number | null;
+  changePct: number | null;
+  change7d: number | null;
+  sharesOutstanding: number;
 }
 
 export interface MarketInfo {
@@ -82,6 +91,10 @@ export interface SummaryRow {
   historyStart: ISODate;
   changes: Changes;
   largeMove: boolean;
+  /** trailing-12-month cash DPS in NGN (null = unknown) */
+  ttmDps: number | null;
+  /** ttmDps / close * 100 (null = unknown) */
+  divYield: number | null;
 }
 
 export interface MoverRow {
@@ -109,6 +122,24 @@ export interface Summary {
 
 export type RunOutcome = 'appended' | 'duplicate-date' | 'market-open' | 'not-final' | 'backfill-only';
 
+export interface DividendRecord {
+  exDate: ISODate;
+  recordDate: ISODate | null;
+  payDate: ISODate | null;
+  /** cash DPS in NGN */
+  dps: number;
+  /** interim / final / special when the announcement text says so */
+  kind: string | null;
+}
+
+export interface DividendHistory {
+  symbol: string;
+  /** when this file was refreshed */
+  fetchedAt: ISODate;
+  latestExDate: ISODate | null;
+  records: DividendRecord[];
+}
+
 export interface Report {
   runAt: string;
   outcome: RunOutcome;
@@ -117,6 +148,10 @@ export interface Report {
     ok: string[];
     failed: { symbol: string; error: string }[];
     stoppedEarly: string | null;
+  };
+  dividends: {
+    ok: string[];
+    failed: { symbol: string; error: string }[];
   };
   warnings: string[];
 }

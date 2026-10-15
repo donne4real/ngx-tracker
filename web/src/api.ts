@@ -1,4 +1,4 @@
-import type { History, Summary } from '../../pipeline/src/types';
+import type { DividendHistory, History, Summary } from '../../pipeline/src/types';
 
 const SYMBOL_RE = /^[A-Z0-9][A-Z0-9.\-]*$/;
 const isJson = (r: Response) => (r.headers.get('content-type') ?? '').includes('json');
@@ -14,6 +14,7 @@ function isValidHistory(j: unknown): j is History {
 }
 
 const historyCache = new Map<string, History>();
+const dividendsCache = new Map<string, DividendHistory>();
 
 export async function loadSummary(fetchImpl: typeof fetch = fetch): Promise<Summary> {
   const r = await fetchImpl('data/summary.json', { cache: 'no-cache' });
@@ -35,4 +36,20 @@ export async function loadHistory(symbol: string, fetchImpl: typeof fetch = fetc
   if (!isValidHistory(j)) throw new Error(`Price history for ${symbol} is corrupt`);
   historyCache.set(symbol, j);
   return j;
+}
+
+/** null = no dividend file yet (batch hasn't reached this stock, or it pays none). */
+export async function loadDividends(symbol: string, fetchImpl: typeof fetch = fetch): Promise<DividendHistory | null> {
+  if (!SYMBOL_RE.test(symbol) || /^\.+$/.test(symbol.replace(/[-]/g, ''))) return null;
+  const cached = dividendsCache.get(symbol);
+  if (cached) return cached;
+  const r = await fetchImpl(`data/dividends/${encodeURIComponent(symbol)}.json`, { cache: 'no-cache' });
+  if (r.status === 404 || (r.ok && !isJson(r))) return null;
+  if (!r.ok) throw new Error(`Couldn't load dividends (HTTP ${r.status})`);
+  const j: unknown = await r.json();
+  if (typeof j !== 'object' || j === null || !Array.isArray((j as DividendHistory).records)) {
+    throw new Error(`Dividends for ${symbol} are corrupt`);
+  }
+  dividendsCache.set(symbol, j as DividendHistory);
+  return j as DividendHistory;
 }

@@ -22,6 +22,18 @@ describe('StockPage', () => {
     expect(await screen.findByRole('heading', { name: /history not available/i })).toBeInTheDocument();
   });
 
+  it('shows the dividend card with TTM payout and yield', async () => {
+    respondWith({ symbol: 'MTNN', bars: [
+      { date: '2026-09-24', close: 855, volume: 10, traded: true, source: 'eodhd' },
+      { date: '2026-09-25', close: 100, volume: 20, traded: true, source: 'kobo' },
+    ] });
+    const row = makeRow({ symbol: 'MTNN', close: 100, ttmDps: 2.5, divYield: 2.5 });
+    render(<StockPage summary={makeSummary([row])} symbol="MTNN" />);
+    expect(await screen.findByRole('heading', { name: /dividends/i })).toBeInTheDocument();
+    expect(screen.getByText('TTM payout')).toBeInTheDocument();
+    expect(screen.getByText('+2.50%')).toBeInTheDocument();
+  });
+
   it('shows price, changes, partial-history label, large-move flag and the chart', async () => {
     respondWith({ symbol: 'MTNN', bars: [
       { date: '2026-09-24', close: 855, volume: 10, traded: true, source: 'eodhd' },

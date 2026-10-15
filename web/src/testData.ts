@@ -12,7 +12,7 @@ export function makeRow(over: Partial<SummaryRow> & { symbol: string }): Summary
     name: `${over.symbol} Plc`, sector: 'ICT', board: 'Main Board', status: 'active', close: 100, volume: 1000,
     traded: true, lastDate: '2026-09-25', historyStart: '2025-09-25',
     changes: changes({ day: 1, week: 2, month: 3, '3m': 4, '6m': 5, ytd: 6, '1y': 7 }),
-    largeMove: false, ...over,
+    largeMove: false, ttmDps: null, divYield: null, ...over,
   };
 }
 
