@@ -1,0 +1,42 @@
+{
+  "symbol": "ALEX",
+  "fetchedAt": "2026-10-15",
+  "latestExDate": "2022-05-30",
+  "records": [
+    {
+      "exDate": "2017-06-28",
+      "recordDate": "2017-06-23",
+      "payDate": "2017-08-07",
+      "dps": 0.085,
+      "kind": null
+    },
+    {
+      "exDate": "2018-08-13",
+      "recordDate": "2018-08-10",
+      "payDate": "2018-09-24",
+      "dps": 0.085,
+      "kind": null
+    },
+    {
+      "exDate": "2019-06-17",
+      "recordDate": "2019-06-14",
+      "payDate": "2019-09-02",
+      "dps": 0.085,
+      "kind": null
+    },
+    {
+      "exDate": "2021-05-28",
+      "recordDate": "2021-05-27",
+      "payDate": "2022-04-25",
+      "dps": 0.085,
+      "kind": null
+    },
+    {
+      "exDate": "2022-05-30",
+      "recordDate": "2022-05-27",
+      "payDate": "2022-11-28",
+      "dps": 0.05,
+      "kind": null
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "symbol": "ABBEYBANK",
+  "fetchedAt": "2026-10-15",
+  "latestExDate": "2026-05-13",
+  "records": [
+    {
+      "exDate": "2024-05-13",
+      "recordDate": "2024-05-10",
+      "payDate": "2024-05-31",
+      "dps": 0.04,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-13",
+      "recordDate": "2025-05-12",
+      "payDate": "2025-05-28",
+      "dps": 0.06,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-13",
+      "recordDate": "2026-05-12",
+      "payDate": "2026-05-25",
+      "dps": 0.12,
+      "kind": null
+    }
+  ]
+}

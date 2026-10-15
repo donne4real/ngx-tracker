@@ -1,17 +1,19 @@
 {
-  "lastTradeDate": "2026-10-14",
+  "lastTradeDate": "2026-10-15",
   "stocks": [
     {
       "symbol": "ABBEYBANK",
       "name": "Abbey Bank Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 71076923078,
+      "marketCap": 67523076924.100006,
+      "sharesOutstanding": 10153846154,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "ABCTRANS",
@@ -19,11 +21,13 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 14475361738.75,
+      "sharesOutstanding": 2392621775,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "ACADEMY",
@@ -31,23 +35,27 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 4626720000,
+      "sharesOutstanding": 907200000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "ACCESSCORP",
       "name": "Access Holdings Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Premium Board",
-      "marketCap": 1514226611497.2,
+      "marketCap": 1508894827653.9001,
+      "sharesOutstanding": 53317838433,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "AFRINSURE",
@@ -55,23 +63,27 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 4117000000,
+      "sharesOutstanding": 20585000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "AFRIPRUD",
       "name": "Africa Prudential Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 43200000000,
+      "marketCap": 44000000000,
+      "sharesOutstanding": 4000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "AFROMEDIA",
@@ -79,23 +91,27 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 1065371276.64,
+      "sharesOutstanding": 4439046986,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "AIICO",
       "name": "AIICO Insurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 144956893007.52,
+      "marketCap": 148251367848.6,
+      "sharesOutstanding": 36605276012,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "AIRTELAFRI",
@@ -103,11 +119,13 @@
       "sector": "ICT",
       "board": "Main Board",
       "marketCap": 23676354475200,
+      "sharesOutstanding": 3758151504,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "ALEX",
@@ -115,35 +133,41 @@
       "sector": "NATURAL RESOURCES",
       "board": "Main Board",
       "marketCap": 2177564400,
+      "sharesOutstanding": 219956000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "ARADEL",
       "name": "Aradel Holdings Plc",
       "sector": "OIL AND GAS",
       "board": "Main Board",
-      "marketCap": 6082782104000,
+      "marketCap": 6516832055564,
+      "sharesOutstanding": 4344844360,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "AUSTINLAZ",
       "name": "Austin Laz & Company Plc",
       "sector": "INDUSTRIAL GOODS",
       "board": "Main Board",
-      "marketCap": 2613261200,
+      "marketCap": 2872427600,
+      "sharesOutstanding": 1079860000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "AVACAP",
@@ -151,11 +175,13 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 30000000000,
+      "sharesOutstanding": 5000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "AVAIF",
@@ -163,11 +189,13 @@
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Main Board",
       "marketCap": 4075000000,
+      "sharesOutstanding": 4075,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "BAPLC",
@@ -175,11 +203,13 @@
       "sector": "ICT",
       "board": "Growth Board",
       "marketCap": 62500000,
+      "sharesOutstanding": 10000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "BERGER",
@@ -187,11 +217,13 @@
       "sector": "INDUSTRIAL GOODS",
       "board": "Main Board",
       "marketCap": 42777940777.2,
+      "sharesOutstanding": 289823447,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "BETAGLAS",
@@ -199,11 +231,13 @@
       "sector": "INDUSTRIAL GOODS",
       "board": "Main Board",
       "marketCap": 306882813600,
+      "sharesOutstanding": 599966400,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "BUACEMENT",
@@ -211,11 +245,13 @@
       "sector": "INDUSTRIAL GOODS",
       "board": "Main Board",
       "marketCap": 10057713155820,
+      "sharesOutstanding": 33864354060,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "BUAFOODS",
@@ -223,11 +259,13 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 13690800000000,
+      "sharesOutstanding": 18000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "CADBURY",
@@ -235,11 +273,13 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 136817077140,
+      "sharesOutstanding": 2280284619,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": "2026-10-15"
     },
     {
       "symbol": "CAP",
@@ -247,11 +287,13 @@
       "sector": "INDUSTRIAL GOODS",
       "board": "Main Board",
       "marketCap": 88400103750,
+      "sharesOutstanding": 814747500,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CAVERTON",
@@ -259,11 +301,13 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 13737089974.999998,
+      "sharesOutstanding": 3350509750,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CHAMPION",
@@ -271,11 +315,13 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 89479959590,
+      "sharesOutstanding": 8947995959,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CHAMS",
@@ -283,11 +329,13 @@
       "sector": "ICT",
       "board": "Main Board",
       "marketCap": 31500000000,
+      "sharesOutstanding": 9000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CHELLARAM",
@@ -295,11 +343,13 @@
       "sector": "CONGLOMERATES",
       "board": "Growth Board",
       "marketCap": 7012372499.999999,
+      "sharesOutstanding": 722925000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CILEASING",
@@ -307,23 +357,27 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 15922315503.000002,
+      "sharesOutstanding": 2948576945,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CMFC",
       "name": "DEAP Capital Management & Trust Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 5310000000,
+      "marketCap": 5400000000,
+      "sharesOutstanding": 1500000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CNIF",
@@ -331,11 +385,13 @@
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Main Board",
       "marketCap": 13562970000.000002,
+      "sharesOutstanding": 87900000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CONHALLPLC",
@@ -343,11 +399,13 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 76422000000,
+      "sharesOutstanding": 10840000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CONOIL",
@@ -355,23 +413,27 @@
       "sector": "OIL AND GAS",
       "board": "Main Board",
       "marketCap": 145729944570,
+      "sharesOutstanding": 693952117,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CORNERST",
       "name": "Cornerstone Insurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 89923643993.7,
+      "marketCap": 89015324357.40001,
+      "sharesOutstanding": 18166392726,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CUSTODIAN",
@@ -379,11 +441,13 @@
       "sector": "CONGLOMERATES",
       "board": "Main Board",
       "marketCap": 411730493650,
+      "sharesOutstanding": 5881864195,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CUTIX",
@@ -391,35 +455,41 @@
       "sector": "INDUSTRIAL GOODS",
       "board": "Main Board",
       "marketCap": 16556427044.400002,
+      "sharesOutstanding": 7045288104,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "CWG",
       "name": "CWG Plc",
       "sector": "ICT",
       "board": "Main Board",
-      "marketCap": 46078081051.75,
+      "marketCap": 50622768497.950005,
+      "sharesOutstanding": 2524826359,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "DAARCOMM",
       "name": "DAAR Communications Plc",
       "sector": "SERVICES",
       "board": "Main Board",
-      "marketCap": 18840000000,
+      "marketCap": 17640000000,
+      "sharesOutstanding": 12000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "DANGCEM",
@@ -427,23 +497,27 @@
       "sector": "INDUSTRIAL GOODS",
       "board": "Premium Board",
       "marketCap": 17999025653041.7,
+      "sharesOutstanding": 16873559251,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "DANGSUGAR",
       "name": "Dangote Sugar Refinery Plc",
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
-      "marketCap": 825987720388,
+      "marketCap": 815662873883.15,
+      "sharesOutstanding": 12146878241,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "EKOCORP",
@@ -451,35 +525,41 @@
       "sector": "HEALTHCARE",
       "board": "Main Board",
       "marketCap": 2891885266.4,
+      "sharesOutstanding": 498600908,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "ELLAHLAKES",
       "name": "Ellah Lakes Plc",
       "sector": "AGRICULTURE",
       "board": "Main Board",
-      "marketCap": 30672480740.100002,
+      "marketCap": 30865389424,
+      "sharesOutstanding": 3858173678,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "ENAMELWA",
       "name": "Enamelware Nigeria Plc",
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
-      "marketCap": 3094502400,
+      "marketCap": 2786572800,
+      "sharesOutstanding": 76032000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "ETERNA",
@@ -487,23 +567,27 @@
       "sector": "OIL AND GAS",
       "board": "Main Board",
       "marketCap": 52230993112.35,
+      "sharesOutstanding": 1304144647,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "ETI",
       "name": "Ecobank Transnational Incorporated",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 1673050124308.5,
+      "marketCap": 1694408211001.8,
+      "sharesOutstanding": 23731207437,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "ETRANZACT",
@@ -511,11 +595,13 @@
       "sector": "ICT",
       "board": "Main Board",
       "marketCap": 144899997102,
+      "sharesOutstanding": 9199999816,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "EUNISELL",
@@ -523,11 +609,13 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 44736209469,
+      "sharesOutstanding": 236699521,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "FCMB",
@@ -535,23 +623,27 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 470488769014,
+      "sharesOutstanding": 42771706274,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "FIDELITYBK",
       "name": "Fidelity Bank Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 1004244226620,
+      "marketCap": 1009265447753.1001,
+      "sharesOutstanding": 50212211331,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "FIDSON",
@@ -559,47 +651,55 @@
       "sector": "HEALTHCARE",
       "board": "Main Board",
       "marketCap": 190484690825,
+      "sharesOutstanding": 2294996275,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "FIRSTHOLDCO",
       "name": "First HoldCo Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Premium Board",
-      "marketCap": 6083487905387.899,
+      "marketCap": 6134609652492,
+      "sharesOutstanding": 44453693134,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "FTGINSURE",
       "name": "Fortis Global Insurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 22594303525.5,
+      "marketCap": 24530958113.399998,
+      "sharesOutstanding": 12911030586,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "FTNCOCOA",
       "name": "FTN Cocoa Processors Plc",
       "sector": "AGRICULTURE",
       "board": "Main Board",
-      "marketCap": 30771000000,
+      "marketCap": 29679000000,
+      "sharesOutstanding": 3900000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "GEREGU",
@@ -607,11 +707,13 @@
       "sector": "UTILITIES",
       "board": "Main Board",
       "marketCap": 2064250000000,
+      "sharesOutstanding": 2500000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "GOLDBREW",
@@ -619,35 +721,41 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 7275142800,
+      "sharesOutstanding": 1024668000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "GTCO",
       "name": "Guaranty Trust Holding Company Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 4678429377792,
+      "marketCap": 4667464308937.8,
+      "sharesOutstanding": 36550229514,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "GUINEAINS",
       "name": "Guinea Insurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 7942800000,
+      "marketCap": 7704516000,
+      "sharesOutstanding": 7942800000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "GUINNESS",
@@ -655,11 +763,13 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 926531932437,
+      "sharesOutstanding": 2190382819,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "HBMNG",
@@ -667,11 +777,13 @@
       "sector": "INDUSTRIAL GOODS",
       "board": "Premium Board",
       "marketCap": 5718267401080,
+      "sharesOutstanding": 16107795496,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "HMCALL",
@@ -679,23 +791,27 @@
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Main Board",
       "marketCap": 10646020000,
+      "sharesOutstanding": 3122000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "HONYFLOUR",
       "name": "Honeywell Flour Mills Plc",
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
-      "marketCap": 139967988663.69998,
+      "marketCap": 139571478780.80002,
+      "sharesOutstanding": 7930197658,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "IKEJAHOTEL",
@@ -703,11 +819,13 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 97306552215,
+      "sharesOutstanding": 2162367827,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "IMG",
@@ -715,11 +833,13 @@
       "sector": "NATURAL RESOURCES",
       "board": "Main Board",
       "marketCap": 20469798328,
+      "sharesOutstanding": 731064226,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "INFINITY",
@@ -727,23 +847,27 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 46917626850,
+      "sharesOutstanding": 4170455720,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "INTBREW",
       "name": "International Breweries Plc",
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
-      "marketCap": 1598770118357,
+      "marketCap": 1674501334489.7,
+      "sharesOutstanding": 168291591406,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "INTENEGINS",
@@ -751,35 +875,41 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 2683738672.0099998,
+      "sharesOutstanding": 1284085489,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "JAIZBANK",
       "name": "Jaiz Bank Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "NON-INTEREST FINANCE BOARD",
-      "marketCap": 341108989039.8,
+      "marketCap": 352256341622.8,
+      "sharesOutstanding": 44589410332,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "JAPAULGOLD",
       "name": "Japaul Gold & Ventures Plc",
       "sector": "OIL AND GAS",
       "board": "Main Board",
-      "marketCap": 38224040598.880005,
+      "marketCap": 36797770427.28,
+      "sharesOutstanding": 14262701716,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "JBERGER",
@@ -787,11 +917,13 @@
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Main Board",
       "marketCap": 497280000000,
+      "sharesOutstanding": 1600000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "JOHNHOLT",
@@ -799,11 +931,13 @@
       "sector": "CONGLOMERATES",
       "board": "Main Board",
       "marketCap": 3405074855,
+      "sharesOutstanding": 389151412,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "JULI",
@@ -811,11 +945,13 @@
       "sector": "SERVICES",
       "board": "Growth Board",
       "marketCap": 1309377776.2,
+      "sharesOutstanding": 199905004,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "LASACO",
@@ -823,11 +959,13 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 20393797973.2,
+      "sharesOutstanding": 11083585855,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "LEARNAFRCA",
@@ -835,23 +973,27 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 7941113437.5,
+      "sharesOutstanding": 867881250,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "LEGENDINT",
       "name": "Legend Internet Plc",
       "sector": "ICT",
       "board": "Main Board",
-      "marketCap": 6900000000,
+      "marketCap": 6500000000,
+      "sharesOutstanding": 2000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "LINKASSURE",
@@ -859,35 +1001,41 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 30122399985.329998,
+      "sharesOutstanding": 18479999991,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "LIVESTOCK",
       "name": "Livestock Feeds Plc",
       "sector": "AGRICULTURE",
       "board": "Main Board",
-      "marketCap": 50849990135.1,
+      "marketCap": 55799989174.8,
+      "sharesOutstanding": 2999999418,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "LIVINGTRUST",
       "name": "LivingTrust Mortgage Bank Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Growth Board",
-      "marketCap": 15000000000,
+      "marketCap": 14650000000,
+      "sharesOutstanding": 5000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "MANSARD",
@@ -895,11 +1043,13 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 99000000000,
+      "sharesOutstanding": 9000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "MAYBAKER",
@@ -907,35 +1057,41 @@
       "sector": "HEALTHCARE",
       "board": "Main Board",
       "marketCap": 68578086718.5,
+      "sharesOutstanding": 1725234886,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "MBENEFIT",
       "name": "Mutual Benefits Assurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 64397807894.37,
+      "marketCap": 62391645654.67,
+      "sharesOutstanding": 20061622397,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "MCNICHOLS",
       "name": "McNichols Consolidated Plc",
       "sector": "CONSUMER GOODS",
       "board": "Growth Board",
-      "marketCap": 5583965645,
+      "marketCap": 5807324270.8,
+      "sharesOutstanding": 1116793129,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "MECURE",
@@ -943,11 +1099,13 @@
       "sector": "HEALTHCARE",
       "board": "Growth Board",
       "marketCap": 224800000000,
+      "sharesOutstanding": 4000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "MEYER",
@@ -955,11 +1113,13 @@
       "sector": "INDUSTRIAL GOODS",
       "board": "Main Board",
       "marketCap": 8473241681.849999,
+      "sharesOutstanding": 531237723,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "MOFIREIF",
@@ -967,11 +1127,13 @@
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Main Board",
       "marketCap": 100000000000,
+      "sharesOutstanding": 1000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "MORISON",
@@ -979,35 +1141,41 @@
       "sector": "HEALTHCARE",
       "board": "Main Board",
       "marketCap": 13062400000,
+      "sharesOutstanding": 1256000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "MTNN",
       "name": "MTN Nigeria Communications Plc",
       "sector": "ICT",
       "board": "Premium Board",
-      "marketCap": 17720252726932,
+      "marketCap": 17216359284460,
+      "sharesOutstanding": 20995560103,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "MULTITREX",
       "name": "Multi-Trex Integrated Foods Plc",
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
-      "marketCap": 3115356936,
+      "marketCap": 3426892629.6000004,
+      "sharesOutstanding": 6230713872,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "MULTIVERSE",
@@ -1015,11 +1183,13 @@
       "sector": "NATURAL RESOURCES",
       "board": "Main Board",
       "marketCap": 8182922265.599999,
+      "sharesOutstanding": 426193868,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NAHCO",
@@ -1027,23 +1197,27 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 272868750000,
+      "sharesOutstanding": 1949062500,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NASCON",
       "name": "NASCON Allied Industries Plc",
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
-      "marketCap": 510488487879.4,
+      "marketCap": 462115041966,
+      "sharesOutstanding": 2702427146,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NB",
@@ -1051,11 +1225,13 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 2323727019000,
+      "sharesOutstanding": 30983026920,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NCR",
@@ -1063,23 +1239,27 @@
       "sector": "ICT",
       "board": "Main Board",
       "marketCap": 17409600000,
+      "sharesOutstanding": 108000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NEIMETH",
       "name": "Neimeth International Pharmaceuticals Plc",
       "sector": "HEALTHCARE",
       "board": "Main Board",
-      "marketCap": 33757526403.2,
+      "marketCap": 33330215942.399998,
+      "sharesOutstanding": 4273104608,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NEM",
@@ -1087,11 +1267,13 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 141715496917.75,
+      "sharesOutstanding": 5016477767,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NESTLE",
@@ -1099,11 +1281,13 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 2179804693000,
+      "sharesOutstanding": 792656252,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NGXGROUP",
@@ -1111,23 +1295,27 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 331935590142,
+      "sharesOutstanding": 1964115918,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NIDF",
       "name": "Nigeria Infrastructure Debt Fund",
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Main Board",
-      "marketCap": 176702069658.09998,
+      "marketCap": 189024556574,
+      "sharesOutstanding": 1196357953,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NNFM",
@@ -1135,11 +1323,13 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 14149080000.000002,
+      "sharesOutstanding": 178200000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NPFMCRFBK",
@@ -1147,11 +1337,13 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 27567488740.999996,
+      "sharesOutstanding": 5992932335,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NREIT",
@@ -1159,35 +1351,41 @@
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Main Board",
       "marketCap": 179513746086,
+      "sharesOutstanding": 1588617222,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "NSLTECH",
       "name": "Secure Electronic Technology Plc",
       "sector": "SERVICES",
       "board": "Main Board",
-      "marketCap": 4054708800,
+      "marketCap": 3942077999.9999995,
+      "sharesOutstanding": 5631540000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "OANDO",
       "name": "Oando Plc",
       "sector": "OIL AND GAS",
       "board": "Main Board",
-      "marketCap": 429505301218.55,
+      "marketCap": 434477866210.95,
+      "sharesOutstanding": 12431412481,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "OKOMUOIL",
@@ -1195,23 +1393,27 @@
       "sector": "AGRICULTURE",
       "board": "Main Board",
       "marketCap": 1217379942000,
+      "sharesOutstanding": 953910000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "OMATEK",
       "name": "Omatek Ventures Plc",
       "sector": "ICT",
       "board": "Main Board",
-      "marketCap": 3912579997.76,
+      "marketCap": 4295012629.12,
+      "sharesOutstanding": 2941789472,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "PHARMDEKO",
@@ -1219,11 +1421,13 @@
       "sector": "HEALTHCARE",
       "board": "Main Board",
       "marketCap": 396781419.84000003,
+      "sharesOutstanding": 216820448,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "PREMPAINTS",
@@ -1231,11 +1435,13 @@
       "sector": "INDUSTRIAL GOODS",
       "board": "Main Board",
       "marketCap": 3739200000,
+      "sharesOutstanding": 123000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "PRESCO",
@@ -1243,11 +1449,13 @@
       "sector": "AGRICULTURE",
       "board": "Main Board",
       "marketCap": 2386183334015.1,
+      "sharesOutstanding": 1166666667,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "PRESTIGE",
@@ -1255,11 +1463,13 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 18553586646,
+      "sharesOutstanding": 13252561890,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "PZ",
@@ -1267,11 +1477,13 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 256095769402.5,
+      "sharesOutstanding": 3970477045,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "REDSTAREX",
@@ -1279,11 +1491,13 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 12789272568.4,
+      "sharesOutstanding": 954423326,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "REGALINS",
@@ -1291,11 +1505,13 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 12483900000,
+      "sharesOutstanding": 16005000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "RONCHESS",
@@ -1303,23 +1519,27 @@
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Growth Board",
       "marketCap": 7371000000,
+      "sharesOutstanding": 91000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "ROYALEX",
       "name": "Royal Exchange Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 8597366897.6,
+      "marketCap": 8928034855.2,
+      "sharesOutstanding": 8266698940,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "RTBRISCOE",
@@ -1327,11 +1547,13 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 10881301140,
+      "sharesOutstanding": 1176356880,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "SCOA",
@@ -1339,11 +1561,13 @@
       "sector": "CONGLOMERATES",
       "board": "Main Board",
       "marketCap": 21476738228.25,
+      "sharesOutstanding": 649825665,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "SEPLAT",
@@ -1351,11 +1575,13 @@
       "sector": "OIL AND GAS",
       "board": "Premium Board",
       "marketCap": 9599172970456.1,
+      "sharesOutstanding": 599944561,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "SFSREIT",
@@ -1363,11 +1589,13 @@
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Real Estate Investment Trust & Close End Fund",
       "marketCap": 8375000000,
+      "sharesOutstanding": 20000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "SKYAVN",
@@ -1375,11 +1603,13 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 231732895999.99997,
+      "sharesOutstanding": 1353580000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "SOVRENINS",
@@ -1387,11 +1617,13 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 31301906862.600002,
+      "sharesOutstanding": 14228139483,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "STANBIC",
@@ -1399,23 +1631,27 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 2671497233328,
+      "sharesOutstanding": 15901769246,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "STERLINGNG",
       "name": "Sterling Financial Holdings Company Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 4005192404015.9,
+      "marketCap": 4010404105257.3003,
+      "sharesOutstanding": 52117012414,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "SUNUASSUR",
@@ -1423,35 +1659,41 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 17025644000,
+      "sharesOutstanding": 5810800000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "TANTALIZER",
       "name": "Tantalizers Plc",
       "sector": "SERVICES",
       "board": "Main Board",
-      "marketCap": 19900000003.98,
+      "marketCap": 19500000003.899998,
+      "sharesOutstanding": 5000000001,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "THOMASWY",
       "name": "Thomas Wyatt Nigeria Plc",
       "sector": "NATURAL RESOURCES",
       "board": "Main Board",
-      "marketCap": 930600000,
+      "marketCap": 871200000.0000001,
+      "sharesOutstanding": 396000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "TIP",
@@ -1459,11 +1701,13 @@
       "sector": "SERVICES",
       "board": "Growth Board",
       "marketCap": 23050522196.8,
+      "sharesOutstanding": 889981552,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "TOTAL",
@@ -1471,11 +1715,13 @@
       "sector": "OIL AND GAS",
       "board": "Main Board",
       "marketCap": 176008120300.8,
+      "sharesOutstanding": 339521837,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "TRANSCOHOT",
@@ -1483,11 +1729,13 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 2975454503395.5,
+      "sharesOutstanding": 10242528411,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "TRANSCORP",
@@ -1495,11 +1743,13 @@
       "sector": "CONGLOMERATES",
       "board": "Main Board",
       "marketCap": 365831912664,
+      "sharesOutstanding": 10161997574,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "TRANSEXPR",
@@ -1507,11 +1757,13 @@
       "sector": "SERVICES",
       "board": "Main Board",
       "marketCap": 1479505731.66,
+      "sharesOutstanding": 498150078,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "TRANSPOWER",
@@ -1519,11 +1771,13 @@
       "sector": "UTILITIES",
       "board": "Main Board",
       "marketCap": 1335000000000,
+      "sharesOutstanding": 7500000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "TRIPPLEG",
@@ -1531,11 +1785,13 @@
       "sector": "INDUSTRIAL GOODS",
       "board": "Main Board",
       "marketCap": 3058815720,
+      "sharesOutstanding": 989908000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "UACN",
@@ -1543,35 +1799,41 @@
       "sector": "CONGLOMERATES",
       "board": "Main Board",
       "marketCap": 538408224704,
+      "sharesOutstanding": 2926131656,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "UBA",
       "name": "United Bank for Africa Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Premium Board",
-      "marketCap": 1900435538201,
+      "marketCap": 1907064964497.05,
+      "sharesOutstanding": 44196175307,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "UCAP",
       "name": "United Capital Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 300600000000,
+      "marketCap": 301500000000,
+      "sharesOutstanding": 18000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "UHOMREIT",
@@ -1580,10 +1842,12 @@
       "board": "Real Estate Investment Trust & Close End Fund",
       "marketCap": 17501384670,
       "status": "active",
-      "missingDays": 1,
+      "missingDays": 2,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "sharesOutstanding": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "UHREIT",
@@ -1591,11 +1855,13 @@
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Real Estate Investment Trust & Close End Fund",
       "marketCap": 0,
+      "sharesOutstanding": 0,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-10-14",
       "backfill": "pending",
-      "backfillAttempts": 0
+      "backfillAttempts": 1,
+      "dividendsAt": null
     },
     {
       "symbol": "UNILEVER",
@@ -1603,11 +1869,13 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 588863055242.5,
+      "sharesOutstanding": 5745005417,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "UNIONDICON",
@@ -1615,11 +1883,13 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 6491795930,
+      "sharesOutstanding": 273338776,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "UNITYBNK",
@@ -1627,11 +1897,13 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 17650900292.420002,
+      "sharesOutstanding": 11689337942,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "UNIVINSURE",
@@ -1639,23 +1911,27 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 12320000000,
+      "sharesOutstanding": 16000000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "UPDC",
       "name": "UPDC Plc",
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Main Board",
-      "marketCap": 72383882750.4,
+      "marketCap": 70527885756.8,
+      "sharesOutstanding": 18559969936,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "UPDCREIT",
@@ -1663,47 +1939,55 @@
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Real Estate Investment Trust & Close End Fund",
       "marketCap": 62704333250,
+      "sharesOutstanding": 2668269500,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "UPL",
       "name": "University Press Plc",
       "sector": "SERVICES",
       "board": "Main Board",
-      "marketCap": 2027624668.8000002,
+      "marketCap": 2157047520,
+      "sharesOutstanding": 431409504,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "VERITASKAP",
       "name": "Veritas Kapital Assurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 14975999999.28,
+      "marketCap": 15253333332.6,
+      "sharesOutstanding": 13866666666,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "VFDGROUP",
       "name": "VFD Group Plc",
       "sector": "INVESTMENT",
       "board": "Main Board",
-      "marketCap": 101094558180,
+      "marketCap": 98814229800,
+      "sharesOutstanding": 7601094600,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "VITAFOAM",
@@ -1711,23 +1995,27 @@
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
       "marketCap": 242663748416,
+      "sharesOutstanding": 1250844064,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "WAPIC",
       "name": "Coronation Insurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 59979198765,
+      "marketCap": 57580030814.4,
+      "sharesOutstanding": 23991679506,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "WEMABANK",
@@ -1735,35 +2023,41 @@
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
       "marketCap": 1243685199834,
+      "sharesOutstanding": 40118877414,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "ZENITHBANK",
       "name": "Zenith Bank Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Premium Board",
-      "marketCap": 5248724274000,
+      "marketCap": 5244617291000,
+      "sharesOutstanding": 41069830000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     },
     {
       "symbol": "ZICHIS",
       "name": "Zichis Agro Allied Industries Plc",
       "sector": "AGRICULTURE",
       "board": "Growth Board",
-      "marketCap": 9780000000,
+      "marketCap": 10758000000,
+      "sharesOutstanding": 600000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
-      "backfillAttempts": 0
+      "backfillAttempts": 0,
+      "dividendsAt": null
     }
   ]
 }

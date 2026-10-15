@@ -1,0 +1,42 @@
+{
+  "symbol": "ACADEMY",
+  "fetchedAt": "2026-10-15",
+  "latestExDate": "2026-09-17",
+  "records": [
+    {
+      "exDate": "2022-09-19",
+      "recordDate": "2022-09-16",
+      "payDate": "2022-09-29",
+      "dps": 0.08333,
+      "kind": null
+    },
+    {
+      "exDate": "2023-09-12",
+      "recordDate": "2023-09-11",
+      "payDate": "2023-09-21",
+      "dps": 0.08333,
+      "kind": null
+    },
+    {
+      "exDate": "2024-08-30",
+      "recordDate": "2024-08-29",
+      "payDate": "2024-09-12",
+      "dps": 0.08333,
+      "kind": null
+    },
+    {
+      "exDate": "2025-10-17",
+      "recordDate": "2025-10-16",
+      "payDate": "2025-10-30",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2026-09-17",
+      "recordDate": "2026-09-17",
+      "payDate": "2026-09-25",
+      "dps": 0.1,
+      "kind": null
+    }
+  ]
+}

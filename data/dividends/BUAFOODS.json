@@ -1,0 +1,42 @@
+{
+  "symbol": "BUAFOODS",
+  "fetchedAt": "2026-10-15",
+  "latestExDate": "2026-06-05",
+  "records": [
+    {
+      "exDate": "2022-07-14",
+      "recordDate": "2022-07-13",
+      "payDate": "2022-08-04",
+      "dps": 3.5,
+      "kind": null
+    },
+    {
+      "exDate": "2023-09-04",
+      "recordDate": "2023-09-01",
+      "payDate": "2023-09-21",
+      "dps": 4.5,
+      "kind": null
+    },
+    {
+      "exDate": "2024-08-26",
+      "recordDate": "2024-08-23",
+      "payDate": "2024-09-26",
+      "dps": 5.5,
+      "kind": null
+    },
+    {
+      "exDate": "2025-08-22",
+      "recordDate": "2025-08-21",
+      "payDate": "2025-09-11",
+      "dps": 13,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-05",
+      "recordDate": "2026-06-05",
+      "payDate": "2026-07-15",
+      "dps": 28,
+      "kind": null
+    }
+  ]
+}

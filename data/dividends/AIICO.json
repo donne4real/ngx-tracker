@@ -1,0 +1,42 @@
+{
+  "symbol": "AIICO",
+  "fetchedAt": "2026-10-15",
+  "latestExDate": "2026-05-29",
+  "records": [
+    {
+      "exDate": "2022-05-23",
+      "recordDate": "2022-05-20",
+      "payDate": "2022-05-30",
+      "dps": 0.02,
+      "kind": null
+    },
+    {
+      "exDate": "2023-06-01",
+      "recordDate": "2023-05-31",
+      "payDate": "2023-06-15",
+      "dps": 0.03,
+      "kind": null
+    },
+    {
+      "exDate": "2024-07-22",
+      "recordDate": "2024-07-19",
+      "payDate": "2024-07-26",
+      "dps": 0.05,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-22",
+      "recordDate": "2025-05-21",
+      "payDate": "2025-05-27",
+      "dps": 0.07,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-29",
+      "recordDate": "2026-05-27",
+      "payDate": "2026-06-05",
+      "dps": 0.12,
+      "kind": null
+    }
+  ]
+}

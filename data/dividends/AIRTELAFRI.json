@@ -1,0 +1,91 @@
+{
+  "symbol": "AIRTELAFRI",
+  "fetchedAt": "2026-10-15",
+  "latestExDate": "2026-06-18",
+  "records": [
+    {
+      "exDate": "2020-11-12",
+      "recordDate": "2020-11-13",
+      "payDate": "2020-12-11",
+      "dps": 5.70735,
+      "kind": null
+    },
+    {
+      "exDate": "2021-06-28",
+      "recordDate": "2021-06-25",
+      "payDate": "2021-07-23",
+      "dps": 10.26875,
+      "kind": null
+    },
+    {
+      "exDate": "2021-11-11",
+      "recordDate": "2021-11-12",
+      "payDate": "2021-12-10",
+      "dps": 8.219,
+      "kind": null
+    },
+    {
+      "exDate": "2022-06-23",
+      "recordDate": "2022-06-22",
+      "payDate": "2022-07-25",
+      "dps": 12.4623,
+      "kind": null
+    },
+    {
+      "exDate": "2022-11-10",
+      "recordDate": "2022-11-09",
+      "payDate": "2022-12-09",
+      "dps": 9.59004,
+      "kind": null
+    },
+    {
+      "exDate": "2023-06-22",
+      "recordDate": "2023-06-21",
+      "payDate": "2023-07-26",
+      "dps": 22.57575,
+      "kind": null
+    },
+    {
+      "exDate": "2023-11-09",
+      "recordDate": "2023-11-08",
+      "payDate": "2023-12-15",
+      "dps": 20.42611,
+      "kind": null
+    },
+    {
+      "exDate": "2024-06-24",
+      "recordDate": "2024-06-21",
+      "payDate": "2024-07-26",
+      "dps": 53.04984,
+      "kind": null
+    },
+    {
+      "exDate": "2024-11-11",
+      "recordDate": "2024-11-08",
+      "payDate": "2024-12-13",
+      "dps": 43.08122,
+      "kind": null
+    },
+    {
+      "exDate": "2025-06-23",
+      "recordDate": "2025-06-20",
+      "payDate": "2025-07-25",
+      "dps": 61.971,
+      "kind": null
+    },
+    {
+      "exDate": "2025-11-05",
+      "recordDate": "2025-11-07",
+      "payDate": "2025-12-12",
+      "dps": 40.52112,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-18",
+      "recordDate": "2026-06-19",
+      "payDate": "2026-07-24",
+      "dps": 58.58565,
+      "kind": null
+    }
+  ]
+}

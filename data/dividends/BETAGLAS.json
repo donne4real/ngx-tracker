@@ -1,0 +1,49 @@
+{
+  "symbol": "BETAGLAS",
+  "fetchedAt": "2026-10-15",
+  "latestExDate": "2026-06-04",
+  "records": [
+    {
+      "exDate": "2021-06-11",
+      "recordDate": "2021-06-10",
+      "payDate": "2021-07-02",
+      "dps": 0.86667,
+      "kind": null
+    },
+    {
+      "exDate": "2022-06-14",
+      "recordDate": "2022-06-10",
+      "payDate": "2022-07-06",
+      "dps": 1.1,
+      "kind": null
+    },
+    {
+      "exDate": "2023-06-19",
+      "recordDate": "2023-06-16",
+      "payDate": "2023-07-07",
+      "dps": 1.17,
+      "kind": null
+    },
+    {
+      "exDate": "2024-06-19",
+      "recordDate": "2024-06-17",
+      "payDate": "2024-06-27",
+      "dps": 1.4,
+      "kind": null
+    },
+    {
+      "exDate": "2025-06-18",
+      "recordDate": "2025-06-17",
+      "payDate": "2025-06-26",
+      "dps": 2.95,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-04",
+      "recordDate": "2026-06-04",
+      "payDate": "2026-06-25",
+      "dps": 7.2,
+      "kind": null
+    }
+  ]
+}
