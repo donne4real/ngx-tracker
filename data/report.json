@@ -1,44 +1,17 @@
 {
-  "runAt": "2026-10-15T19:16:35.563Z",
-  "outcome": "appended",
+  "runAt": "2026-10-15T20:42:24.043Z",
+  "outcome": "duplicate-date",
   "tradeDate": "2026-10-15",
   "backfill": {
     "ok": [],
-    "failed": [
-      {
-        "symbol": "UHREIT",
-        "error": "EODHD returned no prices"
-      }
-    ],
+    "failed": [],
     "stoppedEarly": null
   },
   "dividends": {
-    "ok": [
-      "ABBEYBANK",
-      "ABCTRANS",
-      "ACADEMY",
-      "ACCESSCORP",
-      "AFRINSURE",
-      "AFRIPRUD",
-      "AFROMEDIA",
-      "AIICO",
-      "AIRTELAFRI",
-      "ALEX",
-      "ARADEL",
-      "AUSTINLAZ",
-      "AVACAP",
-      "AVAIF",
-      "BAPLC",
-      "BERGER",
-      "BETAGLAS",
-      "BUACEMENT",
-      "BUAFOODS",
-      "CADBURY"
-    ],
+    "ok": [],
     "failed": []
   },
   "warnings": [
-    "UHREIT: non-numeric market_cap coerced",
-    "UHREIT: dropped 1 unusable EODHD rows"
+    "UHREIT: non-numeric market_cap coerced"
   ]
 }
