@@ -20,6 +20,9 @@ function NotFound({ symbol }: { symbol: string }) {
 
 const pctClass = (n: number | null | undefined) => (n == null ? 'muted' : n > 0 ? 'up' : n < 0 ? 'down' : '');
 
+/** Free full statements/ratios on StockAnalysis (covers large NGX names; thin for small caps). */
+const financialsUrl = (symbol: string) => `https://stockanalysis.com/quote/ngx/${encodeURIComponent(symbol)}/financials/`;
+
 export function StockPage({ summary, symbol }: { summary: Summary; symbol: string }) {
   const row = summary.stocks.find((s) => s.symbol === symbol);
   const [history, setHistory] = useState<History | null | undefined>(undefined);
@@ -80,7 +83,7 @@ export function StockPage({ summary, symbol }: { summary: Summary; symbol: strin
           ))}
         </div>
         {row.largeMove && <p className="banner" title={LARGE_MOVE_TITLE}>⚠ Moved more than ±10% on the day: possibly a bonus issue or split, since prices are not adjusted.</p>}
-        <p className="muted">History starts {formatDate(row.historyStart)}.</p>
+        <p className="muted">History starts {formatDate(row.historyStart)}. <a href={financialsUrl(row.symbol)} target="_blank" rel="noreferrer">Financials on StockAnalysis ↗</a></p>
       </section>
 
       <section className="card">

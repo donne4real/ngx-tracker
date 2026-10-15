@@ -22,6 +22,15 @@ describe('StockPage', () => {
     expect(await screen.findByRole('heading', { name: /history not available/i })).toBeInTheDocument();
   });
 
+  it('links out to free financials on StockAnalysis', async () => {
+    respondWith({ symbol: 'MTNN', bars: [
+      { date: '2026-09-25', close: 100, volume: 20, traded: true, source: 'kobo' },
+    ] });
+    render(<StockPage summary={makeSummary([makeRow({ symbol: 'MTNN' })])} symbol="MTNN" />);
+    const link = await screen.findByRole('link', { name: /financials on stockanalysis/i });
+    expect(link.getAttribute('href')).toBe('https://stockanalysis.com/quote/ngx/MTNN/financials/');
+  });
+
   it('shows the dividend card with TTM payout and yield', async () => {
     respondWith({ symbol: 'MTNN', bars: [
       { date: '2026-09-24', close: 855, volume: 10, traded: true, source: 'eodhd' },
