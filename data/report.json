@@ -1,44 +1,17 @@
 {
-  "runAt": "2026-10-16T18:51:58.484Z",
-  "outcome": "appended",
+  "runAt": "2026-10-16T20:15:04.694Z",
+  "outcome": "duplicate-date",
   "tradeDate": "2026-10-16",
   "backfill": {
     "ok": [],
-    "failed": [
-      {
-        "symbol": "UHREIT",
-        "error": "EODHD returned no prices"
-      }
-    ],
+    "failed": [],
     "stoppedEarly": null
   },
   "dividends": {
-    "ok": [
-      "CAP",
-      "CAVERTON",
-      "CHAMPION",
-      "CHAMS",
-      "CHELLARAM",
-      "CILEASING",
-      "CMFC",
-      "CNIF",
-      "CONHALLPLC",
-      "CONOIL",
-      "CORNERST",
-      "CUSTODIAN",
-      "CUTIX",
-      "CWG",
-      "DAARCOMM",
-      "DANGCEM",
-      "DANGSUGAR",
-      "EKOCORP",
-      "ELLAHLAKES",
-      "ENAMELWA"
-    ],
+    "ok": [],
     "failed": []
   },
   "warnings": [
-    "UHREIT: non-numeric market_cap coerced",
-    "UHREIT: dropped 1 unusable EODHD rows"
+    "UHREIT: non-numeric market_cap coerced"
   ]
 }
