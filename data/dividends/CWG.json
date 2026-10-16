@@ -1,0 +1,35 @@
+{
+  "symbol": "CWG",
+  "fetchedAt": "2026-10-16",
+  "latestExDate": "2026-04-08",
+  "records": [
+    {
+      "exDate": "2023-04-18",
+      "recordDate": "2023-04-17",
+      "payDate": "2023-04-28",
+      "dps": 0.04,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-18",
+      "recordDate": "2024-04-17",
+      "payDate": "2024-04-29",
+      "dps": 0.16,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-08",
+      "recordDate": "2025-04-07",
+      "payDate": "2025-04-11",
+      "dps": 0.39,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-08",
+      "recordDate": "2026-04-07",
+      "payDate": "2026-04-17",
+      "dps": 0.7,
+      "kind": null
+    }
+  ]
+}

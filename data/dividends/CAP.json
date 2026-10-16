@@ -1,0 +1,42 @@
+{
+  "symbol": "CAP",
+  "fetchedAt": "2026-10-16",
+  "latestExDate": "2026-06-04",
+  "records": [
+    {
+      "exDate": "2022-06-02",
+      "recordDate": "2022-06-01",
+      "payDate": "2022-06-17",
+      "dps": 1.25,
+      "kind": null
+    },
+    {
+      "exDate": "2023-06-02",
+      "recordDate": "2023-06-01",
+      "payDate": "2023-06-16",
+      "dps": 1.55,
+      "kind": null
+    },
+    {
+      "exDate": "2024-06-03",
+      "recordDate": "2024-05-31",
+      "payDate": "2024-06-25",
+      "dps": 1.55,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-22",
+      "recordDate": "2025-04-18",
+      "payDate": "2025-06-06",
+      "dps": 2.4,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-04",
+      "recordDate": "2026-06-04",
+      "payDate": "2026-06-25",
+      "dps": 4,
+      "kind": null
+    }
+  ]
+}

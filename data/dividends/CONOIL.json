@@ -1,0 +1,42 @@
+{
+  "symbol": "CONOIL",
+  "fetchedAt": "2026-10-16",
+  "latestExDate": "2025-11-26",
+  "records": [
+    {
+      "exDate": "2021-07-05",
+      "recordDate": "2021-07-02",
+      "payDate": "2021-11-19",
+      "dps": 1.5,
+      "kind": null
+    },
+    {
+      "exDate": "2022-05-31",
+      "recordDate": "2022-05-30",
+      "payDate": "2022-11-04",
+      "dps": 2.5,
+      "kind": null
+    },
+    {
+      "exDate": "2023-06-30",
+      "recordDate": "2023-06-27",
+      "payDate": "2023-09-29",
+      "dps": 2.5,
+      "kind": null
+    },
+    {
+      "exDate": "2024-10-21",
+      "recordDate": "2024-10-18",
+      "payDate": "2024-11-22",
+      "dps": 3.5,
+      "kind": null
+    },
+    {
+      "exDate": "2025-11-26",
+      "recordDate": "2025-11-25",
+      "payDate": "2025-12-23",
+      "dps": 3.5,
+      "kind": null
+    }
+  ]
+}

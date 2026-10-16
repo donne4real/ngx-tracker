@@ -1,0 +1,49 @@
+{
+  "symbol": "DANGSUGAR",
+  "fetchedAt": "2026-10-16",
+  "latestExDate": "2023-03-27",
+  "records": [
+    {
+      "exDate": "2018-04-16",
+      "recordDate": "2018-04-13",
+      "payDate": "2018-06-22",
+      "dps": 1.25,
+      "kind": null
+    },
+    {
+      "exDate": "2019-06-03",
+      "recordDate": "2019-05-31",
+      "payDate": "2019-06-19",
+      "dps": 1.1,
+      "kind": null
+    },
+    {
+      "exDate": "2020-06-22",
+      "recordDate": "2020-06-19",
+      "payDate": "2020-07-09",
+      "dps": 1.1,
+      "kind": null
+    },
+    {
+      "exDate": "2021-03-18",
+      "recordDate": "2021-03-17",
+      "payDate": "2021-05-20",
+      "dps": 1.5,
+      "kind": null
+    },
+    {
+      "exDate": "2022-06-02",
+      "recordDate": "2022-06-01",
+      "payDate": "2022-06-15",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2023-03-27",
+      "recordDate": "2023-03-24",
+      "payDate": "2023-04-15",
+      "dps": 1.5,
+      "kind": null
+    }
+  ]
+}

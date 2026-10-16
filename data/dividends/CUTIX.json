@@ -1,0 +1,49 @@
+{
+  "symbol": "CUTIX",
+  "fetchedAt": "2026-10-16",
+  "latestExDate": "2025-08-18",
+  "records": [
+    {
+      "exDate": "2020-11-16",
+      "recordDate": "2020-11-13",
+      "payDate": "2020-11-30",
+      "dps": 0.03125,
+      "kind": null
+    },
+    {
+      "exDate": "2021-11-15",
+      "recordDate": "2021-11-12",
+      "payDate": "2021-11-29",
+      "dps": 0.075,
+      "kind": null
+    },
+    {
+      "exDate": "2022-08-22",
+      "recordDate": "2022-08-19",
+      "payDate": "2022-08-31",
+      "dps": 0.05,
+      "kind": null
+    },
+    {
+      "exDate": "2023-08-18",
+      "recordDate": "2023-08-17",
+      "payDate": "2023-08-31",
+      "dps": 0.06,
+      "kind": null
+    },
+    {
+      "exDate": "2024-08-19",
+      "recordDate": "2024-08-16",
+      "payDate": "2024-09-04",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2025-08-18",
+      "recordDate": "2025-08-15",
+      "payDate": "2025-09-02",
+      "dps": 0.1,
+      "kind": null
+    }
+  ]
+}

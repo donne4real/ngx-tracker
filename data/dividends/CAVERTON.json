@@ -1,0 +1,35 @@
+{
+  "symbol": "CAVERTON",
+  "fetchedAt": "2026-10-16",
+  "latestExDate": "2021-04-28",
+  "records": [
+    {
+      "exDate": "2018-04-26",
+      "recordDate": "2018-04-25",
+      "payDate": "2018-05-08",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2019-05-08",
+      "recordDate": "2019-05-07",
+      "payDate": "2019-05-21",
+      "dps": 0.25,
+      "kind": null
+    },
+    {
+      "exDate": "2020-06-16",
+      "recordDate": "2020-06-15",
+      "payDate": "2020-06-25",
+      "dps": 0.2,
+      "kind": null
+    },
+    {
+      "exDate": "2021-04-28",
+      "recordDate": "2021-04-27",
+      "payDate": "2021-05-27",
+      "dps": 0.1,
+      "kind": null
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "CORNERST",
+  "fetchedAt": "2026-10-16",
+  "latestExDate": "2026-07-03",
+  "records": [
+    {
+      "exDate": "2022-07-13",
+      "recordDate": "2022-07-08",
+      "payDate": "2022-07-26",
+      "dps": 0.05,
+      "kind": null
+    },
+    {
+      "exDate": "2023-06-06",
+      "recordDate": "2023-06-05",
+      "payDate": "2023-06-21",
+      "dps": 0.06,
+      "kind": null
+    },
+    {
+      "exDate": "2024-07-15",
+      "recordDate": "2024-07-12",
+      "payDate": "2024-08-01",
+      "dps": 0.16,
+      "kind": null
+    },
+    {
+      "exDate": "2025-07-08",
+      "recordDate": "2025-07-07",
+      "payDate": "2025-07-29",
+      "dps": 0.27,
+      "kind": null
+    },
+    {
+      "exDate": "2026-07-02",
+      "recordDate": "2026-07-02",
+      "payDate": "2026-07-20",
+      "dps": 0.28,
+      "kind": null
+    },
+    {
+      "exDate": "2026-07-03",
+      "recordDate": "2026-07-03",
+      "payDate": "2026-07-20",
+      "dps": 0.28,
+      "kind": null
+    }
+  ]
+}

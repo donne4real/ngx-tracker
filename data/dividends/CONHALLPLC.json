@@ -1,0 +1,49 @@
+{
+  "symbol": "CONHALLPLC",
+  "fetchedAt": "2026-10-16",
+  "latestExDate": "2026-04-30",
+  "records": [
+    {
+      "exDate": "2021-08-16",
+      "recordDate": "2021-08-13",
+      "payDate": "2021-09-02",
+      "dps": 0.02,
+      "kind": null
+    },
+    {
+      "exDate": "2022-05-16",
+      "recordDate": "2022-05-13",
+      "payDate": null,
+      "dps": 0.02,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-14",
+      "recordDate": "2023-04-13",
+      "payDate": "2023-05-24",
+      "dps": 0.03,
+      "kind": null
+    },
+    {
+      "exDate": "2024-06-17",
+      "recordDate": "2024-06-14",
+      "payDate": "2024-06-26",
+      "dps": 0.05,
+      "kind": null
+    },
+    {
+      "exDate": "2025-08-18",
+      "recordDate": "2025-08-15",
+      "payDate": "2025-08-27",
+      "dps": 0.1,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-30",
+      "recordDate": "2026-04-29",
+      "payDate": null,
+      "dps": 0.15,
+      "kind": null
+    }
+  ]
+}

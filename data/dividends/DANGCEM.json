@@ -1,0 +1,42 @@
+{
+  "symbol": "DANGCEM",
+  "fetchedAt": "2026-10-16",
+  "latestExDate": "2026-06-18",
+  "records": [
+    {
+      "exDate": "2022-05-31",
+      "recordDate": "2022-05-30",
+      "payDate": "2022-06-15",
+      "dps": 20,
+      "kind": null
+    },
+    {
+      "exDate": "2023-03-31",
+      "recordDate": "2023-03-30",
+      "payDate": "2023-04-14",
+      "dps": 20,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-16",
+      "recordDate": "2024-04-15",
+      "payDate": "2024-05-31",
+      "dps": 30,
+      "kind": null
+    },
+    {
+      "exDate": "2025-06-10",
+      "recordDate": "2025-06-09",
+      "payDate": "2025-06-23",
+      "dps": 30,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-18",
+      "recordDate": "2026-06-18",
+      "payDate": "2026-07-02",
+      "dps": 45,
+      "kind": null
+    }
+  ]
+}

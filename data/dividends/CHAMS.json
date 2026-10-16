@@ -1,0 +1,14 @@
+{
+  "symbol": "CHAMS",
+  "fetchedAt": "2026-10-16",
+  "latestExDate": "2026-06-19",
+  "records": [
+    {
+      "exDate": "2026-06-19",
+      "recordDate": "2026-06-19",
+      "payDate": "2026-07-10",
+      "dps": 0.03,
+      "kind": null
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
-  "lastTradeDate": "2026-10-15",
+  "lastTradeDate": "2026-10-16",
   "stocks": [
     {
       "symbol": "ABBEYBANK",
       "name": "Abbey Bank Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 67523076924.100006,
+      "marketCap": 69046153847.2,
       "sharesOutstanding": 10153846154,
       "status": "active",
       "missingDays": 0,
@@ -48,7 +48,7 @@
       "name": "Access Holdings Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Premium Board",
-      "marketCap": 1508894827653.9001,
+      "marketCap": 1519558395340.5,
       "sharesOutstanding": 53317838433,
       "status": "active",
       "missingDays": 0,
@@ -104,7 +104,7 @@
       "name": "AIICO Insurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 148251367848.6,
+      "marketCap": 144956893007.52,
       "sharesOutstanding": 36605276012,
       "status": "active",
       "missingDays": 0,
@@ -160,7 +160,7 @@
       "name": "Austin Laz & Company Plc",
       "sector": "INDUSTRIAL GOODS",
       "board": "Main Board",
-      "marketCap": 2872427600,
+      "marketCap": 3153191200,
       "sharesOutstanding": 1079860000,
       "status": "active",
       "missingDays": 0,
@@ -174,7 +174,7 @@
       "name": "AVA Capital Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 30000000000,
+      "marketCap": 31000000000,
       "sharesOutstanding": 5000000000,
       "status": "active",
       "missingDays": 0,
@@ -293,7 +293,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CAVERTON",
@@ -307,7 +307,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CHAMPION",
@@ -321,7 +321,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CHAMS",
@@ -335,7 +335,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CHELLARAM",
@@ -349,7 +349,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CILEASING",
@@ -363,21 +363,21 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CMFC",
       "name": "DEAP Capital Management & Trust Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 5400000000,
+      "marketCap": 4965000000,
       "sharesOutstanding": 1500000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CNIF",
@@ -391,21 +391,21 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CONHALLPLC",
       "name": "Consolidated Hallmark Holdings Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 76422000000,
+      "marketCap": 75880000000,
       "sharesOutstanding": 10840000000,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CONOIL",
@@ -419,7 +419,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CORNERST",
@@ -433,7 +433,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CUSTODIAN",
@@ -447,7 +447,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CUTIX",
@@ -461,7 +461,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "CWG",
@@ -475,7 +475,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "DAARCOMM",
@@ -489,7 +489,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "DANGCEM",
@@ -503,21 +503,21 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "DANGSUGAR",
       "name": "Dangote Sugar Refinery Plc",
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
-      "marketCap": 815662873883.15,
+      "marketCap": 819914281267.5,
       "sharesOutstanding": 12146878241,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "EKOCORP",
@@ -531,21 +531,21 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "ELLAHLAKES",
       "name": "Ellah Lakes Plc",
       "sector": "AGRICULTURE",
       "board": "Main Board",
-      "marketCap": 30865389424,
+      "marketCap": 30479572056.2,
       "sharesOutstanding": 3858173678,
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "ENAMELWA",
@@ -559,7 +559,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-16"
     },
     {
       "symbol": "ETERNA",
@@ -594,7 +594,7 @@
       "name": "eTranzact International Plc",
       "sector": "ICT",
       "board": "Main Board",
-      "marketCap": 144899997102,
+      "marketCap": 159159996816.80002,
       "sharesOutstanding": 9199999816,
       "status": "active",
       "missingDays": 0,
@@ -622,7 +622,7 @@
       "name": "FCMB Group Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 470488769014,
+      "marketCap": 461934427759.2,
       "sharesOutstanding": 42771706274,
       "status": "active",
       "missingDays": 0,
@@ -636,7 +636,7 @@
       "name": "Fidelity Bank Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 1009265447753.1001,
+      "marketCap": 1056967048517.55,
       "sharesOutstanding": 50212211331,
       "status": "active",
       "missingDays": 0,
@@ -650,7 +650,7 @@
       "name": "Fidson Healthcare Plc",
       "sector": "HEALTHCARE",
       "board": "Main Board",
-      "marketCap": 190484690825,
+      "marketCap": 191632188962.5,
       "sharesOutstanding": 2294996275,
       "status": "active",
       "missingDays": 0,
@@ -734,7 +734,7 @@
       "name": "Guaranty Trust Holding Company Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 4667464308937.8,
+      "marketCap": 4561468643347.2,
       "sharesOutstanding": 36550229514,
       "status": "active",
       "missingDays": 0,
@@ -748,7 +748,7 @@
       "name": "Guinea Insurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 7704516000,
+      "marketCap": 7625088000,
       "sharesOutstanding": 7942800000,
       "status": "active",
       "missingDays": 0,
@@ -860,7 +860,7 @@
       "name": "International Breweries Plc",
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
-      "marketCap": 1674501334489.7,
+      "marketCap": 1682915914060,
       "sharesOutstanding": 168291591406,
       "status": "active",
       "missingDays": 0,
@@ -874,7 +874,7 @@
       "name": "International Energy Insurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 2683738672.0099998,
+      "marketCap": 2773624656.2400002,
       "sharesOutstanding": 1284085489,
       "status": "active",
       "missingDays": 0,
@@ -888,7 +888,7 @@
       "name": "Jaiz Bank Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "NON-INTEREST FINANCE BOARD",
-      "marketCap": 352256341622.8,
+      "marketCap": 345567930073,
       "sharesOutstanding": 44589410332,
       "status": "active",
       "missingDays": 0,
@@ -902,7 +902,7 @@
       "name": "Japaul Gold & Ventures Plc",
       "sector": "OIL AND GAS",
       "board": "Main Board",
-      "marketCap": 36797770427.28,
+      "marketCap": 36369889375.799995,
       "sharesOutstanding": 14262701716,
       "status": "active",
       "missingDays": 0,
@@ -958,7 +958,7 @@
       "name": "LASACO Assurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 20393797973.2,
+      "marketCap": 20061290397.55,
       "sharesOutstanding": 11083585855,
       "status": "active",
       "missingDays": 0,
@@ -986,7 +986,7 @@
       "name": "Legend Internet Plc",
       "sector": "ICT",
       "board": "Main Board",
-      "marketCap": 6500000000,
+      "marketCap": 7100000000,
       "sharesOutstanding": 2000000000,
       "status": "active",
       "missingDays": 0,
@@ -1000,7 +1000,7 @@
       "name": "Linkage Assurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 30122399985.329998,
+      "marketCap": 32339999984.25,
       "sharesOutstanding": 18479999991,
       "status": "active",
       "missingDays": 0,
@@ -1014,7 +1014,7 @@
       "name": "Livestock Feeds Plc",
       "sector": "AGRICULTURE",
       "board": "Main Board",
-      "marketCap": 55799989174.8,
+      "marketCap": 56999988942,
       "sharesOutstanding": 2999999418,
       "status": "active",
       "missingDays": 0,
@@ -1070,7 +1070,7 @@
       "name": "Mutual Benefits Assurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 62391645654.67,
+      "marketCap": 63194110550.549995,
       "sharesOutstanding": 20061622397,
       "status": "active",
       "missingDays": 0,
@@ -1154,7 +1154,7 @@
       "name": "MTN Nigeria Communications Plc",
       "sector": "ICT",
       "board": "Premium Board",
-      "marketCap": 17216359284460,
+      "marketCap": 17321337084975,
       "sharesOutstanding": 20995560103,
       "status": "active",
       "missingDays": 0,
@@ -1168,7 +1168,7 @@
       "name": "Multi-Trex Integrated Foods Plc",
       "sector": "CONSUMER GOODS",
       "board": "Main Board",
-      "marketCap": 3426892629.6000004,
+      "marketCap": 3738428323.2,
       "sharesOutstanding": 6230713872,
       "status": "active",
       "missingDays": 0,
@@ -1252,7 +1252,7 @@
       "name": "Neimeth International Pharmaceuticals Plc",
       "sector": "HEALTHCARE",
       "board": "Main Board",
-      "marketCap": 33330215942.399998,
+      "marketCap": 32689250251.2,
       "sharesOutstanding": 4273104608,
       "status": "active",
       "missingDays": 0,
@@ -1294,7 +1294,7 @@
       "name": "Nigerian Exchange Group Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 331935590142,
+      "marketCap": 333899706060,
       "sharesOutstanding": 1964115918,
       "status": "active",
       "missingDays": 0,
@@ -1336,7 +1336,7 @@
       "name": "NPF Microfinance Bank Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 27567488740.999996,
+      "marketCap": 26069255657.249996,
       "sharesOutstanding": 5992932335,
       "status": "active",
       "missingDays": 0,
@@ -1364,7 +1364,7 @@
       "name": "Secure Electronic Technology Plc",
       "sector": "SERVICES",
       "board": "Main Board",
-      "marketCap": 3942077999.9999995,
+      "marketCap": 4167339600,
       "sharesOutstanding": 5631540000,
       "status": "active",
       "missingDays": 0,
@@ -1406,7 +1406,7 @@
       "name": "Omatek Ventures Plc",
       "sector": "ICT",
       "board": "Main Board",
-      "marketCap": 4295012629.12,
+      "marketCap": 4706863155.2,
       "sharesOutstanding": 2941789472,
       "status": "active",
       "missingDays": 0,
@@ -1462,7 +1462,7 @@
       "name": "Prestige Assurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 18553586646,
+      "marketCap": 18421061027.1,
       "sharesOutstanding": 13252561890,
       "status": "active",
       "missingDays": 0,
@@ -1504,7 +1504,7 @@
       "name": "Regency Alliance Insurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 12483900000,
+      "marketCap": 12804000000,
       "sharesOutstanding": 16005000000,
       "status": "active",
       "missingDays": 0,
@@ -1532,7 +1532,7 @@
       "name": "Royal Exchange Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 8928034855.2,
+      "marketCap": 8349365929.4,
       "sharesOutstanding": 8266698940,
       "status": "active",
       "missingDays": 0,
@@ -1616,7 +1616,7 @@
       "name": "Sovereign Trust Insurance Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 31301906862.600002,
+      "marketCap": 30163655703.960003,
       "sharesOutstanding": 14228139483,
       "status": "active",
       "missingDays": 0,
@@ -1630,7 +1630,7 @@
       "name": "Stanbic IBTC Holdings Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 2671497233328,
+      "marketCap": 2544283079360,
       "sharesOutstanding": 15901769246,
       "status": "active",
       "missingDays": 0,
@@ -1644,7 +1644,7 @@
       "name": "Sterling Financial Holdings Company Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 4010404105257.3003,
+      "marketCap": 3986951449671,
       "sharesOutstanding": 52117012414,
       "status": "active",
       "missingDays": 0,
@@ -1658,7 +1658,7 @@
       "name": "Sunu Assurances Nigeria Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 17025644000,
+      "marketCap": 17432400000,
       "sharesOutstanding": 5810800000,
       "status": "active",
       "missingDays": 0,
@@ -1686,7 +1686,7 @@
       "name": "Thomas Wyatt Nigeria Plc",
       "sector": "NATURAL RESOURCES",
       "board": "Main Board",
-      "marketCap": 871200000.0000001,
+      "marketCap": 958320000,
       "sharesOutstanding": 396000000,
       "status": "active",
       "missingDays": 0,
@@ -1742,7 +1742,7 @@
       "name": "Transnational Corporation Plc",
       "sector": "CONGLOMERATES",
       "board": "Main Board",
-      "marketCap": 365831912664,
+      "marketCap": 366848112421.4,
       "sharesOutstanding": 10161997574,
       "status": "active",
       "missingDays": 0,
@@ -1756,7 +1756,7 @@
       "name": "Trans-Nationwide Express Plc",
       "sector": "SERVICES",
       "board": "Main Board",
-      "marketCap": 1479505731.66,
+      "marketCap": 1345005210.6000001,
       "sharesOutstanding": 498150078,
       "status": "active",
       "missingDays": 0,
@@ -1812,7 +1812,7 @@
       "name": "United Bank for Africa Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Premium Board",
-      "marketCap": 1907064964497.05,
+      "marketCap": 1900435538201,
       "sharesOutstanding": 44196175307,
       "status": "active",
       "missingDays": 0,
@@ -1826,7 +1826,7 @@
       "name": "United Capital Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Main Board",
-      "marketCap": 301500000000,
+      "marketCap": 309600000000,
       "sharesOutstanding": 18000000000,
       "status": "active",
       "missingDays": 0,
@@ -1842,7 +1842,7 @@
       "board": "Real Estate Investment Trust & Close End Fund",
       "marketCap": 17501384670,
       "status": "active",
-      "missingDays": 2,
+      "missingDays": 3,
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
@@ -1860,7 +1860,7 @@
       "missingDays": 0,
       "firstKoboDate": "2026-10-14",
       "backfill": "pending",
-      "backfillAttempts": 1,
+      "backfillAttempts": 2,
       "dividendsAt": null
     },
     {
@@ -1924,7 +1924,7 @@
       "name": "UPDC Plc",
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Main Board",
-      "marketCap": 70527885756.8,
+      "marketCap": 74239879744,
       "sharesOutstanding": 18559969936,
       "status": "active",
       "missingDays": 0,
@@ -1938,7 +1938,7 @@
       "name": "UPDC Real Estate Investment Trust",
       "sector": "CONSTRUCTION/REAL ESTATE",
       "board": "Real Estate Investment Trust & Close End Fund",
-      "marketCap": 62704333250,
+      "marketCap": 56433899925,
       "sharesOutstanding": 2668269500,
       "status": "active",
       "missingDays": 0,
@@ -1952,7 +1952,7 @@
       "name": "University Press Plc",
       "sector": "SERVICES",
       "board": "Main Board",
-      "marketCap": 2157047520,
+      "marketCap": 2135477044.8000002,
       "sharesOutstanding": 431409504,
       "status": "active",
       "missingDays": 0,
@@ -1980,7 +1980,7 @@
       "name": "VFD Group Plc",
       "sector": "INVESTMENT",
       "board": "Main Board",
-      "marketCap": 98814229800,
+      "marketCap": 101094558180,
       "sharesOutstanding": 7601094600,
       "status": "active",
       "missingDays": 0,
@@ -2036,7 +2036,7 @@
       "name": "Zenith Bank Plc",
       "sector": "FINANCIAL SERVICES",
       "board": "Premium Board",
-      "marketCap": 5244617291000,
+      "marketCap": 5174798580000,
       "sharesOutstanding": 41069830000,
       "status": "active",
       "missingDays": 0,
@@ -2050,7 +2050,7 @@
       "name": "Zichis Agro Allied Industries Plc",
       "sector": "AGRICULTURE",
       "board": "Growth Board",
-      "marketCap": 10758000000,
+      "marketCap": 10260000000,
       "sharesOutstanding": 600000000,
       "status": "active",
       "missingDays": 0,
