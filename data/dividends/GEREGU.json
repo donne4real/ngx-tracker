@@ -1,0 +1,35 @@
+{
+  "symbol": "GEREGU",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-04-14",
+  "records": [
+    {
+      "exDate": "2023-02-28",
+      "recordDate": "2023-02-27",
+      "payDate": "2023-03-29",
+      "dps": 8,
+      "kind": null
+    },
+    {
+      "exDate": "2024-02-28",
+      "recordDate": "2024-02-27",
+      "payDate": "2024-03-28",
+      "dps": 8,
+      "kind": null
+    },
+    {
+      "exDate": "2025-03-14",
+      "recordDate": "2025-03-13",
+      "payDate": "2025-03-28",
+      "dps": 8.5,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-14",
+      "recordDate": "2026-04-13",
+      "payDate": "2026-04-30",
+      "dps": 9,
+      "kind": null
+    }
+  ]
+}

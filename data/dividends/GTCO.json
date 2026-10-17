@@ -1,0 +1,84 @@
+{
+  "symbol": "GTCO",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-10-12",
+  "records": [
+    {
+      "exDate": "2021-09-28",
+      "recordDate": "2021-09-27",
+      "payDate": "2021-10-12",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2022-03-24",
+      "recordDate": "2022-03-23",
+      "payDate": "2022-04-08",
+      "dps": 2.7,
+      "kind": null
+    },
+    {
+      "exDate": "2022-09-21",
+      "recordDate": "2022-09-20",
+      "payDate": "2022-09-30",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-02",
+      "recordDate": "2023-05-01",
+      "payDate": "2023-05-11",
+      "dps": 2.8,
+      "kind": null
+    },
+    {
+      "exDate": "2023-09-15",
+      "recordDate": "2023-09-14",
+      "payDate": "2023-09-25",
+      "dps": 0.5,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-29",
+      "recordDate": "2024-04-26",
+      "payDate": "2024-05-09",
+      "dps": 2.7,
+      "kind": null
+    },
+    {
+      "exDate": "2024-09-26",
+      "recordDate": "2024-09-25",
+      "payDate": "2024-10-07",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-16",
+      "recordDate": "2025-04-15",
+      "payDate": "2025-04-24",
+      "dps": 7.03,
+      "kind": null
+    },
+    {
+      "exDate": "2025-10-08",
+      "recordDate": "2025-10-07",
+      "payDate": "2025-10-15",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-14",
+      "recordDate": "2026-04-13",
+      "payDate": "2026-04-28",
+      "dps": 11.76,
+      "kind": null
+    },
+    {
+      "exDate": "2026-10-12",
+      "recordDate": "2026-10-12",
+      "payDate": "2026-10-20",
+      "dps": 1,
+      "kind": "interim"
+    }
+  ]
+}

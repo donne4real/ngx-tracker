@@ -1,0 +1,70 @@
+{
+  "symbol": "HBMNG",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-08-13",
+  "records": [
+    {
+      "exDate": "2021-05-04",
+      "recordDate": "2021-04-30",
+      "payDate": "2021-05-25",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2021-11-11",
+      "recordDate": "2021-11-10",
+      "payDate": "2021-11-19",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2022-04-04",
+      "recordDate": "2022-04-01",
+      "payDate": "2022-04-21",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-11",
+      "recordDate": "2023-04-06",
+      "payDate": "2023-04-28",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-02",
+      "recordDate": "2024-03-28",
+      "payDate": "2024-04-26",
+      "dps": 1.9,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-02",
+      "recordDate": "2025-03-28",
+      "payDate": "2025-04-25",
+      "dps": 1.2,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-12",
+      "recordDate": "2025-05-09",
+      "payDate": "2025-05-20",
+      "dps": 4,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-07",
+      "recordDate": "2026-04-03",
+      "payDate": "2026-04-30",
+      "dps": 6,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-13",
+      "recordDate": "2026-08-13",
+      "payDate": "2026-08-17",
+      "dps": 16,
+      "kind": null
+    }
+  ]
+}

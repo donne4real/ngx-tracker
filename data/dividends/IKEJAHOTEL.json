@@ -1,0 +1,70 @@
+{
+  "symbol": "IKEJAHOTEL",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-08-10",
+  "records": [
+    {
+      "exDate": "2023-07-05",
+      "recordDate": "2023-07-04",
+      "payDate": "2023-07-31",
+      "dps": 0.075,
+      "kind": null
+    },
+    {
+      "exDate": "2024-07-08",
+      "recordDate": "2024-07-05",
+      "payDate": "2024-08-06",
+      "dps": 0.075,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-12",
+      "recordDate": "2025-05-09",
+      "payDate": "2025-06-06",
+      "dps": 0.03,
+      "kind": null
+    },
+    {
+      "exDate": "2025-07-07",
+      "recordDate": "2025-07-04",
+      "payDate": "2025-08-01",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2025-08-11",
+      "recordDate": "2025-08-08",
+      "payDate": "2025-09-05",
+      "dps": 0.03,
+      "kind": null
+    },
+    {
+      "exDate": "2025-11-10",
+      "recordDate": "2025-11-07",
+      "payDate": "2025-11-28",
+      "dps": 0.03,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-11",
+      "recordDate": "2026-05-08",
+      "payDate": "2026-06-05",
+      "dps": 0.03,
+      "kind": null
+    },
+    {
+      "exDate": "2026-07-06",
+      "recordDate": "2026-07-06",
+      "payDate": "2026-07-24",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-10",
+      "recordDate": "2026-08-10",
+      "payDate": "2026-09-04",
+      "dps": 0.03,
+      "kind": null
+    }
+  ]
+}

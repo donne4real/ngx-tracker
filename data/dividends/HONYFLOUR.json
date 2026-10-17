@@ -1,0 +1,42 @@
+{
+  "symbol": "HONYFLOUR",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-08-31",
+  "records": [
+    {
+      "exDate": "2017-09-14",
+      "recordDate": "2017-09-13",
+      "payDate": "2017-09-22",
+      "dps": 0.06,
+      "kind": null
+    },
+    {
+      "exDate": "2018-09-10",
+      "recordDate": "2018-09-07",
+      "payDate": "2018-09-21",
+      "dps": 0.06,
+      "kind": null
+    },
+    {
+      "exDate": "2020-09-17",
+      "recordDate": "2020-09-16",
+      "payDate": "2020-09-30",
+      "dps": 0.04,
+      "kind": null
+    },
+    {
+      "exDate": "2021-09-06",
+      "recordDate": "2021-09-03",
+      "payDate": "2021-10-14",
+      "dps": 0.07,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-31",
+      "recordDate": "2026-08-31",
+      "payDate": "2026-09-17",
+      "dps": 0.2,
+      "kind": null
+    }
+  ]
+}

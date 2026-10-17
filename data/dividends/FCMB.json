@@ -1,0 +1,49 @@
+{
+  "symbol": "FCMB",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-06-16",
+  "records": [
+    {
+      "exDate": "2021-04-09",
+      "recordDate": "2021-04-08",
+      "payDate": "2021-04-21",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2022-04-19",
+      "recordDate": "2022-04-14",
+      "payDate": "2022-04-27",
+      "dps": 0.2,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-14",
+      "recordDate": "2023-04-13",
+      "payDate": "2023-04-28",
+      "dps": 0.25,
+      "kind": null
+    },
+    {
+      "exDate": "2024-05-14",
+      "recordDate": "2024-05-13",
+      "payDate": "2024-05-24",
+      "dps": 0.5,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-17",
+      "recordDate": "2025-04-16",
+      "payDate": "2025-04-29",
+      "dps": 0.55,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-16",
+      "recordDate": "2026-06-16",
+      "payDate": "2026-06-30",
+      "dps": 0.35,
+      "kind": null
+    }
+  ]
+}

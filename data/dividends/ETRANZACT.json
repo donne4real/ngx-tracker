@@ -1,0 +1,21 @@
+{
+  "symbol": "ETRANZACT",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-07-07",
+  "records": [
+    {
+      "exDate": "2025-07-08",
+      "recordDate": "2025-07-07",
+      "payDate": "2025-07-24",
+      "dps": 0.125,
+      "kind": null
+    },
+    {
+      "exDate": "2026-07-07",
+      "recordDate": "2026-07-07",
+      "payDate": "2026-07-23",
+      "dps": 0.125,
+      "kind": null
+    }
+  ]
+}

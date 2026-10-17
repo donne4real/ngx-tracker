@@ -573,7 +573,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "ETI",
@@ -587,7 +587,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "ETRANZACT",
@@ -601,7 +601,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "EUNISELL",
@@ -615,7 +615,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "FCMB",
@@ -629,7 +629,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "FIDELITYBK",
@@ -643,7 +643,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "FIDSON",
@@ -657,7 +657,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "FIRSTHOLDCO",
@@ -671,7 +671,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "FTGINSURE",
@@ -685,7 +685,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "FTNCOCOA",
@@ -699,7 +699,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "GEREGU",
@@ -713,7 +713,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "GOLDBREW",
@@ -727,7 +727,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "GTCO",
@@ -741,7 +741,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "GUINEAINS",
@@ -755,7 +755,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "GUINNESS",
@@ -769,7 +769,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "HBMNG",
@@ -783,7 +783,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "HMCALL",
@@ -797,7 +797,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "HONYFLOUR",
@@ -811,7 +811,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "IKEJAHOTEL",
@@ -825,7 +825,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "IMG",
@@ -839,7 +839,7 @@
       "firstKoboDate": "2026-09-25",
       "backfill": "done",
       "backfillAttempts": 0,
-      "dividendsAt": null
+      "dividendsAt": "2026-10-17"
     },
     {
       "symbol": "INFINITY",
@@ -1859,8 +1859,8 @@
       "status": "active",
       "missingDays": 0,
       "firstKoboDate": "2026-10-14",
-      "backfill": "pending",
-      "backfillAttempts": 2,
+      "backfill": "failed",
+      "backfillAttempts": 3,
       "dividendsAt": null
     },
     {

@@ -1,0 +1,21 @@
+{
+  "symbol": "HMCALL",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-05-29",
+  "records": [
+    {
+      "exDate": "2025-04-02",
+      "recordDate": "2025-03-31",
+      "payDate": "2025-05-15",
+      "dps": 0.0007,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-29",
+      "recordDate": "2026-05-28",
+      "payDate": "2026-06-18",
+      "dps": 0.05,
+      "kind": null
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "symbol": "GUINNESS",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-07-30",
+  "records": [
+    {
+      "exDate": "2021-09-29",
+      "recordDate": "2021-09-28",
+      "payDate": "2021-10-27",
+      "dps": 0.46,
+      "kind": null
+    },
+    {
+      "exDate": "2022-09-26",
+      "recordDate": "2022-09-23",
+      "payDate": "2022-10-26",
+      "dps": 7.14,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-21",
+      "recordDate": "2026-04-20",
+      "payDate": "2026-04-24",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2026-07-30",
+      "recordDate": "2026-07-30",
+      "payDate": "2026-08-10",
+      "dps": 7,
+      "kind": null
+    }
+  ]
+}

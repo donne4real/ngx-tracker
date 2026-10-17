@@ -1,0 +1,49 @@
+{
+  "symbol": "IMG",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-06-05",
+  "records": [
+    {
+      "exDate": "2021-06-07",
+      "recordDate": "2021-06-04",
+      "payDate": "2021-06-25",
+      "dps": 0.37879,
+      "kind": null
+    },
+    {
+      "exDate": "2023-07-07",
+      "recordDate": "2023-07-06",
+      "payDate": "2023-07-25",
+      "dps": 0.36364,
+      "kind": null
+    },
+    {
+      "exDate": "2024-06-14",
+      "recordDate": "2024-06-13",
+      "payDate": "2024-07-02",
+      "dps": 0.45455,
+      "kind": null
+    },
+    {
+      "exDate": "2025-06-10",
+      "recordDate": "2025-06-05",
+      "payDate": "2025-06-25",
+      "dps": 0.8,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-04",
+      "recordDate": "2026-06-04",
+      "payDate": "2026-06-24",
+      "dps": 0.5,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-05",
+      "recordDate": "2026-06-05",
+      "payDate": "2026-06-24",
+      "dps": 0.5,
+      "kind": null
+    }
+  ]
+}

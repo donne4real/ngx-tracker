@@ -1,0 +1,28 @@
+{
+  "symbol": "ETERNA",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-04-14",
+  "records": [
+    {
+      "exDate": "2021-05-04",
+      "recordDate": "2021-04-30",
+      "payDate": "2021-08-13",
+      "dps": 0.1,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-25",
+      "recordDate": "2023-04-21",
+      "payDate": "2023-05-12",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-14",
+      "recordDate": "2026-04-13",
+      "payDate": "2026-05-12",
+      "dps": 0.5,
+      "kind": null
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "symbol": "ETI",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-06-15",
+  "records": [
+    {
+      "exDate": "2022-06-06",
+      "recordDate": "2022-06-03",
+      "payDate": "2022-06-20",
+      "dps": 0.67096,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-26",
+      "recordDate": "2023-05-25",
+      "payDate": "2023-06-06",
+      "dps": 0.50713,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-12",
+      "recordDate": "2026-06-12",
+      "payDate": "2026-06-30",
+      "dps": 0.0016,
+      "kind": "final"
+    },
+    {
+      "exDate": "2026-06-15",
+      "recordDate": "2026-06-12",
+      "payDate": "2026-06-30",
+      "dps": 2.17645,
+      "kind": null
+    }
+  ]
+}

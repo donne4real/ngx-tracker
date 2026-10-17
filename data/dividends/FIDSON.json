@@ -1,0 +1,49 @@
+{
+  "symbol": "FIDSON",
+  "fetchedAt": "2026-10-17",
+  "latestExDate": "2026-04-15",
+  "records": [
+    {
+      "exDate": "2021-07-08",
+      "recordDate": "2021-07-07",
+      "payDate": "2021-07-29",
+      "dps": 0.22727,
+      "kind": null
+    },
+    {
+      "exDate": "2022-07-13",
+      "recordDate": "2022-07-08",
+      "payDate": "2022-07-29",
+      "dps": 0.5,
+      "kind": null
+    },
+    {
+      "exDate": "2023-07-10",
+      "recordDate": "2023-07-07",
+      "payDate": "2023-09-12",
+      "dps": 0.55,
+      "kind": null
+    },
+    {
+      "exDate": "2024-06-19",
+      "recordDate": "2024-06-18",
+      "payDate": "2024-07-05",
+      "dps": 0.6,
+      "kind": null
+    },
+    {
+      "exDate": "2025-07-14",
+      "recordDate": "2025-07-11",
+      "payDate": "2025-08-01",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-15",
+      "recordDate": "2026-04-14",
+      "payDate": "2026-07-31",
+      "dps": 1.5,
+      "kind": null
+    }
+  ]
+}

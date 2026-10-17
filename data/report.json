@@ -1,17 +1,43 @@
 {
-  "runAt": "2026-10-16T20:15:04.694Z",
-  "outcome": "duplicate-date",
+  "runAt": "2026-10-17T14:31:58.670Z",
+  "outcome": "backfill-only",
   "tradeDate": "2026-10-16",
   "backfill": {
     "ok": [],
-    "failed": [],
+    "failed": [
+      {
+        "symbol": "UHREIT",
+        "error": "EODHD returned no prices"
+      }
+    ],
     "stoppedEarly": null
   },
   "dividends": {
-    "ok": [],
+    "ok": [
+      "ETERNA",
+      "ETI",
+      "ETRANZACT",
+      "EUNISELL",
+      "FCMB",
+      "FIDELITYBK",
+      "FIDSON",
+      "FIRSTHOLDCO",
+      "FTGINSURE",
+      "FTNCOCOA",
+      "GEREGU",
+      "GOLDBREW",
+      "GTCO",
+      "GUINEAINS",
+      "GUINNESS",
+      "HBMNG",
+      "HMCALL",
+      "HONYFLOUR",
+      "IKEJAHOTEL",
+      "IMG"
+    ],
     "failed": []
   },
   "warnings": [
-    "UHREIT: non-numeric market_cap coerced"
+    "UHREIT: dropped 1 unusable EODHD rows"
   ]
 }
