@@ -1,0 +1,21 @@
+{
+  "symbol": "MBENEFIT",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2026-07-22",
+  "records": [
+    {
+      "exDate": "2025-07-25",
+      "recordDate": "2025-07-24",
+      "payDate": "2025-08-07",
+      "dps": 0.02,
+      "kind": null
+    },
+    {
+      "exDate": "2026-07-22",
+      "recordDate": "2026-07-22",
+      "payDate": "2026-08-06",
+      "dps": 0.04,
+      "kind": null
+    }
+  ]
+}

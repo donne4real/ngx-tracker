@@ -1,0 +1,14 @@
+{
+  "symbol": "INTBREW",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2026-09-16",
+  "records": [
+    {
+      "exDate": "2026-09-16",
+      "recordDate": "2026-09-16",
+      "payDate": "2026-09-23",
+      "dps": 0.5,
+      "kind": null
+    }
+  ]
+}

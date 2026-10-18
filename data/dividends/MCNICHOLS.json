@@ -1,0 +1,56 @@
+{
+  "symbol": "MCNICHOLS",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2026-06-30",
+  "records": [
+    {
+      "exDate": "2021-07-01",
+      "recordDate": "2021-06-30",
+      "payDate": "2021-08-05",
+      "dps": 0.01364,
+      "kind": null
+    },
+    {
+      "exDate": "2022-07-01",
+      "recordDate": "2022-06-30",
+      "payDate": "2022-08-03",
+      "dps": 0.03,
+      "kind": null
+    },
+    {
+      "exDate": "2023-06-01",
+      "recordDate": "2023-05-31",
+      "payDate": "2023-08-03",
+      "dps": 0.01,
+      "kind": null
+    },
+    {
+      "exDate": "2024-07-01",
+      "recordDate": "2024-06-28",
+      "payDate": "2024-07-30",
+      "dps": 0.02,
+      "kind": null
+    },
+    {
+      "exDate": "2024-11-04",
+      "recordDate": "2024-11-01",
+      "payDate": "2024-11-11",
+      "dps": 0.02,
+      "kind": null
+    },
+    {
+      "exDate": "2025-07-01",
+      "recordDate": "2025-06-30",
+      "payDate": "2025-08-05",
+      "dps": 0.04,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-30",
+      "recordDate": "2026-06-30",
+      "payDate": "2026-08-06",
+      "dps": 0.06,
+      "kind": null
+    }
+  ]
+}

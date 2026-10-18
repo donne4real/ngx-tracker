@@ -1,0 +1,42 @@
+{
+  "symbol": "JBERGER",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2026-06-01",
+  "records": [
+    {
+      "exDate": "2022-05-30",
+      "recordDate": "2022-05-27",
+      "payDate": "2022-06-17",
+      "dps": 2.5,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-29",
+      "recordDate": "2023-05-26",
+      "payDate": "2023-06-16",
+      "dps": 2.5,
+      "kind": null
+    },
+    {
+      "exDate": "2024-06-03",
+      "recordDate": "2024-05-31",
+      "payDate": "2024-06-21",
+      "dps": 3,
+      "kind": null
+    },
+    {
+      "exDate": "2025-06-02",
+      "recordDate": "2025-05-30",
+      "payDate": "2025-06-20",
+      "dps": 3.25,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-01",
+      "recordDate": "2026-05-29",
+      "payDate": "2026-06-19",
+      "dps": 4.25,
+      "kind": null
+    }
+  ]
+}

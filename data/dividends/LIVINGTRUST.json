@@ -1,0 +1,42 @@
+{
+  "symbol": "LIVINGTRUST",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2025-07-04",
+  "records": [
+    {
+      "exDate": "2021-05-24",
+      "recordDate": "2021-05-21",
+      "payDate": "2021-06-14",
+      "dps": 0.01,
+      "kind": null
+    },
+    {
+      "exDate": "2022-05-16",
+      "recordDate": "2022-05-13",
+      "payDate": "2022-06-06",
+      "dps": 0.06,
+      "kind": null
+    },
+    {
+      "exDate": "2023-07-07",
+      "recordDate": "2023-07-06",
+      "payDate": "2023-07-24",
+      "dps": 0.012,
+      "kind": null
+    },
+    {
+      "exDate": "2024-05-27",
+      "recordDate": "2024-05-24",
+      "payDate": "2024-06-10",
+      "dps": 0.03,
+      "kind": null
+    },
+    {
+      "exDate": "2025-07-04",
+      "recordDate": "2025-07-03",
+      "payDate": "2025-07-21",
+      "dps": 0.08,
+      "kind": null
+    }
+  ]
+}

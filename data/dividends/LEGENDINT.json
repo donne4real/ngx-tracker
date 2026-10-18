@@ -1,0 +1,14 @@
+{
+  "symbol": "LEGENDINT",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2025-10-30",
+  "records": [
+    {
+      "exDate": "2025-10-30",
+      "recordDate": "2025-10-29",
+      "payDate": "2025-11-07",
+      "dps": 0.06,
+      "kind": null
+    }
+  ]
+}

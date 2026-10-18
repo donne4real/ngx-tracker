@@ -1,0 +1,21 @@
+{
+  "symbol": "LINKASSURE",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2024-07-15",
+  "records": [
+    {
+      "exDate": "2021-05-04",
+      "recordDate": "2021-04-30",
+      "payDate": "2021-05-26",
+      "dps": 0.03788,
+      "kind": null
+    },
+    {
+      "exDate": "2024-07-15",
+      "recordDate": "2024-07-12",
+      "payDate": "2024-07-31",
+      "dps": 0.04167,
+      "kind": null
+    }
+  ]
+}

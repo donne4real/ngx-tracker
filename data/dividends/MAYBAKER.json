@@ -1,0 +1,42 @@
+{
+  "symbol": "MAYBAKER",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2026-05-20",
+  "records": [
+    {
+      "exDate": "2022-05-18",
+      "recordDate": "2022-05-17",
+      "payDate": "2022-06-03",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-17",
+      "recordDate": "2023-05-16",
+      "payDate": "2023-06-02",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2024-05-22",
+      "recordDate": "2024-05-21",
+      "payDate": "2024-06-06",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-21",
+      "recordDate": "2025-05-20",
+      "payDate": "2025-06-05",
+      "dps": 0.4,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-20",
+      "recordDate": "2026-05-19",
+      "payDate": "2026-06-04",
+      "dps": 0.5,
+      "kind": null
+    }
+  ]
+}

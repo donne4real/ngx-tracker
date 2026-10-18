@@ -1,0 +1,35 @@
+{
+  "symbol": "MEYER",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2026-05-04",
+  "records": [
+    {
+      "exDate": "2021-08-16",
+      "recordDate": "2021-08-13",
+      "payDate": "2021-08-25",
+      "dps": 1.5,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-29",
+      "recordDate": "2024-04-26",
+      "payDate": "2024-05-27",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-12",
+      "recordDate": "2025-05-09",
+      "payDate": "2025-05-30",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-04",
+      "recordDate": "2026-04-30",
+      "payDate": "2026-05-25",
+      "dps": 0.45,
+      "kind": null
+    }
+  ]
+}

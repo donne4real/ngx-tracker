@@ -1,0 +1,35 @@
+{
+  "symbol": "LASACO",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2023-07-04",
+  "records": [
+    {
+      "exDate": "2019-08-19",
+      "recordDate": "2019-08-16",
+      "payDate": "2019-10-11",
+      "dps": 0.2,
+      "kind": null
+    },
+    {
+      "exDate": "2020-09-01",
+      "recordDate": "2020-08-31",
+      "payDate": "2020-09-22",
+      "dps": 0.2,
+      "kind": null
+    },
+    {
+      "exDate": "2021-08-06",
+      "recordDate": "2021-08-05",
+      "payDate": "2021-08-30",
+      "dps": 0.1,
+      "kind": null
+    },
+    {
+      "exDate": "2023-07-04",
+      "recordDate": "2023-07-03",
+      "payDate": "2023-07-31",
+      "dps": 0.15,
+      "kind": null
+    }
+  ]
+}

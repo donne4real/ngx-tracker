@@ -1,0 +1,56 @@
+{
+  "symbol": "MANSARD",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2025-06-26",
+  "records": [
+    {
+      "exDate": "2021-04-23",
+      "recordDate": "2021-04-22",
+      "payDate": "2021-05-07",
+      "dps": 0.22,
+      "kind": null
+    },
+    {
+      "exDate": "2022-04-29",
+      "recordDate": "2022-04-28",
+      "payDate": "2022-07-14",
+      "dps": 0.25,
+      "kind": null
+    },
+    {
+      "exDate": "2022-11-24",
+      "recordDate": "2022-11-23",
+      "payDate": "2022-12-09",
+      "dps": 0.06,
+      "kind": null
+    },
+    {
+      "exDate": "2023-06-22",
+      "recordDate": "2023-06-21",
+      "payDate": "2023-07-28",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2023-11-30",
+      "recordDate": "2023-11-29",
+      "payDate": "2023-12-15",
+      "dps": 0.06,
+      "kind": null
+    },
+    {
+      "exDate": "2024-07-16",
+      "recordDate": "2024-07-15",
+      "payDate": "2024-08-08",
+      "dps": 0.34,
+      "kind": null
+    },
+    {
+      "exDate": "2025-06-26",
+      "recordDate": "2025-06-25",
+      "payDate": "2025-07-10",
+      "dps": 0.45,
+      "kind": null
+    }
+  ]
+}

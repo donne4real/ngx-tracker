@@ -1,0 +1,14 @@
+{
+  "symbol": "JAPAULGOLD",
+  "fetchedAt": "2026-10-18",
+  "latestExDate": "2025-06-10",
+  "records": [
+    {
+      "exDate": "2025-06-10",
+      "recordDate": "2025-06-06",
+      "payDate": "2025-07-04",
+      "dps": 0.04,
+      "kind": null
+    }
+  ]
+}
