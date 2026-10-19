@@ -1,0 +1,14 @@
+{
+  "symbol": "NREIT",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2026-07-30",
+  "records": [
+    {
+      "exDate": "2026-07-30",
+      "recordDate": "2026-07-30",
+      "payDate": "2026-09-08",
+      "dps": 1.72,
+      "kind": null
+    }
+  ]
+}

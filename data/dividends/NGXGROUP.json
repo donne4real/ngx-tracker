@@ -1,0 +1,49 @@
+{
+  "symbol": "NGXGROUP",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2026-07-30",
+  "records": [
+    {
+      "exDate": "2023-08-11",
+      "recordDate": "2023-08-10",
+      "payDate": "2023-08-31",
+      "dps": 0.1875,
+      "kind": null
+    },
+    {
+      "exDate": "2024-03-27",
+      "recordDate": "2024-03-26",
+      "payDate": "2024-04-29",
+      "dps": 0.5625,
+      "kind": null
+    },
+    {
+      "exDate": "2025-03-14",
+      "recordDate": "2025-03-13",
+      "payDate": "2025-04-09",
+      "dps": 1.5,
+      "kind": null
+    },
+    {
+      "exDate": "2025-11-10",
+      "recordDate": "2025-11-07",
+      "payDate": "2025-11-18",
+      "dps": 0.75,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-13",
+      "recordDate": "2026-04-10",
+      "payDate": "2026-04-29",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2026-07-30",
+      "recordDate": "2026-07-30",
+      "payDate": "2026-08-05",
+      "dps": 1.3,
+      "kind": null
+    }
+  ]
+}

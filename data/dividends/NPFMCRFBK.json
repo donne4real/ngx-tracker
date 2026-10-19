@@ -1,0 +1,42 @@
+{
+  "symbol": "NPFMCRFBK",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2026-05-20",
+  "records": [
+    {
+      "exDate": "2022-05-09",
+      "recordDate": "2022-05-06",
+      "payDate": "2022-05-26",
+      "dps": 0.09,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-09",
+      "recordDate": "2023-05-08",
+      "payDate": "2023-06-22",
+      "dps": 0.1,
+      "kind": null
+    },
+    {
+      "exDate": "2024-10-08",
+      "recordDate": "2024-10-07",
+      "payDate": "2024-11-01",
+      "dps": 0.12,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-29",
+      "recordDate": "2025-05-28",
+      "payDate": "2025-06-19",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-20",
+      "recordDate": "2026-05-19",
+      "payDate": "2026-06-11",
+      "dps": 0.2,
+      "kind": null
+    }
+  ]
+}

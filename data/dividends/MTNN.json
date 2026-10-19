@@ -1,0 +1,77 @@
+{
+  "symbol": "MTNN",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2026-08-21",
+  "records": [
+    {
+      "exDate": "2021-05-05",
+      "recordDate": "2021-05-04",
+      "payDate": "2021-06-08",
+      "dps": 5.9,
+      "kind": null
+    },
+    {
+      "exDate": "2021-08-20",
+      "recordDate": "2021-08-19",
+      "payDate": "2021-08-27",
+      "dps": 4.55,
+      "kind": null
+    },
+    {
+      "exDate": "2022-04-07",
+      "recordDate": "2022-04-06",
+      "payDate": "2022-04-28",
+      "dps": 8.57,
+      "kind": null
+    },
+    {
+      "exDate": "2022-08-19",
+      "recordDate": "2022-08-18",
+      "payDate": "2022-08-26",
+      "dps": 5.6,
+      "kind": null
+    },
+    {
+      "exDate": "2023-03-28",
+      "recordDate": "2023-03-27",
+      "payDate": "2023-04-20",
+      "dps": 10,
+      "kind": null
+    },
+    {
+      "exDate": "2023-08-17",
+      "recordDate": "2023-08-16",
+      "payDate": "2023-08-24",
+      "dps": 5.6,
+      "kind": null
+    },
+    {
+      "exDate": "2025-11-21",
+      "recordDate": "2025-11-20",
+      "payDate": "2025-11-28",
+      "dps": 5,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-09",
+      "recordDate": "2026-04-08",
+      "payDate": "2026-05-05",
+      "dps": 15,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-20",
+      "recordDate": "2026-08-20",
+      "payDate": "2026-09-07",
+      "dps": 26,
+      "kind": "interim"
+    },
+    {
+      "exDate": "2026-08-21",
+      "recordDate": "2026-08-21",
+      "payDate": "2026-09-07",
+      "dps": 26,
+      "kind": null
+    }
+  ]
+}

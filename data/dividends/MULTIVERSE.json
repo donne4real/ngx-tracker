@@ -1,0 +1,42 @@
+{
+  "symbol": "MULTIVERSE",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2026-06-08",
+  "records": [
+    {
+      "exDate": "2023-05-25",
+      "recordDate": "2023-05-24",
+      "payDate": "2023-06-14",
+      "dps": 0.05,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-12",
+      "recordDate": "2024-04-11",
+      "payDate": "2024-05-02",
+      "dps": 0.05,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-26",
+      "recordDate": "2025-05-23",
+      "payDate": "2025-06-18",
+      "dps": 0.1,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-05",
+      "recordDate": "2026-06-05",
+      "payDate": "2026-06-29",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-08",
+      "recordDate": "2026-06-08",
+      "payDate": "2026-06-29",
+      "dps": 0.15,
+      "kind": null
+    }
+  ]
+}

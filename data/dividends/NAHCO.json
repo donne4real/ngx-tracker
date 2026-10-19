@@ -1,0 +1,84 @@
+{
+  "symbol": "NAHCO",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2026-05-04",
+  "records": [
+    {
+      "exDate": "2021-07-14",
+      "recordDate": "2021-07-13",
+      "payDate": "2021-07-30",
+      "dps": 0.09115,
+      "kind": null
+    },
+    {
+      "exDate": "2021-07-14",
+      "recordDate": "2021-07-13",
+      "payDate": "2021-07-30",
+      "dps": 0.10417,
+      "kind": null
+    },
+    {
+      "exDate": "2022-07-18",
+      "recordDate": "2022-07-15",
+      "payDate": "2022-07-29",
+      "dps": 0.35875,
+      "kind": null
+    },
+    {
+      "exDate": "2022-07-18",
+      "recordDate": "2022-07-15",
+      "payDate": "2022-07-29",
+      "dps": 0.41,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-15",
+      "recordDate": "2023-05-12",
+      "payDate": "2023-05-26",
+      "dps": 1.05,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-15",
+      "recordDate": "2023-05-12",
+      "payDate": "2023-05-26",
+      "dps": 1.2,
+      "kind": null
+    },
+    {
+      "exDate": "2024-05-13",
+      "recordDate": "2024-05-10",
+      "payDate": "2024-05-24",
+      "dps": 2.2225,
+      "kind": null
+    },
+    {
+      "exDate": "2024-05-13",
+      "recordDate": "2024-05-10",
+      "payDate": "2024-05-24",
+      "dps": 2.54,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-12",
+      "recordDate": "2025-05-09",
+      "payDate": "2025-05-23",
+      "dps": 5.1975,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-12",
+      "recordDate": "2025-05-09",
+      "payDate": "2025-05-23",
+      "dps": 5.94,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-04",
+      "recordDate": "2026-05-01",
+      "payDate": "2026-05-15",
+      "dps": 6.25,
+      "kind": null
+    }
+  ]
+}

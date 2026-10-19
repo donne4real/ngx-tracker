@@ -1,0 +1,49 @@
+{
+  "symbol": "NEM",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2026-04-15",
+  "records": [
+    {
+      "exDate": "2021-06-07",
+      "recordDate": "2021-06-04",
+      "payDate": "2021-06-24",
+      "dps": 0.18,
+      "kind": null
+    },
+    {
+      "exDate": "2022-05-04",
+      "recordDate": "2022-04-29",
+      "payDate": "2022-05-19",
+      "dps": 0.22,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-02",
+      "recordDate": "2023-04-28",
+      "payDate": "2023-05-18",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2024-06-21",
+      "recordDate": "2024-06-20",
+      "payDate": "2024-07-02",
+      "dps": 0.6,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-28",
+      "recordDate": "2025-04-25",
+      "payDate": "2025-05-20",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-15",
+      "recordDate": "2026-04-14",
+      "payDate": "2026-05-14",
+      "dps": 1.5,
+      "kind": null
+    }
+  ]
+}

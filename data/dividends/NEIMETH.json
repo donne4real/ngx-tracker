@@ -1,0 +1,21 @@
+{
+  "symbol": "NEIMETH",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2022-03-15",
+  "records": [
+    {
+      "exDate": "2021-02-23",
+      "recordDate": "2021-02-22",
+      "payDate": "2021-03-12",
+      "dps": 0.065,
+      "kind": null
+    },
+    {
+      "exDate": "2022-03-15",
+      "recordDate": "2022-03-14",
+      "payDate": "2022-03-25",
+      "dps": 0.07,
+      "kind": null
+    }
+  ]
+}

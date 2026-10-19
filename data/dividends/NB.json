@@ -1,0 +1,77 @@
+{
+  "symbol": "NB",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2023-03-17",
+  "records": [
+    {
+      "exDate": "2018-11-23",
+      "recordDate": "2018-11-22",
+      "payDate": "2018-12-10",
+      "dps": 0.48,
+      "kind": null
+    },
+    {
+      "exDate": "2019-03-07",
+      "recordDate": "2019-03-06",
+      "payDate": "2019-05-20",
+      "dps": 1.464,
+      "kind": null
+    },
+    {
+      "exDate": "2019-11-22",
+      "recordDate": "2019-11-21",
+      "payDate": "2019-12-09",
+      "dps": 0.4,
+      "kind": null
+    },
+    {
+      "exDate": "2020-03-05",
+      "recordDate": "2020-03-04",
+      "payDate": "2020-06-24",
+      "dps": 1.208,
+      "kind": null
+    },
+    {
+      "exDate": "2020-11-23",
+      "recordDate": "2020-11-20",
+      "payDate": "2020-12-01",
+      "dps": 0.2,
+      "kind": null
+    },
+    {
+      "exDate": "2021-03-11",
+      "recordDate": "2021-03-10",
+      "payDate": "2021-04-23",
+      "dps": 0.552,
+      "kind": null
+    },
+    {
+      "exDate": "2021-11-22",
+      "recordDate": "2021-11-19",
+      "payDate": "2021-12-03",
+      "dps": 0.32,
+      "kind": null
+    },
+    {
+      "exDate": "2022-03-10",
+      "recordDate": "2022-03-09",
+      "payDate": "2022-04-22",
+      "dps": 0.96,
+      "kind": null
+    },
+    {
+      "exDate": "2022-11-24",
+      "recordDate": "2022-11-23",
+      "payDate": "2022-12-01",
+      "dps": 0.32,
+      "kind": null
+    },
+    {
+      "exDate": "2023-03-17",
+      "recordDate": "2023-03-16",
+      "payDate": "2023-04-26",
+      "dps": 1.03,
+      "kind": null
+    }
+  ]
+}

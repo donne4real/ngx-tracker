@@ -1,0 +1,42 @@
+{
+  "symbol": "NNFM",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2025-09-18",
+  "records": [
+    {
+      "exDate": "2021-08-25",
+      "recordDate": "2021-08-24",
+      "payDate": "2021-09-10",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2022-08-24",
+      "recordDate": "2022-08-23",
+      "payDate": "2022-09-09",
+      "dps": 0.25,
+      "kind": null
+    },
+    {
+      "exDate": "2023-08-23",
+      "recordDate": "2023-08-22",
+      "payDate": "2023-09-08",
+      "dps": 0.35,
+      "kind": null
+    },
+    {
+      "exDate": "2024-11-12",
+      "recordDate": "2024-11-11",
+      "payDate": "2024-11-19",
+      "dps": 0.5,
+      "kind": null
+    },
+    {
+      "exDate": "2025-09-18",
+      "recordDate": "2025-09-17",
+      "payDate": "2025-09-26",
+      "dps": 0.25,
+      "kind": null
+    }
+  ]
+}

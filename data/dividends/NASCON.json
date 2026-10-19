@@ -1,0 +1,49 @@
+{
+  "symbol": "NASCON",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2026-04-02",
+  "records": [
+    {
+      "exDate": "2021-04-23",
+      "recordDate": "2021-04-22",
+      "payDate": "2021-05-31",
+      "dps": 0.39216,
+      "kind": null
+    },
+    {
+      "exDate": "2022-05-06",
+      "recordDate": "2022-05-05",
+      "payDate": "2022-06-06",
+      "dps": 0.39216,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-02",
+      "recordDate": "2023-04-28",
+      "payDate": "2023-05-26",
+      "dps": 0.98039,
+      "kind": null
+    },
+    {
+      "exDate": "2023-11-10",
+      "recordDate": "2023-11-09",
+      "payDate": "2023-11-17",
+      "dps": 0.98039,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-17",
+      "recordDate": "2025-04-16",
+      "payDate": "2025-05-09",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-02",
+      "recordDate": "2026-04-01",
+      "payDate": "2026-04-28",
+      "dps": 6,
+      "kind": null
+    }
+  ]
+}

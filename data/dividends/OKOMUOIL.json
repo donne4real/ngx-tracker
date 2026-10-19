@@ -1,0 +1,98 @@
+{
+  "symbol": "OKOMUOIL",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2026-04-28",
+  "records": [
+    {
+      "exDate": "2021-05-14",
+      "recordDate": "2021-05-11",
+      "payDate": "2021-05-26",
+      "dps": 7,
+      "kind": null
+    },
+    {
+      "exDate": "2022-04-25",
+      "recordDate": "2022-04-22",
+      "payDate": "2022-05-25",
+      "dps": 8,
+      "kind": null
+    },
+    {
+      "exDate": "2022-08-23",
+      "recordDate": "2022-08-22",
+      "payDate": "2022-08-29",
+      "dps": 7,
+      "kind": null
+    },
+    {
+      "exDate": "2022-11-16",
+      "recordDate": "2022-11-15",
+      "payDate": "2022-11-22",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-25",
+      "recordDate": "2023-04-24",
+      "payDate": "2023-05-25",
+      "dps": 12,
+      "kind": null
+    },
+    {
+      "exDate": "2023-11-17",
+      "recordDate": "2023-11-16",
+      "payDate": "2023-11-20",
+      "dps": 4.5,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-26",
+      "recordDate": "2024-04-25",
+      "payDate": "2024-05-23",
+      "dps": 14,
+      "kind": null
+    },
+    {
+      "exDate": "2024-08-09",
+      "recordDate": "2024-08-08",
+      "payDate": "2024-08-16",
+      "dps": 8,
+      "kind": null
+    },
+    {
+      "exDate": "2024-11-15",
+      "recordDate": "2024-11-14",
+      "payDate": "2024-11-21",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-25",
+      "recordDate": "2025-04-24",
+      "payDate": "2025-05-22",
+      "dps": 26,
+      "kind": null
+    },
+    {
+      "exDate": "2025-08-11",
+      "recordDate": "2025-08-08",
+      "payDate": "2025-08-22",
+      "dps": 30,
+      "kind": null
+    },
+    {
+      "exDate": "2025-11-03",
+      "recordDate": "2025-10-31",
+      "payDate": "2025-11-14",
+      "dps": 10,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-28",
+      "recordDate": "2026-04-27",
+      "payDate": "2026-05-26",
+      "dps": 15,
+      "kind": null
+    }
+  ]
+}

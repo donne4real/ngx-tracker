@@ -1,7 +1,7 @@
 {
-  "runAt": "2026-10-18T14:58:38.236Z",
-  "outcome": "backfill-only",
-  "tradeDate": "2026-10-16",
+  "runAt": "2026-10-19T20:38:33.818Z",
+  "outcome": "appended",
+  "tradeDate": "2026-10-19",
   "backfill": {
     "ok": [],
     "failed": [],
@@ -9,28 +9,30 @@
   },
   "dividends": {
     "ok": [
-      "INFINITY",
-      "INTBREW",
-      "INTENEGINS",
-      "JAIZBANK",
-      "JAPAULGOLD",
-      "JBERGER",
-      "JOHNHOLT",
-      "JULI",
-      "LASACO",
-      "LEARNAFRCA",
-      "LEGENDINT",
-      "LINKASSURE",
-      "LIVESTOCK",
-      "LIVINGTRUST",
-      "MANSARD",
-      "MAYBAKER",
-      "MBENEFIT",
-      "MCNICHOLS",
-      "MECURE",
-      "MEYER"
+      "MOFIREIF",
+      "MORISON",
+      "MTNN",
+      "MULTITREX",
+      "MULTIVERSE",
+      "NAHCO",
+      "NASCON",
+      "NB",
+      "NCR",
+      "NEIMETH",
+      "NEM",
+      "NESTLE",
+      "NGXGROUP",
+      "NIDF",
+      "NNFM",
+      "NPFMCRFBK",
+      "NREIT",
+      "NSLTECH",
+      "OANDO",
+      "OKOMUOIL"
     ],
     "failed": []
   },
-  "warnings": []
+  "warnings": [
+    "UHREIT: non-numeric market_cap coerced"
+  ]
 }

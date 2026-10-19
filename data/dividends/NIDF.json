@@ -1,0 +1,98 @@
+{
+  "symbol": "NIDF",
+  "fetchedAt": "2026-10-19",
+  "latestExDate": "2026-07-20",
+  "records": [
+    {
+      "exDate": "2023-10-16",
+      "recordDate": "2023-10-13",
+      "payDate": "2023-10-20",
+      "dps": 7.62,
+      "kind": null
+    },
+    {
+      "exDate": "2023-12-12",
+      "recordDate": "2023-12-11",
+      "payDate": "2023-12-15",
+      "dps": 6.55,
+      "kind": null
+    },
+    {
+      "exDate": "2024-01-23",
+      "recordDate": "2024-01-22",
+      "payDate": "2024-01-26",
+      "dps": 3.95,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-15",
+      "recordDate": "2024-04-12",
+      "payDate": "2024-04-19",
+      "dps": 4.23,
+      "kind": null
+    },
+    {
+      "exDate": "2024-07-19",
+      "recordDate": "2024-07-18",
+      "payDate": "2024-07-25",
+      "dps": 4.27,
+      "kind": null
+    },
+    {
+      "exDate": "2024-10-22",
+      "recordDate": "2024-10-21",
+      "payDate": "2024-10-28",
+      "dps": 5.09,
+      "kind": null
+    },
+    {
+      "exDate": "2025-01-31",
+      "recordDate": "2025-01-30",
+      "payDate": "2025-02-06",
+      "dps": 5.5,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-23",
+      "recordDate": "2025-04-22",
+      "payDate": "2025-04-30",
+      "dps": 5.43,
+      "kind": null
+    },
+    {
+      "exDate": "2025-07-25",
+      "recordDate": "2025-07-24",
+      "payDate": "2025-08-01",
+      "dps": 5.2,
+      "kind": null
+    },
+    {
+      "exDate": "2025-10-28",
+      "recordDate": "2025-10-27",
+      "payDate": "2025-11-04",
+      "dps": 4.25,
+      "kind": null
+    },
+    {
+      "exDate": "2026-01-29",
+      "recordDate": "2026-01-28",
+      "payDate": "2026-02-05",
+      "dps": 4.68,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-29",
+      "recordDate": "2026-04-28",
+      "payDate": "2026-05-06",
+      "dps": 4.53,
+      "kind": null
+    },
+    {
+      "exDate": "2026-07-20",
+      "recordDate": "2026-07-20",
+      "payDate": "2026-07-27",
+      "dps": 4.4,
+      "kind": null
+    }
+  ]
+}
