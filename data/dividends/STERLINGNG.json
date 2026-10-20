@@ -1,0 +1,35 @@
+{
+  "symbol": "STERLINGNG",
+  "fetchedAt": "2026-10-20",
+  "latestExDate": "2025-07-02",
+  "records": [
+    {
+      "exDate": "2021-04-19",
+      "recordDate": "2021-04-16",
+      "payDate": "2021-05-06",
+      "dps": 0.05,
+      "kind": null
+    },
+    {
+      "exDate": "2022-05-30",
+      "recordDate": "2022-05-27",
+      "payDate": "2022-06-16",
+      "dps": 0.1,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-22",
+      "recordDate": "2023-05-19",
+      "payDate": "2023-05-31",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2025-07-02",
+      "recordDate": "2025-07-01",
+      "payDate": "2025-07-11",
+      "dps": 0.18,
+      "kind": null
+    }
+  ]
+}

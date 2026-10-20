@@ -1,0 +1,42 @@
+{
+  "symbol": "SFSREIT",
+  "fetchedAt": "2026-10-20",
+  "latestExDate": "2026-04-20",
+  "records": [
+    {
+      "exDate": "2022-04-25",
+      "recordDate": "2022-04-22",
+      "payDate": "2022-05-13",
+      "dps": 7.25,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-20",
+      "recordDate": "2023-04-19",
+      "payDate": "2023-05-19",
+      "dps": 8.45,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-22",
+      "recordDate": "2024-04-19",
+      "payDate": "2024-05-14",
+      "dps": 14.5,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-28",
+      "recordDate": "2025-04-25",
+      "payDate": "2025-05-19",
+      "dps": 21.5,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-20",
+      "recordDate": "2026-04-17",
+      "payDate": "2026-05-18",
+      "dps": 28.3,
+      "kind": null
+    }
+  ]
+}

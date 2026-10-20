@@ -1,0 +1,21 @@
+{
+  "symbol": "SOVRENINS",
+  "fetchedAt": "2026-10-20",
+  "latestExDate": "2025-09-08",
+  "records": [
+    {
+      "exDate": "2024-09-11",
+      "recordDate": "2024-09-10",
+      "payDate": "2024-09-26",
+      "dps": 0.03,
+      "kind": null
+    },
+    {
+      "exDate": "2025-09-08",
+      "recordDate": "2025-09-05",
+      "payDate": "2025-09-25",
+      "dps": 0.05,
+      "kind": null
+    }
+  ]
+}

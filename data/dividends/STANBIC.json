@@ -1,0 +1,84 @@
+{
+  "symbol": "STANBIC",
+  "fetchedAt": "2026-10-20",
+  "latestExDate": "2026-10-15",
+  "records": [
+    {
+      "exDate": "2021-09-21",
+      "recordDate": "2021-09-20",
+      "payDate": "2021-09-29",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2022-04-14",
+      "recordDate": "2022-04-13",
+      "payDate": "2022-05-27",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2022-09-07",
+      "recordDate": "2022-09-06",
+      "payDate": "2022-09-21",
+      "dps": 1.5,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-04",
+      "recordDate": "2023-04-03",
+      "payDate": "2023-05-26",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2023-09-13",
+      "recordDate": "2023-09-12",
+      "payDate": "2023-09-27",
+      "dps": 1.5,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-22",
+      "recordDate": "2024-04-19",
+      "payDate": "2024-05-17",
+      "dps": 2.2,
+      "kind": null
+    },
+    {
+      "exDate": "2024-09-19",
+      "recordDate": "2024-09-18",
+      "payDate": "2024-09-30",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-14",
+      "recordDate": "2025-04-11",
+      "payDate": "2025-05-16",
+      "dps": 3,
+      "kind": null
+    },
+    {
+      "exDate": "2025-10-07",
+      "recordDate": "2025-10-06",
+      "payDate": "2025-10-21",
+      "dps": 2.5,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-05",
+      "recordDate": "2026-05-04",
+      "payDate": "2026-05-26",
+      "dps": 4,
+      "kind": null
+    },
+    {
+      "exDate": "2026-10-15",
+      "recordDate": "2026-10-15",
+      "payDate": "2026-11-13",
+      "dps": 4.5,
+      "kind": "interim"
+    }
+  ]
+}

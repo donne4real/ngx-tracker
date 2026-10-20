@@ -1,0 +1,91 @@
+{
+  "symbol": "PRESCO",
+  "fetchedAt": "2026-10-20",
+  "latestExDate": "2026-08-17",
+  "records": [
+    {
+      "exDate": "2021-07-07",
+      "recordDate": "2021-07-06",
+      "payDate": "2021-07-28",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2021-11-15",
+      "recordDate": "2021-11-12",
+      "payDate": "2021-11-19",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2022-07-13",
+      "recordDate": "2022-07-08",
+      "payDate": "2022-07-28",
+      "dps": 6.6,
+      "kind": null
+    },
+    {
+      "exDate": "2022-11-22",
+      "recordDate": "2022-11-21",
+      "payDate": "2022-11-25",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2023-09-14",
+      "recordDate": "2023-09-13",
+      "payDate": "2023-10-03",
+      "dps": 6.8,
+      "kind": null
+    },
+    {
+      "exDate": "2023-11-14",
+      "recordDate": "2023-11-13",
+      "payDate": "2023-11-17",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2024-05-15",
+      "recordDate": "2024-05-14",
+      "payDate": "2024-06-06",
+      "dps": 24.3,
+      "kind": null
+    },
+    {
+      "exDate": "2025-07-07",
+      "recordDate": "2025-07-04",
+      "payDate": "2025-08-19",
+      "dps": 42,
+      "kind": null
+    },
+    {
+      "exDate": "2025-11-10",
+      "recordDate": "2025-11-07",
+      "payDate": "2025-11-21",
+      "dps": 30,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-10",
+      "recordDate": "2026-08-10",
+      "payDate": "2026-09-15",
+      "dps": 14.66,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-14",
+      "recordDate": "2026-08-14",
+      "payDate": "2026-08-27",
+      "dps": 10,
+      "kind": "interim"
+    },
+    {
+      "exDate": "2026-08-17",
+      "recordDate": "2026-08-17",
+      "payDate": "2026-08-27",
+      "dps": 10,
+      "kind": null
+    }
+  ]
+}

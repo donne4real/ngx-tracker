@@ -1,0 +1,238 @@
+{
+  "symbol": "SEPLAT",
+  "fetchedAt": "2026-10-20",
+  "latestExDate": "2026-08-14",
+  "records": [
+    {
+      "exDate": "2020-11-16",
+      "recordDate": "2020-11-13",
+      "payDate": "2020-12-07",
+      "dps": 19.0125,
+      "kind": null
+    },
+    {
+      "exDate": "2021-05-05",
+      "recordDate": "2021-05-04",
+      "payDate": "2021-05-28",
+      "dps": 19,
+      "kind": null
+    },
+    {
+      "exDate": "2021-05-27",
+      "recordDate": "2021-05-26",
+      "payDate": "2021-06-10",
+      "dps": 10.3125,
+      "kind": null
+    },
+    {
+      "exDate": "2021-08-13",
+      "recordDate": "2021-08-12",
+      "payDate": "2021-09-13",
+      "dps": 10.2875,
+      "kind": null
+    },
+    {
+      "exDate": "2021-11-16",
+      "recordDate": "2021-11-15",
+      "payDate": "2021-12-09",
+      "dps": 10.294,
+      "kind": null
+    },
+    {
+      "exDate": "2022-05-06",
+      "recordDate": "2022-05-05",
+      "payDate": "2022-05-25",
+      "dps": 10.378,
+      "kind": null
+    },
+    {
+      "exDate": "2022-05-31",
+      "recordDate": "2022-05-30",
+      "payDate": "2022-06-24",
+      "dps": 10.38025,
+      "kind": null
+    },
+    {
+      "exDate": "2022-08-15",
+      "recordDate": "2022-08-12",
+      "payDate": "2022-09-09",
+      "dps": 10.476,
+      "kind": null
+    },
+    {
+      "exDate": "2022-11-11",
+      "recordDate": "2022-11-10",
+      "payDate": "2022-12-06",
+      "dps": 11.01475,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-19",
+      "recordDate": "2023-04-18",
+      "payDate": "2023-05-16",
+      "dps": 34.52925,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-19",
+      "recordDate": "2023-04-18",
+      "payDate": "2023-05-16",
+      "dps": 34.536,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-19",
+      "recordDate": "2023-05-18",
+      "payDate": "2023-06-16",
+      "dps": 13.8252,
+      "kind": null
+    },
+    {
+      "exDate": "2023-08-18",
+      "recordDate": "2023-08-17",
+      "payDate": "2023-08-30",
+      "dps": 23.3094,
+      "kind": null
+    },
+    {
+      "exDate": "2023-11-13",
+      "recordDate": "2023-11-10",
+      "payDate": "2023-11-24",
+      "dps": 24.0864,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-29",
+      "recordDate": "2024-04-26",
+      "payDate": "2024-05-29",
+      "dps": 79.7964,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-29",
+      "recordDate": "2024-04-26",
+      "payDate": "2024-05-29",
+      "dps": 81.33,
+      "kind": null
+    },
+    {
+      "exDate": "2024-06-03",
+      "recordDate": "2024-05-31",
+      "payDate": "2024-06-14",
+      "dps": 39.615,
+      "kind": null
+    },
+    {
+      "exDate": "2024-08-14",
+      "recordDate": "2024-08-13",
+      "payDate": "2024-08-28",
+      "dps": 47.0565,
+      "kind": null
+    },
+    {
+      "exDate": "2024-11-13",
+      "recordDate": "2024-11-12",
+      "payDate": "2024-11-27",
+      "dps": 59.59368,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-12",
+      "recordDate": "2025-05-09",
+      "payDate": "2025-05-23",
+      "dps": 110.58285,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-12",
+      "recordDate": "2025-05-09",
+      "payDate": "2025-05-23",
+      "dps": 110.9934,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-26",
+      "recordDate": "2025-05-23",
+      "payDate": "2025-06-06",
+      "dps": 72.99924,
+      "kind": null
+    },
+    {
+      "exDate": "2025-08-14",
+      "recordDate": "2025-08-13",
+      "payDate": "2025-08-28",
+      "dps": 70.4927,
+      "kind": null
+    },
+    {
+      "exDate": "2025-11-14",
+      "recordDate": "2025-11-13",
+      "payDate": "2025-11-28",
+      "dps": 108.11475,
+      "kind": null
+    },
+    {
+      "exDate": "2025-11-14",
+      "recordDate": "2025-11-13",
+      "payDate": "2025-11-28",
+      "dps": 108.00825,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-18",
+      "recordDate": "2026-05-15",
+      "payDate": "2026-05-29",
+      "dps": 113.7847,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-18",
+      "recordDate": "2026-05-15",
+      "payDate": "2026-05-29",
+      "dps": 113.73656,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-08",
+      "recordDate": "2026-06-08",
+      "payDate": "2026-06-19",
+      "dps": 122.4981,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-08",
+      "recordDate": "2026-06-08",
+      "payDate": "2026-06-19",
+      "dps": 122.4954,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-13",
+      "recordDate": "2026-08-13",
+      "payDate": "2026-08-28",
+      "dps": 0.07,
+      "kind": "special"
+    },
+    {
+      "exDate": "2026-08-13",
+      "recordDate": "2026-08-13",
+      "payDate": "2026-08-28",
+      "dps": 0.05,
+      "kind": "interim"
+    },
+    {
+      "exDate": "2026-08-14",
+      "recordDate": "2026-08-14",
+      "payDate": "2026-08-28",
+      "dps": 163.0428,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-14",
+      "recordDate": "2026-08-14",
+      "payDate": "2026-08-28",
+      "dps": 163.2108,
+      "kind": null
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "symbol": "SUNUASSUR",
+  "fetchedAt": "2026-10-20",
+  "latestExDate": "2025-06-02",
+  "records": [
+    {
+      "exDate": "2023-05-31",
+      "recordDate": "2023-05-30",
+      "payDate": "2023-06-15",
+      "dps": 0.03,
+      "kind": null
+    },
+    {
+      "exDate": "2024-07-15",
+      "recordDate": "2024-07-12",
+      "payDate": "2024-08-19",
+      "dps": 0.05,
+      "kind": null
+    },
+    {
+      "exDate": "2025-06-02",
+      "recordDate": "2025-05-30",
+      "payDate": "2025-06-16",
+      "dps": 0.1,
+      "kind": null
+    }
+  ]
+}

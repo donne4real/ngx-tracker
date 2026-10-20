@@ -1,0 +1,56 @@
+{
+  "symbol": "REDSTAREX",
+  "fetchedAt": "2026-10-20",
+  "latestExDate": "2026-09-02",
+  "records": [
+    {
+      "exDate": "2020-09-21",
+      "recordDate": "2020-09-18",
+      "payDate": "2020-10-15",
+      "dps": 0.33971,
+      "kind": null
+    },
+    {
+      "exDate": "2021-09-06",
+      "recordDate": "2021-09-03",
+      "payDate": "2021-09-23",
+      "dps": 0.05,
+      "kind": null
+    },
+    {
+      "exDate": "2022-09-14",
+      "recordDate": "2022-09-13",
+      "payDate": "2022-10-12",
+      "dps": 0.075,
+      "kind": null
+    },
+    {
+      "exDate": "2023-08-21",
+      "recordDate": "2023-08-18",
+      "payDate": "2023-09-15",
+      "dps": 0.2,
+      "kind": null
+    },
+    {
+      "exDate": "2024-08-26",
+      "recordDate": "2024-08-23",
+      "payDate": "2024-09-12",
+      "dps": 0.27,
+      "kind": null
+    },
+    {
+      "exDate": "2025-09-03",
+      "recordDate": "2025-09-02",
+      "payDate": "2025-09-18",
+      "dps": 0.35,
+      "kind": null
+    },
+    {
+      "exDate": "2026-09-02",
+      "recordDate": "2026-09-02",
+      "payDate": "2026-09-18",
+      "dps": 0.45,
+      "kind": null
+    }
+  ]
+}

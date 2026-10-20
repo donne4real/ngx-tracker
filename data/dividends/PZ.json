@@ -1,0 +1,49 @@
+{
+  "symbol": "PZ",
+  "fetchedAt": "2026-10-20",
+  "latestExDate": "2026-10-09",
+  "records": [
+    {
+      "exDate": "2018-09-24",
+      "recordDate": "2018-09-21",
+      "payDate": "2018-10-19",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2019-10-14",
+      "recordDate": "2019-10-11",
+      "payDate": "2019-10-30",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2020-10-19",
+      "recordDate": "2020-10-16",
+      "payDate": "2021-02-01",
+      "dps": 0.1,
+      "kind": null
+    },
+    {
+      "exDate": "2022-01-10",
+      "recordDate": "2022-01-07",
+      "payDate": "2022-01-28",
+      "dps": 0.25,
+      "kind": null
+    },
+    {
+      "exDate": "2023-01-09",
+      "recordDate": "2023-01-06",
+      "payDate": "2023-01-26",
+      "dps": 1.01,
+      "kind": null
+    },
+    {
+      "exDate": "2026-10-09",
+      "recordDate": "2026-10-09",
+      "payDate": "2026-10-30",
+      "dps": 2.5,
+      "kind": "final"
+    }
+  ]
+}

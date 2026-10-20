@@ -1,0 +1,28 @@
+{
+  "symbol": "PRESTIGE",
+  "fetchedAt": "2026-10-20",
+  "latestExDate": "2024-07-31",
+  "records": [
+    {
+      "exDate": "2021-05-18",
+      "recordDate": "2021-05-17",
+      "payDate": "2021-05-28",
+      "dps": 0.025,
+      "kind": null
+    },
+    {
+      "exDate": "2022-05-23",
+      "recordDate": "2022-05-20",
+      "payDate": "2022-05-27",
+      "dps": 0.015,
+      "kind": null
+    },
+    {
+      "exDate": "2024-07-31",
+      "recordDate": "2024-07-30",
+      "payDate": "2024-08-09",
+      "dps": 0.02,
+      "kind": null
+    }
+  ]
+}
