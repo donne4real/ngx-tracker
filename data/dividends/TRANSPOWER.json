@@ -1,0 +1,49 @@
+{
+  "symbol": "TRANSPOWER",
+  "fetchedAt": "2026-10-21",
+  "latestExDate": "2026-07-21",
+  "records": [
+    {
+      "exDate": "2024-04-22",
+      "recordDate": "2024-04-19",
+      "payDate": "2024-05-07",
+      "dps": 3.13,
+      "kind": null
+    },
+    {
+      "exDate": "2024-08-07",
+      "recordDate": "2024-08-06",
+      "payDate": "2024-08-16",
+      "dps": 1.5,
+      "kind": null
+    },
+    {
+      "exDate": "2025-02-12",
+      "recordDate": "2025-02-11",
+      "payDate": "2025-03-11",
+      "dps": 3.5,
+      "kind": null
+    },
+    {
+      "exDate": "2025-08-11",
+      "recordDate": "2025-08-08",
+      "payDate": "2025-08-18",
+      "dps": 1.5,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-14",
+      "recordDate": "2026-04-13",
+      "payDate": "2026-04-28",
+      "dps": 4,
+      "kind": null
+    },
+    {
+      "exDate": "2026-07-21",
+      "recordDate": "2026-07-21",
+      "payDate": "2026-07-23",
+      "dps": 1.5,
+      "kind": null
+    }
+  ]
+}

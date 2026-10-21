@@ -1,0 +1,42 @@
+{
+  "symbol": "UHREIT",
+  "fetchedAt": "2026-10-21",
+  "latestExDate": "2026-06-01",
+  "records": [
+    {
+      "exDate": "2022-04-21",
+      "recordDate": "2022-04-20",
+      "payDate": "2022-05-13",
+      "dps": 1.91,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-16",
+      "recordDate": "2023-05-15",
+      "payDate": "2023-05-26",
+      "dps": 0.021,
+      "kind": null
+    },
+    {
+      "exDate": "2024-07-10",
+      "recordDate": "2024-07-09",
+      "payDate": "2024-07-25",
+      "dps": 0.0315,
+      "kind": null
+    },
+    {
+      "exDate": "2025-06-16",
+      "recordDate": "2025-06-13",
+      "payDate": "2025-06-27",
+      "dps": 5.05,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-01",
+      "recordDate": "2026-05-29",
+      "payDate": "2026-06-19",
+      "dps": 5.55,
+      "kind": null
+    }
+  ]
+}

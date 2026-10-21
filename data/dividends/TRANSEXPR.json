@@ -1,0 +1,28 @@
+{
+  "symbol": "TRANSEXPR",
+  "fetchedAt": "2026-10-21",
+  "latestExDate": "2024-06-26",
+  "records": [
+    {
+      "exDate": "2020-07-06",
+      "recordDate": "2020-07-03",
+      "payDate": "2020-07-20",
+      "dps": 0.02824,
+      "kind": null
+    },
+    {
+      "exDate": "2023-06-13",
+      "recordDate": "2023-06-09",
+      "payDate": "2023-06-26",
+      "dps": 0.02,
+      "kind": null
+    },
+    {
+      "exDate": "2024-06-26",
+      "recordDate": "2024-06-25",
+      "payDate": "2024-07-05",
+      "dps": 0.02,
+      "kind": null
+    }
+  ]
+}

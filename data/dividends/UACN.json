@@ -1,0 +1,49 @@
+{
+  "symbol": "UACN",
+  "fetchedAt": "2026-10-21",
+  "latestExDate": "2026-06-15",
+  "records": [
+    {
+      "exDate": "2021-06-15",
+      "recordDate": "2021-06-14",
+      "payDate": "2021-07-01",
+      "dps": 1.2,
+      "kind": null
+    },
+    {
+      "exDate": "2022-06-08",
+      "recordDate": "2022-06-07",
+      "payDate": "2022-06-23",
+      "dps": 0.65,
+      "kind": null
+    },
+    {
+      "exDate": "2023-06-07",
+      "recordDate": "2023-06-06",
+      "payDate": "2023-06-22",
+      "dps": 0.22,
+      "kind": null
+    },
+    {
+      "exDate": "2024-06-07",
+      "recordDate": "2024-06-06",
+      "payDate": "2024-06-21",
+      "dps": 0.22,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-22",
+      "recordDate": "2025-05-21",
+      "payDate": "2025-06-05",
+      "dps": 0.22,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-15",
+      "recordDate": "2026-06-12",
+      "payDate": "2026-06-26",
+      "dps": 1,
+      "kind": null
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "symbol": "UNILEVER",
+  "fetchedAt": "2026-10-21",
+  "latestExDate": "2026-08-03",
+  "records": [
+    {
+      "exDate": "2022-04-19",
+      "recordDate": "2022-04-14",
+      "payDate": "2022-05-06",
+      "dps": 0.5,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-18",
+      "recordDate": "2023-04-17",
+      "payDate": "2023-05-05",
+      "dps": 0.25,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-29",
+      "recordDate": "2024-04-26",
+      "payDate": "2024-05-10",
+      "dps": 0.75,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-28",
+      "recordDate": "2025-04-25",
+      "payDate": "2025-05-12",
+      "dps": 1.25,
+      "kind": null
+    },
+    {
+      "exDate": "2025-08-11",
+      "recordDate": "2025-08-08",
+      "payDate": "2025-08-22",
+      "dps": 0.5,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-13",
+      "recordDate": "2026-04-10",
+      "payDate": "2026-05-08",
+      "dps": 3.25,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-03",
+      "recordDate": "2026-08-03",
+      "payDate": "2026-08-14",
+      "dps": 2,
+      "kind": null
+    }
+  ]
+}

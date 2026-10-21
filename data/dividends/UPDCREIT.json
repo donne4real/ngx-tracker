@@ -1,0 +1,91 @@
+{
+  "symbol": "UPDCREIT",
+  "fetchedAt": "2026-10-21",
+  "latestExDate": "2026-08-31",
+  "records": [
+    {
+      "exDate": "2021-10-08",
+      "recordDate": "2021-10-07",
+      "payDate": "2021-10-13",
+      "dps": 0.38,
+      "kind": null
+    },
+    {
+      "exDate": "2021-12-31",
+      "recordDate": "2021-12-30",
+      "payDate": "2022-01-10",
+      "dps": 0.18,
+      "kind": null
+    },
+    {
+      "exDate": "2022-10-04",
+      "recordDate": "2022-09-30",
+      "payDate": "2022-10-27",
+      "dps": 0.01,
+      "kind": null
+    },
+    {
+      "exDate": "2022-10-05",
+      "recordDate": "2022-10-04",
+      "payDate": "2022-10-27",
+      "dps": 0.17,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-15",
+      "recordDate": "2023-05-12",
+      "payDate": "2023-05-31",
+      "dps": 0.16,
+      "kind": null
+    },
+    {
+      "exDate": "2023-09-01",
+      "recordDate": "2023-08-31",
+      "payDate": "2023-09-07",
+      "dps": 0.19,
+      "kind": null
+    },
+    {
+      "exDate": "2024-05-17",
+      "recordDate": "2024-05-16",
+      "payDate": "2024-05-24",
+      "dps": 0.22,
+      "kind": null
+    },
+    {
+      "exDate": "2024-11-19",
+      "recordDate": "2024-11-18",
+      "payDate": "2024-11-27",
+      "dps": 0.2,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-09",
+      "recordDate": "2025-05-08",
+      "payDate": "2025-05-15",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2025-09-01",
+      "recordDate": "2025-08-29",
+      "payDate": "2025-09-04",
+      "dps": 0.22,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-20",
+      "recordDate": "2026-04-17",
+      "payDate": "2026-05-06",
+      "dps": 0.33,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-31",
+      "recordDate": "2026-08-31",
+      "payDate": "2026-09-04",
+      "dps": 0.4,
+      "kind": null
+    }
+  ]
+}

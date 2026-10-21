@@ -1,0 +1,63 @@
+{
+  "symbol": "TRANSCORP",
+  "fetchedAt": "2026-10-21",
+  "latestExDate": "2026-07-24",
+  "records": [
+    {
+      "exDate": "2022-04-11",
+      "recordDate": "2022-04-08",
+      "payDate": "2022-04-22",
+      "dps": 0.08,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-12",
+      "recordDate": "2023-04-11",
+      "payDate": "2023-04-27",
+      "dps": 0.2,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-25",
+      "recordDate": "2024-04-24",
+      "payDate": "2024-05-28",
+      "dps": 0.4,
+      "kind": null
+    },
+    {
+      "exDate": "2024-08-08",
+      "recordDate": "2024-08-07",
+      "payDate": "2024-08-19",
+      "dps": 1.6,
+      "kind": null
+    },
+    {
+      "exDate": "2025-03-28",
+      "recordDate": "2025-03-27",
+      "payDate": "2025-04-16",
+      "dps": 0.6,
+      "kind": null
+    },
+    {
+      "exDate": "2025-08-12",
+      "recordDate": "2025-08-11",
+      "payDate": "2025-08-19",
+      "dps": 0.4,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-28",
+      "recordDate": "2026-04-27",
+      "payDate": "2026-05-08",
+      "dps": 1.6,
+      "kind": null
+    },
+    {
+      "exDate": "2026-07-24",
+      "recordDate": "2026-07-24",
+      "payDate": "2026-07-28",
+      "dps": 0.4,
+      "kind": null
+    }
+  ]
+}

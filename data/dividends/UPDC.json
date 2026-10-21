@@ -1,0 +1,21 @@
+{
+  "symbol": "UPDC",
+  "fetchedAt": "2026-10-21",
+  "latestExDate": "2026-04-23",
+  "records": [
+    {
+      "exDate": "2025-05-02",
+      "recordDate": "2025-04-30",
+      "payDate": "2025-05-14",
+      "dps": 0.01,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-23",
+      "recordDate": "2026-04-22",
+      "payDate": "2026-05-07",
+      "dps": 0.01,
+      "kind": null
+    }
+  ]
+}

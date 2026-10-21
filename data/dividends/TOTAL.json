@@ -1,0 +1,63 @@
+{
+  "symbol": "TOTAL",
+  "fetchedAt": "2026-10-21",
+  "latestExDate": "2025-04-23",
+  "records": [
+    {
+      "exDate": "2020-06-05",
+      "recordDate": "2020-06-04",
+      "payDate": "2020-09-25",
+      "dps": 6.71,
+      "kind": null
+    },
+    {
+      "exDate": "2021-04-19",
+      "recordDate": "2021-04-16",
+      "payDate": "2021-06-18",
+      "dps": 6.08,
+      "kind": null
+    },
+    {
+      "exDate": "2021-08-16",
+      "recordDate": "2021-08-13",
+      "payDate": "2021-09-13",
+      "dps": 4,
+      "kind": null
+    },
+    {
+      "exDate": "2022-04-25",
+      "recordDate": "2022-04-22",
+      "payDate": "2022-06-17",
+      "dps": 18.2,
+      "kind": null
+    },
+    {
+      "exDate": "2022-11-21",
+      "recordDate": "2022-11-18",
+      "payDate": "2022-12-05",
+      "dps": 4,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-26",
+      "recordDate": "2023-04-25",
+      "payDate": "2023-06-02",
+      "dps": 21,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-24",
+      "recordDate": "2024-04-23",
+      "payDate": "2024-06-14",
+      "dps": 25,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-23",
+      "recordDate": "2025-04-22",
+      "payDate": "2025-05-16",
+      "dps": 40,
+      "kind": null
+    }
+  ]
+}

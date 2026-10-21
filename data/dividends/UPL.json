@@ -1,0 +1,56 @@
+{
+  "symbol": "UPL",
+  "fetchedAt": "2026-10-21",
+  "latestExDate": "2026-08-31",
+  "records": [
+    {
+      "exDate": "2020-09-25",
+      "recordDate": "2020-09-24",
+      "payDate": "2020-11-05",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2021-09-01",
+      "recordDate": "2021-08-31",
+      "payDate": "2021-09-23",
+      "dps": 0.05,
+      "kind": null
+    },
+    {
+      "exDate": "2022-09-01",
+      "recordDate": "2022-08-31",
+      "payDate": "2022-09-29",
+      "dps": 0.1,
+      "kind": null
+    },
+    {
+      "exDate": "2023-09-06",
+      "recordDate": "2023-09-05",
+      "payDate": "2023-09-21",
+      "dps": 0.1,
+      "kind": null
+    },
+    {
+      "exDate": "2024-09-05",
+      "recordDate": "2024-09-04",
+      "payDate": "2024-09-26",
+      "dps": 0.025,
+      "kind": null
+    },
+    {
+      "exDate": "2025-08-25",
+      "recordDate": "2025-08-22",
+      "payDate": "2025-09-18",
+      "dps": 0.15,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-31",
+      "recordDate": "2026-08-31",
+      "payDate": "2026-09-24",
+      "dps": 0.18,
+      "kind": null
+    }
+  ]
+}
