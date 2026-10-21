@@ -1,6 +1,6 @@
 {
-  "runAt": "2026-10-21T19:24:38.606Z",
-  "outcome": "appended",
+  "runAt": "2026-10-21T21:01:46.750Z",
+  "outcome": "duplicate-date",
   "tradeDate": "2026-10-21",
   "backfill": {
     "ok": [],
@@ -8,28 +8,7 @@
     "stoppedEarly": null
   },
   "dividends": {
-    "ok": [
-      "THOMASWY",
-      "TIP",
-      "TOTAL",
-      "TRANSCOHOT",
-      "TRANSCORP",
-      "TRANSEXPR",
-      "TRANSPOWER",
-      "TRIPPLEG",
-      "UACN",
-      "UBA",
-      "UCAP",
-      "UHOMREIT",
-      "UHREIT",
-      "UNILEVER",
-      "UNIONDICON",
-      "UNITYBNK",
-      "UNIVINSURE",
-      "UPDC",
-      "UPDCREIT",
-      "UPL"
-    ],
+    "ok": [],
     "failed": []
   },
   "warnings": [
