@@ -1,0 +1,49 @@
+{
+  "symbol": "WEMABANK",
+  "fetchedAt": "2026-10-22",
+  "latestExDate": "2026-04-30",
+  "records": [
+    {
+      "exDate": "2021-05-14",
+      "recordDate": "2021-05-11",
+      "payDate": "2021-05-25",
+      "dps": 0.12,
+      "kind": null
+    },
+    {
+      "exDate": "2022-04-28",
+      "recordDate": "2022-04-27",
+      "payDate": "2022-05-20",
+      "dps": 0.24,
+      "kind": null
+    },
+    {
+      "exDate": "2023-05-10",
+      "recordDate": "2023-05-09",
+      "payDate": "2023-05-31",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2024-05-10",
+      "recordDate": "2024-05-09",
+      "payDate": "2024-05-28",
+      "dps": 0.5,
+      "kind": null
+    },
+    {
+      "exDate": "2025-05-02",
+      "recordDate": "2025-05-01",
+      "payDate": "2025-05-22",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-30",
+      "recordDate": "2026-04-29",
+      "payDate": "2026-05-20",
+      "dps": 1.25,
+      "kind": null
+    }
+  ]
+}

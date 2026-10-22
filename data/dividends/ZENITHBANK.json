@@ -1,0 +1,84 @@
+{
+  "symbol": "ZENITHBANK",
+  "fetchedAt": "2026-10-22",
+  "latestExDate": "2026-10-23",
+  "records": [
+    {
+      "exDate": "2021-09-13",
+      "recordDate": "2021-09-10",
+      "payDate": "2021-09-20",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2022-03-28",
+      "recordDate": "2022-03-25",
+      "payDate": "2022-04-06",
+      "dps": 2.8,
+      "kind": null
+    },
+    {
+      "exDate": "2022-09-07",
+      "recordDate": "2022-09-06",
+      "payDate": "2022-09-13",
+      "dps": 0.3,
+      "kind": null
+    },
+    {
+      "exDate": "2023-04-17",
+      "recordDate": "2023-04-14",
+      "payDate": "2023-05-02",
+      "dps": 2.9,
+      "kind": null
+    },
+    {
+      "exDate": "2023-09-25",
+      "recordDate": "2023-09-22",
+      "payDate": "2023-09-29",
+      "dps": 0.5,
+      "kind": null
+    },
+    {
+      "exDate": "2024-04-26",
+      "recordDate": "2024-04-25",
+      "payDate": "2024-05-08",
+      "dps": 3.5,
+      "kind": null
+    },
+    {
+      "exDate": "2024-09-17",
+      "recordDate": "2024-09-13",
+      "payDate": "2024-09-20",
+      "dps": 1,
+      "kind": null
+    },
+    {
+      "exDate": "2025-04-16",
+      "recordDate": "2025-04-15",
+      "payDate": "2025-04-29",
+      "dps": 4,
+      "kind": null
+    },
+    {
+      "exDate": "2025-10-06",
+      "recordDate": "2025-10-03",
+      "payDate": "2025-10-10",
+      "dps": 1.25,
+      "kind": null
+    },
+    {
+      "exDate": "2026-04-27",
+      "recordDate": "2026-04-24",
+      "payDate": "2026-05-05",
+      "dps": 8.75,
+      "kind": null
+    },
+    {
+      "exDate": "2026-10-23",
+      "recordDate": "2026-10-23",
+      "payDate": "2026-10-30",
+      "dps": 1.5,
+      "kind": "interim"
+    }
+  ]
+}

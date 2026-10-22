@@ -1,0 +1,35 @@
+{
+  "symbol": "VFDGROUP",
+  "fetchedAt": "2026-10-22",
+  "latestExDate": "2026-08-04",
+  "records": [
+    {
+      "exDate": "2025-04-23",
+      "recordDate": "2025-04-22",
+      "payDate": "2025-05-08",
+      "dps": 2.5,
+      "kind": null
+    },
+    {
+      "exDate": "2026-05-05",
+      "recordDate": "2026-05-04",
+      "payDate": "2026-05-25",
+      "dps": 0.25,
+      "kind": null
+    },
+    {
+      "exDate": "2026-08-03",
+      "recordDate": "2026-08-03",
+      "payDate": "2026-08-10",
+      "dps": 0.24,
+      "kind": "interim"
+    },
+    {
+      "exDate": "2026-08-04",
+      "recordDate": "2026-08-04",
+      "payDate": "2026-08-10",
+      "dps": 0.24,
+      "kind": null
+    }
+  ]
+}

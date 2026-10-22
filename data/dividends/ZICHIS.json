@@ -1,0 +1,14 @@
+{
+  "symbol": "ZICHIS",
+  "fetchedAt": "2026-10-22",
+  "latestExDate": "2026-03-17",
+  "records": [
+    {
+      "exDate": "2026-03-17",
+      "recordDate": "2026-03-16",
+      "payDate": "2026-05-07",
+      "dps": 0.2,
+      "kind": null
+    }
+  ]
+}

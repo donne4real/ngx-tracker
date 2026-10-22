@@ -1,14 +1,22 @@
 {
-  "runAt": "2026-10-21T21:01:46.750Z",
-  "outcome": "duplicate-date",
-  "tradeDate": "2026-10-21",
+  "runAt": "2026-10-22T19:18:15.483Z",
+  "outcome": "appended",
+  "tradeDate": "2026-10-22",
   "backfill": {
     "ok": [],
     "failed": [],
     "stoppedEarly": null
   },
   "dividends": {
-    "ok": [],
+    "ok": [
+      "VERITASKAP",
+      "VFDGROUP",
+      "VITAFOAM",
+      "WAPIC",
+      "WEMABANK",
+      "ZENITHBANK",
+      "ZICHIS"
+    ],
     "failed": []
   },
   "warnings": [
