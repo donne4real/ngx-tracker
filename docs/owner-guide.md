@@ -7,23 +7,25 @@ Everything you need to run, look after and change NGX Tracker. Day to day, **you
 | Part | What it does | Where you manage it |
 |---|---|---|
 | **GitHub repository** `donne4real/ngx-tracker` (private) | Holds the code **and every day's prices** (`data/`), and runs the scheduled jobs | github.com → the repo → **Actions**, **Settings** |
-| **Kobo Terminal** (free Personal plan) | Today's closing price for every NGX stock — 1 request per day | koboterminal.com |
-| **EODHD** (free plan) | About a year of past prices per stock, filled in once | eodhd.com dashboard |
+| **Kobo Terminal** (free Personal plan) | Today's closing price for every NGX stock, plus dividend history (~20 stocks per run) | koboterminal.com |
+| **EODHD** (free plan) | Past prices per stock — fill-up finished Oct 2026; only used again for newly listed stocks | eodhd.com dashboard |
 | **Cloudflare Pages** project `ngx-tracker` | Hosts the website at https://ngx-tracker.pages.dev | dash.cloudflare.com → Workers & Pages |
 | **Cloudflare Access** app "NGX Tracker" | Email sign-in; only allow-listed addresses get in | one.dash.cloudflare.com (Zero Trust) → Access |
-| **Your PC** `ZCodeProject\ngx-tracker` | A working copy of the code, plus `.env` with your keys | — |
+| **Your PC** `Vibe Coding\ZCodeProject\ngx-tracker` | A working copy of the code, plus `.env` with your keys | — |
 
 ## 2. The schedule (all automatic)
 
 | When (UTC) | Lagos time | Job | What it does |
 |---|---|---|---|
-| Mon–Fri 15:30 | 16:30 | Daily prices | Saves today's closes once Kobo says the market is **closed**, fills in ≤18 stocks of history, republishes |
+| Mon–Fri 15:30 | 16:30 | Daily prices | Saves today's closes once Kobo says the market is **closed**, fills in ≤18 stocks of history (while any is missing) + dividend history for ~20 stocks, republishes |
 | Mon–Fri 18:00 | 19:00 | Daily prices (backup) | Same; does nothing if the 15:30 run already saved today |
-| Sat & Sun 12:00 | 13:00 | History only | ≤18 more stocks of past-year history from EODHD; no new prices; republishes |
+| Sat & Sun 12:00 | 13:00 | History only | EODHD history (only while some is missing) + dividend refreshes for up to 20 stocks; no new prices; republishes |
 
 GitHub sometimes starts scheduled jobs 5–20 minutes late; that's normal. Kobo reports the market closed at about **15:26 UTC**, so the 15:30 run occasionally lands too early — it then saves nothing and the 18:00 run does the day's work.
 
 **History fill-up (first ~9 runs):** 18 stocks per run, largest companies first. Tracking started Fri Sep 25, 2026, so all ~146 stocks have their year by about **Sun Oct 4, 2026**. After that, EODHD isn't used again unless a new stock lists.
+
+**Dividend fill-up (Oct–early Nov 2026):** ~20 stocks per run (daily + weekends). Finished in the first week of November 2026 — every stock now refreshes when its data is 30+ days old. The site shows "—" for yield when a stock has no payout records (it pays no dividend, or Kobo has none on file).
 
 ## 3. Accounts, keys and secrets
 
@@ -60,10 +62,12 @@ The free Zero Trust plan allows up to **50 users**.
 | `Outcome: duplicate-date` | Today was already saved (backup run, weekend or holiday) |
 | `Outcome: backfill-only` | Weekend history run |
 | `Backfill: N ok, M failed` | History filled in this run |
+| `Dividends: N ok, M failed` | Dividend histories refreshed in this run |
 | yellow **EODHD backfill paused** warning | EODHD's daily limit was hit, or it rejected the key / was down — it resumes next run without using up retries |
+| `Warning: Dividend refresh paused (Kobo rate limit)` | Too many Kobo requests in one day — resumes next run; dividend problems never fail the run |
 
-- **`data/report.json`** in the repo shows the last run's outcome, which stocks were backfilled, and any failures or warnings.
-- **`data/stocks.json`** shows each stock's `backfill` status (`pending`, `done`, `failed`) and whether it's `active` or `inactive`.
+- **`data/report.json`** in the repo shows the last run's outcome, which stocks were backfilled, dividend refresh results, and any failures or warnings.
+- **`data/stocks.json`** shows each stock's `backfill` status (`pending`, `done`, `failed`), its `dividendsAt` refresh date, and whether it's `active` or `inactive`.
 
 ## 6. When something goes wrong
 
@@ -78,6 +82,7 @@ GitHub emails you whenever a run **fails**. Most failures are one-offs and the n
 | "Data may be out of date" banner on the site | No successful run for 4+ working days | Check Actions for red runs and read the error |
 | Yellow "EODHD backfill paused" for days | EODHD key rejected or plan changed | Check the EODHD dashboard; replace `EODHD_API_KEY` |
 | A stock never gets history (`backfill: failed`) | EODHD doesn't carry that symbol | Nothing — it builds history from Kobo, one day at a time |
+| No yields anywhere / `dividends.failed` entries in `report.json` | Kobo dividend endpoint hiccup or format change | Wait for the next runs (failed stocks retry automatically). Dividend problems never fail a run. A stock that pays no dividend — or has no records on Kobo — always shows "—" for yield |
 | Everyone suddenly can't sign in | Access app or policy changed | Zero Trust → Access → Applications → NGX Tracker; check the policy is attached |
 
 **Republish without fetching new data:** repo → **Actions** → **Daily prices** → **Run workflow** → Run. (On a weekday this also checks Kobo; if today is already saved it just rebuilds and republishes.)
@@ -88,8 +93,8 @@ GitHub emails you whenever a run **fails**. Most failures are one-offs and the n
 
 | Service | Plan | Limit that matters | Current use |
 |---|---|---|---|
-| Kobo Terminal | Personal (free) | 100 requests/day, personal use | 1–2 per weekday |
-| EODHD | Free | 20 requests/day; ~1 year of history | ≤18/day until history is complete, then ~0 |
+| Kobo Terminal | Personal (free) | 100 requests/day, personal use | 1 prices + up to 20 dividend refreshes on weekdays (≈5/day once every stock is inside its 30-day window), fewer on weekends |
+| EODHD | Free | 20 requests/day; ~1 year of history | ~0 since the Oct 2026 fill-up; only for newly listed stocks |
 | GitHub | Free, private repo | 2,000 Actions minutes/month | ~2 minutes per run → roughly 150 min/month |
 | Cloudflare Pages | Free | 500 builds/month | ~30/month |
 | Cloudflare Access | Zero Trust Free | 50 users | your allow-list |
@@ -99,7 +104,8 @@ GitHub emails you whenever a run **fails**. Most failures are one-offs and the n
 ## 8. Known limitations
 
 - **End-of-day only**, once per weekday — not live.
-- **Price-only changes** — dividends aren't included; bonus issues and splits aren't adjusted for (flagged ⚠ when a single day moves more than ±10%).
+- **Price changes exclude dividends** (shown separately as yield); bonus issues and splits aren't adjusted for (flagged ⚠ when a single day moves more than ±10%).
+- **Financials links** go to StockAnalysis (free, external): big companies have full statements, small ones may have little or nothing.
 - **The ±10% flag only covers one-day moves**; a split inside a week/month/year window can distort those figures without a flag.
 - **Market summary counts** (Rose/Fell/Unchanged) are NGX's official figures and won't necessarily add up to the table's total.
 - **A stock missing from Kobo for up to 9 days** still shows its last known price, without a date marker (after 10 days it becomes inactive).
@@ -113,13 +119,13 @@ GitHub emails you whenever a run **fails**. Most failures are one-offs and the n
 
 ## 10. Making changes
 
-The simplest way is to ask Claude (in this project folder) for the change. For hands-on work, see the [Developer guide](developer-guide.md). Useful commands from `ZCodeProject\ngx-tracker`:
+The simplest way is to ask Claude (in this project folder) for the change. For hands-on work, see the [Developer guide](developer-guide.md). Useful commands from `Vibe Coding\ZCodeProject\ngx-tracker`:
 
 | Command | Does |
 |---|---|
 | `npm ci` | Install everything (once, or after pulling changes) |
 | `npm test` | Run all tests |
-| `npm run pipeline -- --data-dir ../.dryrun --backfill 1` | Try the daily job without touching `data/` (spends 1 Kobo + ≤1 EODHD request) |
+| `npm run pipeline -- --data-dir ../.dryrun --backfill 1` | Try the daily job without touching `data/` (spends 1 Kobo + ≤1 EODHD request; add `--dividends 5` to also try 5 dividend refreshes, `--backfill 0` to skip EODHD) |
 | `npm run dev -w web` | Run the site locally with the latest `data/` |
 | `git pull` | Bring down the bot's daily data commits before making changes |
 

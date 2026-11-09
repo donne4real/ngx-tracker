@@ -9,7 +9,8 @@ NGX Tracker shows the stocks listed on the **Nigerian Exchange (NGX)**:
 - each stock's **latest closing price**, updated once every weekday after the market closes;
 - how much each stock has **gone up or down** over several periods;
 - the **biggest gainers and losers**;
-- a **price chart** for each stock.
+- each stock's **dividend yield** (yearly payouts ÷ price);
+- a **price chart** for each stock, plus a link to its **full financial statements** (free, on StockAnalysis).
 
 It is for information only — it isn't investment advice, and prices are end-of-day, not live.
 
@@ -50,16 +51,16 @@ The 10 biggest **gainers** and **losers**. Use the tabs to choose the period:
 
 Stocks that **didn't trade today** are left out of these lists (their price didn't really change).
 
-If you see **"Based on N of M stocks that traded: price history for the rest is still loading"**, the lists only include stocks whose history has been filled in so far — this happens only in the first days of tracking.
+If you see **"Based on N of M stocks that traded: price history for the rest is still loading"**, the lists only include stocks whose history has been filled in so far — this happens only while a few stocks (usually newly listed ones) are still missing history.
 
 **"Not enough history yet"** means there isn't enough past data for that period.
 
 ### All stocks table
 - **Search** by symbol (e.g. `MTNN`) or company name (e.g. `breweries`).
 - **Filter** by sector with the drop-down.
-- **Sort** by clicking any column heading; click again to reverse.
+- **Sort** by clicking any column heading; click again to reverse. The **Yield** column sorts by dividend yield (highest first).
 - **Show inactive** reveals stocks that haven't appeared on the exchange for 2+ weeks (suspended or delisted).
-- **"—"** means that change isn't available yet. **"no trades"** in Volume means nothing traded that day.
+- **"—"** means that figure isn't available yet — for Yield, the stock has no dividend records (it pays no dividend, or none is on file; newly listed stocks show "—" until their dividend history is collected). **"no trades"** in Volume means nothing traded that day.
 - Click a **symbol** to open that stock's page.
 
 On a phone, some columns are hidden to save space; open a stock to see all of its figures.
@@ -68,9 +69,11 @@ On a phone, some columns are hidden to save space; open a stock to see all of it
 
 - **Name, symbol, sector and board** (Main, Premium, Growth, …).
 - **Last close** and its date, plus the change for every period.
-- **Price chart** — choose **1M, 3M, 6M, 1Y or All**. Early on, a stock with only a day or two of history shows a flat line; it fills in once its past year is loaded.
+- **Price chart** — choose **1M, 3M, 6M, 1Y or All**. A newly listed stock shows a short line until its history builds up.
 - **52-week high / low** and **average daily volume**. If the stock has less than a year of history, these read "High/Low **since** <date>" instead.
-- **"History starts <date>"** — how far back the data goes.
+- **Dividends** — yearly payout (TTM), yield, latest ex-date and the last few payouts with their type (interim/final/special) and pay dates. Only shown once the stock's dividend history has been collected.
+- **"History starts <date>"** — how far back the data goes — plus a **Financials on StockAnalysis ↗** link opening that stock's full income statement, balance sheet, cash flow and ratios (free, on stockanalysis.com; big companies have full data, small ones may have less).
+- **"History not available"** means the stock is tracked but its price file is missing — go back and tell the owner.
 
 ## 5. Warning signs
 
@@ -83,7 +86,7 @@ On a phone, some columns are hidden to save space; open a stock to see all of it
 ## 6. Good to know
 
 - **Prices are end-of-day**, published once each weekday, typically in the late afternoon Lagos time. Refresh the page to see the latest.
-- **Changes are price-only.** They don't include dividends, and bonus issues or splits can make longer-period figures (3M, 6M, YTD, 1Y) look worse or better than a shareholder's real return.
+- **Changes are price-only.** They don't include dividends (shown separately as yield), and bonus issues or splits can make longer-period figures (3M, 6M, YTD, 1Y) look worse or better than a shareholder's real return.
 - **Weekends and public holidays** have no new prices.
 - The data comes from Kobo Terminal and EODHD under free personal-use plans — please **don't share the link publicly**.
 

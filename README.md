@@ -1,9 +1,9 @@
 # NGX Tracker
 
-A private website showing every Nigerian Exchange (NGX) stock's latest end-of-day close, day/week/month changes, top gainers and losers, and price history.
+A private website showing every Nigerian Exchange (NGX) stock's latest end-of-day close, day/week/month changes, top gainers and losers, dividend yields, price history, and links to free full financial statements.
 
 - **Data:** Kobo Terminal (free Personal plan) for the daily all-stocks close; EODHD (free plan) for about a year of history before tracking began. Both free plans are for **personal use**: keep the site private.
-- **How it runs:** a GitHub Actions job on weekdays (15:30 and 18:00 UTC) saves the day's prices once Kobo reports the market closed, commits them to `data/`, and deploys the static site to Cloudflare Pages behind Cloudflare Access. On weekends (12:00 UTC) it only fills in more EODHD history (`--backfill-only`), since the free quota resets every calendar day.
+- **How it runs:** a GitHub Actions job on weekdays (15:30 and 18:00 UTC) saves the day's prices once Kobo reports the market closed, commits them to `data/`, and deploys the static site to Cloudflare Pages behind Cloudflare Access. On weekends (12:00 UTC) it runs `--backfill-only`: no new prices, but it refreshes dividend histories (and any still-missing EODHD history), since the free quota resets every calendar day.
 - **Design:** `docs/superpowers/specs/2026-09-25-ngx-tracker-design.md`
 
 ## Local setup
@@ -31,6 +31,6 @@ In the Cloudflare dashboard: **Zero Trust → Access → Applications → Add an
 - `data/history/<SYMBOL>.json`: one file per stock, one bar per line
 - `data/dividends/<SYMBOL>.json`: dividend history per stock, refreshed ~20 stocks per run (free Kobo tier)
 - `data/stocks.json`: tracked stocks, status (active/inactive) and backfill progress
-- `data/report.json`: the last run's outcome, backfill results and warnings
+- `data/report.json`: the last run's outcome, backfill and dividend results, and warnings
 
 A run where Kobo says the market is still open, or the trade date is already stored, changes nothing. GitHub emails you if a run fails. If a deploy fails, start the workflow by hand (Actions → Daily prices → Run workflow): a manual run always rebuilds and redeploys.
