@@ -1,6 +1,6 @@
 {
-  "runAt": "2026-11-13T23:00:29.343Z",
-  "outcome": "duplicate-date",
+  "runAt": "2026-11-14T17:24:08.312Z",
+  "outcome": "backfill-only",
   "tradeDate": "2026-11-13",
   "backfill": {
     "ok": [],
@@ -8,10 +8,29 @@
     "stoppedEarly": null
   },
   "dividends": {
-    "ok": [],
+    "ok": [
+      "ABBEYBANK",
+      "ABCTRANS",
+      "ACADEMY",
+      "ACCESSCORP",
+      "AFRINSURE",
+      "AFRIPRUD",
+      "AFROMEDIA",
+      "AIICO",
+      "AIRTELAFRI",
+      "ALEX",
+      "ARADEL",
+      "AUSTINLAZ",
+      "AVACAP",
+      "AVAIF",
+      "BAPLC",
+      "BERGER",
+      "BETAGLAS",
+      "BUACEMENT",
+      "BUAFOODS",
+      "CADBURY"
+    ],
     "failed": []
   },
-  "warnings": [
-    "UHREIT: non-numeric market_cap coerced"
-  ]
+  "warnings": []
 }

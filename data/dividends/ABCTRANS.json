@@ -1,6 +1,6 @@
 {
   "symbol": "ABCTRANS",
-  "fetchedAt": "2026-10-15",
+  "fetchedAt": "2026-11-14",
   "latestExDate": "2026-05-25",
   "records": [
     {
@@ -13,7 +13,7 @@
     {
       "exDate": "2026-05-25",
       "recordDate": "2026-05-22",
-      "payDate": null,
+      "payDate": "2026-11-13",
       "dps": 0.06,
       "kind": null
     }
