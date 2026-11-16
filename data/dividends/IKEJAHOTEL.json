@@ -1,7 +1,7 @@
 {
   "symbol": "IKEJAHOTEL",
-  "fetchedAt": "2026-10-17",
-  "latestExDate": "2026-08-10",
+  "fetchedAt": "2026-11-16",
+  "latestExDate": "2026-11-09",
   "records": [
     {
       "exDate": "2023-07-05",
@@ -63,6 +63,13 @@
       "exDate": "2026-08-10",
       "recordDate": "2026-08-10",
       "payDate": "2026-09-04",
+      "dps": 0.03,
+      "kind": null
+    },
+    {
+      "exDate": "2026-11-09",
+      "recordDate": "2026-11-09",
+      "payDate": "2026-12-04",
       "dps": 0.03,
       "kind": null
     }

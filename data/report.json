@@ -1,7 +1,7 @@
 {
-  "runAt": "2026-11-15T18:04:51.024Z",
-  "outcome": "backfill-only",
-  "tradeDate": "2026-11-13",
+  "runAt": "2026-11-16T23:46:59.481Z",
+  "outcome": "appended",
+  "tradeDate": "2026-11-16",
   "backfill": {
     "ok": [],
     "failed": [],
@@ -9,28 +9,30 @@
   },
   "dividends": {
     "ok": [
-      "CAP",
-      "CAVERTON",
-      "CHAMPION",
-      "CHAMS",
-      "CHELLARAM",
-      "CILEASING",
-      "CMFC",
-      "CNIF",
-      "CONHALLPLC",
-      "CONOIL",
-      "CORNERST",
-      "CUSTODIAN",
-      "CUTIX",
-      "CWG",
-      "DAARCOMM",
-      "DANGCEM",
-      "DANGSUGAR",
-      "EKOCORP",
-      "ELLAHLAKES",
-      "ENAMELWA"
+      "ETERNA",
+      "ETI",
+      "ETRANZACT",
+      "EUNISELL",
+      "FCMB",
+      "FIDELITYBK",
+      "FIDSON",
+      "FIRSTHOLDCO",
+      "FTGINSURE",
+      "FTNCOCOA",
+      "GEREGU",
+      "GOLDBREW",
+      "GTCO",
+      "GUINEAINS",
+      "GUINNESS",
+      "HBMNG",
+      "HMCALL",
+      "HONYFLOUR",
+      "IKEJAHOTEL",
+      "IMG"
     ],
     "failed": []
   },
-  "warnings": []
+  "warnings": [
+    "UHREIT: non-numeric market_cap coerced"
+  ]
 }

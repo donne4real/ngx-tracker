@@ -1,7 +1,7 @@
 {
   "symbol": "GTCO",
-  "fetchedAt": "2026-10-17",
-  "latestExDate": "2026-10-12",
+  "fetchedAt": "2026-11-16",
+  "latestExDate": "2026-10-13",
   "records": [
     {
       "exDate": "2021-09-28",
@@ -74,11 +74,11 @@
       "kind": null
     },
     {
-      "exDate": "2026-10-12",
-      "recordDate": "2026-10-12",
+      "exDate": "2026-10-13",
+      "recordDate": "2026-10-13",
       "payDate": "2026-10-20",
       "dps": 1,
-      "kind": "interim"
+      "kind": null
     }
   ]
 }

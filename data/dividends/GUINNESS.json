@@ -1,7 +1,7 @@
 {
   "symbol": "GUINNESS",
-  "fetchedAt": "2026-10-17",
-  "latestExDate": "2026-07-30",
+  "fetchedAt": "2026-11-16",
+  "latestExDate": "2026-11-02",
   "records": [
     {
       "exDate": "2021-09-29",
@@ -28,6 +28,13 @@
       "exDate": "2026-07-30",
       "recordDate": "2026-07-30",
       "payDate": "2026-08-10",
+      "dps": 7,
+      "kind": null
+    },
+    {
+      "exDate": "2026-11-02",
+      "recordDate": "2026-11-02",
+      "payDate": "2026-11-13",
       "dps": 7,
       "kind": null
     }
