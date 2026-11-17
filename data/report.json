@@ -1,6 +1,6 @@
 {
-  "runAt": "2026-11-16T23:46:59.481Z",
-  "outcome": "appended",
+  "runAt": "2026-11-17T01:17:55.296Z",
+  "outcome": "duplicate-date",
   "tradeDate": "2026-11-16",
   "backfill": {
     "ok": [],
@@ -8,28 +8,7 @@
     "stoppedEarly": null
   },
   "dividends": {
-    "ok": [
-      "ETERNA",
-      "ETI",
-      "ETRANZACT",
-      "EUNISELL",
-      "FCMB",
-      "FIDELITYBK",
-      "FIDSON",
-      "FIRSTHOLDCO",
-      "FTGINSURE",
-      "FTNCOCOA",
-      "GEREGU",
-      "GOLDBREW",
-      "GTCO",
-      "GUINEAINS",
-      "GUINNESS",
-      "HBMNG",
-      "HMCALL",
-      "HONYFLOUR",
-      "IKEJAHOTEL",
-      "IMG"
-    ],
+    "ok": [],
     "failed": []
   },
   "warnings": [
