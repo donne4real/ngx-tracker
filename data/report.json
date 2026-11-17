@@ -1,14 +1,35 @@
 {
-  "runAt": "2026-11-17T01:17:55.296Z",
-  "outcome": "duplicate-date",
-  "tradeDate": "2026-11-16",
+  "runAt": "2026-11-17T23:01:32.865Z",
+  "outcome": "appended",
+  "tradeDate": "2026-11-17",
   "backfill": {
     "ok": [],
     "failed": [],
     "stoppedEarly": null
   },
   "dividends": {
-    "ok": [],
+    "ok": [
+      "INFINITY",
+      "INTBREW",
+      "INTENEGINS",
+      "JAIZBANK",
+      "JAPAULGOLD",
+      "JBERGER",
+      "JOHNHOLT",
+      "JULI",
+      "LASACO",
+      "LEARNAFRCA",
+      "LEGENDINT",
+      "LINKASSURE",
+      "LIVESTOCK",
+      "LIVINGTRUST",
+      "MANSARD",
+      "MAYBAKER",
+      "MBENEFIT",
+      "MCNICHOLS",
+      "MECURE",
+      "MEYER"
+    ],
     "failed": []
   },
   "warnings": [
