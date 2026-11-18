@@ -1,7 +1,7 @@
 {
   "symbol": "OKOMUOIL",
-  "fetchedAt": "2026-10-19",
-  "latestExDate": "2026-04-28",
+  "fetchedAt": "2026-11-18",
+  "latestExDate": "2026-11-12",
   "records": [
     {
       "exDate": "2021-05-14",
@@ -92,6 +92,13 @@
       "recordDate": "2026-04-27",
       "payDate": "2026-05-26",
       "dps": 15,
+      "kind": null
+    },
+    {
+      "exDate": "2026-11-12",
+      "recordDate": "2026-11-12",
+      "payDate": "2026-11-17",
+      "dps": 11.5,
       "kind": null
     }
   ]
