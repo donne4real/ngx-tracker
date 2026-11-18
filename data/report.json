@@ -1,6 +1,6 @@
 {
-  "runAt": "2026-11-18T22:38:23.772Z",
-  "outcome": "appended",
+  "runAt": "2026-11-18T23:42:20.033Z",
+  "outcome": "duplicate-date",
   "tradeDate": "2026-11-18",
   "backfill": {
     "ok": [],
@@ -8,28 +8,7 @@
     "stoppedEarly": null
   },
   "dividends": {
-    "ok": [
-      "MOFIREIF",
-      "MORISON",
-      "MTNN",
-      "MULTITREX",
-      "MULTIVERSE",
-      "NAHCO",
-      "NASCON",
-      "NB",
-      "NCR",
-      "NEIMETH",
-      "NEM",
-      "NESTLE",
-      "NGXGROUP",
-      "NIDF",
-      "NNFM",
-      "NPFMCRFBK",
-      "NREIT",
-      "NSLTECH",
-      "OANDO",
-      "OKOMUOIL"
-    ],
+    "ok": [],
     "failed": []
   },
   "warnings": [
