@@ -1,7 +1,7 @@
 {
   "symbol": "STANBIC",
-  "fetchedAt": "2026-10-20",
-  "latestExDate": "2026-10-15",
+  "fetchedAt": "2026-11-19",
+  "latestExDate": "2026-10-16",
   "records": [
     {
       "exDate": "2021-09-21",
@@ -79,6 +79,13 @@
       "payDate": "2026-11-13",
       "dps": 4.5,
       "kind": "interim"
+    },
+    {
+      "exDate": "2026-10-16",
+      "recordDate": "2026-10-16",
+      "payDate": "2026-11-13",
+      "dps": 4.5,
+      "kind": null
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "symbol": "PZ",
-  "fetchedAt": "2026-10-20",
-  "latestExDate": "2026-10-09",
+  "fetchedAt": "2026-11-19",
+  "latestExDate": "2026-10-12",
   "records": [
     {
       "exDate": "2018-09-24",
@@ -39,11 +39,11 @@
       "kind": null
     },
     {
-      "exDate": "2026-10-09",
-      "recordDate": "2026-10-09",
+      "exDate": "2026-10-12",
+      "recordDate": "2026-10-12",
       "payDate": "2026-10-30",
       "dps": 2.5,
-      "kind": "final"
+      "kind": null
     }
   ]
 }

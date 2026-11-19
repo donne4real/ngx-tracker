@@ -1,14 +1,35 @@
 {
-  "runAt": "2026-11-18T23:42:20.033Z",
-  "outcome": "duplicate-date",
-  "tradeDate": "2026-11-18",
+  "runAt": "2026-11-19T22:42:16.784Z",
+  "outcome": "appended",
+  "tradeDate": "2026-11-19",
   "backfill": {
     "ok": [],
     "failed": [],
     "stoppedEarly": null
   },
   "dividends": {
-    "ok": [],
+    "ok": [
+      "OMATEK",
+      "PHARMDEKO",
+      "PREMPAINTS",
+      "PRESCO",
+      "PRESTIGE",
+      "PZ",
+      "REDSTAREX",
+      "REGALINS",
+      "RONCHESS",
+      "ROYALEX",
+      "RTBRISCOE",
+      "SCOA",
+      "SEPLAT",
+      "SFSREIT",
+      "SKYAVN",
+      "SOVRENINS",
+      "STANBIC",
+      "STERLINGNG",
+      "SUNUASSUR",
+      "TANTALIZER"
+    ],
     "failed": []
   },
   "warnings": [

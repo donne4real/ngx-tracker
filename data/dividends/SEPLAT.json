@@ -1,7 +1,7 @@
 {
   "symbol": "SEPLAT",
-  "fetchedAt": "2026-10-20",
-  "latestExDate": "2026-08-14",
+  "fetchedAt": "2026-11-19",
+  "latestExDate": "2026-11-13",
   "records": [
     {
       "exDate": "2020-11-16",
@@ -140,14 +140,14 @@
       "exDate": "2025-05-12",
       "recordDate": "2025-05-09",
       "payDate": "2025-05-23",
-      "dps": 110.58285,
+      "dps": 110.9934,
       "kind": null
     },
     {
       "exDate": "2025-05-12",
       "recordDate": "2025-05-09",
       "payDate": "2025-05-23",
-      "dps": 110.9934,
+      "dps": 110.58285,
       "kind": null
     },
     {
@@ -168,21 +168,14 @@
       "exDate": "2025-11-14",
       "recordDate": "2025-11-13",
       "payDate": "2025-11-28",
-      "dps": 108.11475,
+      "dps": 108.00825,
       "kind": null
     },
     {
       "exDate": "2025-11-14",
       "recordDate": "2025-11-13",
       "payDate": "2025-11-28",
-      "dps": 108.00825,
-      "kind": null
-    },
-    {
-      "exDate": "2026-05-18",
-      "recordDate": "2026-05-15",
-      "payDate": "2026-05-29",
-      "dps": 113.7847,
+      "dps": 108.11475,
       "kind": null
     },
     {
@@ -193,10 +186,10 @@
       "kind": null
     },
     {
-      "exDate": "2026-06-08",
-      "recordDate": "2026-06-08",
-      "payDate": "2026-06-19",
-      "dps": 122.4981,
+      "exDate": "2026-05-18",
+      "recordDate": "2026-05-15",
+      "payDate": "2026-05-29",
+      "dps": 113.7847,
       "kind": null
     },
     {
@@ -204,6 +197,13 @@
       "recordDate": "2026-06-08",
       "payDate": "2026-06-19",
       "dps": 122.4954,
+      "kind": null
+    },
+    {
+      "exDate": "2026-06-08",
+      "recordDate": "2026-06-08",
+      "payDate": "2026-06-19",
+      "dps": 122.4981,
       "kind": null
     },
     {
@@ -232,6 +232,13 @@
       "recordDate": "2026-08-14",
       "payDate": "2026-08-28",
       "dps": 163.2108,
+      "kind": null
+    },
+    {
+      "exDate": "2026-11-13",
+      "recordDate": "2026-11-13",
+      "payDate": "2026-11-27",
+      "dps": 255.7267,
       "kind": null
     }
   ]
