@@ -48,9 +48,9 @@ ngx-tracker/
 │   └── test/                 Vitest tests + fixtures/kobo-sample.json (real, trimmed)
 ├── web/                      React 19 + TypeScript + Vite
 │   ├── scripts/copy-data.mjs copies ../data into public/data before dev/build
-│   └── src/                  App, api, route, format, stale, horizons, filterSort, stats,
-│                             components/ (Home, MarketSummary, MoversPanel, StockTable,
-│                             StockPage, PriceChart) + tests
+│   └── src/                  App, api, route, format, stale, watchlist, horizons,
+│                             filterSort, stats, components/ (Home, MarketSummary,
+│                             MoversPanel, StockTable, StockPage, PriceChart) + tests
 └── docs/                     this documentation, spec and plan
 ```
 
@@ -150,12 +150,12 @@ No Kobo price call, but Kobo dividend refreshes run (fresh free quota). If track
 - **Coverage**: `total` = active stocks traded today; `eligible` = those with a non-null change for the horizon. The site shows "Based on N of M" when `eligible < 0.9 × total`.
 - **largeMove**: |day change| > **10** (NGX's usual daily limit) → ⚠.
 - **noTrade**: active stocks not traded on `asOf`.
-- Site-side: **stale** when more than **4** weekdays separate `asOf` and the viewer's date (`web/src/stale.ts`, computed in the Africa/Lagos timezone); 52-week high/low and average volume over bars in (asOf − 12 months, asOf], labelled "since <date>" when history is shorter than a year (`web/src/stats.ts`, loop-based, clamped to `asOf`).
+- Site-side: **stale** when more than **4** weekdays separate `asOf` and the viewer's date (`web/src/stale.ts`, computed in the Africa/Lagos timezone); **per-stock stale** when `row.lastDate < asOf` (`isRowStale` in the same file) → "as of <date>" under Last close in the table, a footnote, and a "No trading data since …" banner on the stock page; 52-week high/low and average volume over bars in (asOf − 12 months, asOf], labelled "since <date>" when history is shorter than a year (`web/src/stats.ts`, loop-based, clamped to `asOf`).
 
 ## 8. Website
 - Hash routes: `#/` (Home) and `#/stock/:SYMBOL` (`route.ts`, tolerant of bad escapes/extra segments). `base: './'` so it works from any path.
 - `api.ts`: `loadSummary` (shape-validated), `loadHistory` and `loadDividends` (both return `null` for unknown symbols, 404, or Cloudflare's HTML fallback page; histories cached per session).
-- Table: sortable **Yield** column (`filterSort.ts` `SortKey: 'yield'`); stock page shows a **Dividends** card (TTM payout, yield, latest ex-date, last 4 payouts) whenever data exists.
+- Table: sortable **Yield** column (`filterSort.ts` `SortKey: 'yield'`); **watchlist** — star toggle per row persisted in localStorage under `ngx-watchlist` (`web/src/watchlist.ts`, corrupt values ignored) with a "Watchlist only" filter (`TableQuery.watchOnly` + watch set in `filterSort`); stock page shows a **Dividends** card (TTM payout, yield, latest ex-date, last 4 payouts) whenever data exists.
 - Stock pages link out to free full statements: `https://stockanalysis.com/quote/ngx/<SYM>/financials/` (external site; coverage varies by company).
 - `horizons.ts`: the one list of period labels, typed `Record<Horizon,string>` so adding a horizon without a label fails the typecheck.
 - **Backward-compatible with older data files:** missing horizons render as "—" / "Not enough history yet" rather than crashing (a newer site can be deployed next to an older `summary.json`).
@@ -178,7 +178,7 @@ npm run build                            # web/dist
 
 ## 10. Tests
 - **Pipeline (Vitest, 71 tests):** dates, Kobo parsing/validation (+snapshot extras), merge/corrections/inactive, every horizon incl. holiday/month-end/YTD edges, movers/coverage/largeMove, EODHD parsing/errors, backfill selection/range/merge, dividends (parse, trailing-DPS, picking, run integration), store (round-trip, corrupt guard, atomicity), the full `runDaily` and `runBackfillOnly` flows against a temp directory with fake fetchers.
-- **Web (Vitest + Testing Library + jsdom, 33 tests):** api fallbacks, routing, formatting, staleness, filter/sort (+yield), table (+yield column), movers tabs/coverage/caveat, stock page (not found, missing history, dividend card, financials link, flags), older-`summary.json` compatibility.
+- **Web (Vitest + Testing Library + jsdom, 44 tests):** api fallbacks, routing, formatting, staleness (site-level and per-stock), watchlist persistence + filtering, filter/sort (+yield, watchOnly), table (+yield column, star toggle, "as of" marker), movers tabs/coverage/caveat, stock page (not found, missing history, dividend card, financials link, flags, stale banner), older-`summary.json` compatibility.
 - Fixture `pipeline/test/fixtures/kobo-sample.json` is a trimmed real response (no keys).
 - CI (`ci.yml`) runs tests, typecheck and build on every push.
 
@@ -210,9 +210,9 @@ npm run build                            # web/dist
 | Dividends from free Kobo endpoint, batched ~20/run | Full fundamentals need paid plans (rejected: ₦0 budget); yields + history give most of the value for free |
 | Financials as external link-out, not scraped | StockAnalysis is Cloudflare-protected and coverage varies; link-out has zero ToS/fragility risk |
 
-Build history: v1 built Sep 25, 2026 (plan Tasks 1–10, independent review, 5 fixes, go-live); 3M/6M/YTD/1Y and weekend runs added the same day; Oct 14, 2026 hardening + free dividend enrichment + financials link-out; dividend fill-up completed Nov 2026.
+Build history: v1 built Sep 25, 2026 (plan Tasks 1–10, independent review, 5 fixes, go-live); 3M/6M/YTD/1Y and weekend runs added the same day; Oct 14, 2026 hardening + free dividend enrichment + financials link-out; dividend fill-up completed Nov 2026; Nov 2026: watchlist (localStorage stars + filter) and per-stock "as of" staleness markers.
 
 ## 14. Extending it
 - **New horizon:** add to `Horizon` (types.ts) and `HORIZONS` (metrics.ts), compute it in `computeChanges`, add the label in `web/src/horizons.ts` (the typecheck enforces it), add table cells in `StockTable.tsx`; write tests first.
 - **Swap/upgrade the data source:** only `kobo.ts` (parsing into `Snapshot`) and `eodhd.ts` should change; everything downstream uses the internal types. Paid Kobo `/fundamentals` stays a drop-in upgrade path if the budget ever changes (spec in `superpowers/specs/2026-10-14-fundamentals-ratios.md`).
-- **Watchlists, alerts, total return, corporate-action adjustment** are out of scope for v1 — see the spec's out-of-scope list.
+- **Alerts, total return, corporate-action adjustment** are out of scope for v1 — see the spec's out-of-scope list. (The v1 watchlist ban was lifted Nov 2026: a client-side watchlist was added from the improvement backlog.)

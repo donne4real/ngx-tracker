@@ -8,3 +8,8 @@ export function isStale(asOf: string, today: Date): boolean {
   const lagosToday = new Intl.DateTimeFormat('en-CA', { timeZone: 'Africa/Lagos', year: 'numeric', month: '2-digit', day: '2-digit' }).format(today);
   return weekdaysAfter(asOf, lagosToday) > STALE_AFTER_WEEKDAYS;
 }
+
+/** True when a stock's last bar is older than the summary's as-of date (ISO date strings compare lexicographically). */
+export function isRowStale(lastDate: string, asOf: string): boolean {
+  return lastDate < asOf;
+}

@@ -7,7 +7,7 @@ const rows = [
   makeRow({ symbol: 'NB', name: 'Nigerian Breweries Plc', sector: 'CONSUMER GOODS', close: 76, changes: changes({ day: -1.3, month: 2, ytd: 30 }) }),
   makeRow({ symbol: 'GONE', name: 'Delisted Plc', sector: 'ICT', status: 'inactive', changes: changes({ day: 9, week: 9, month: 9 }) }),
 ];
-const q = (over: Partial<TableQuery> = {}): TableQuery => ({ search: '', sector: '', sortKey: 'symbol', sortDir: 'asc', showInactive: false, ...over });
+const q = (over: Partial<TableQuery> = {}): TableQuery => ({ search: '', sector: '', sortKey: 'symbol', sortDir: 'asc', showInactive: false, watchOnly: false, ...over });
 
 describe('filterSort', () => {
   it('hides inactive stocks unless asked', () => {
@@ -20,6 +20,10 @@ describe('filterSort', () => {
   });
   it('filters by sector', () => {
     expect(filterSort(rows, q({ sector: 'CONSUMER GOODS' })).map((r) => r.symbol)).toEqual(['NB']);
+  });
+  it('shows only watched stocks when watchOnly is set', () => {
+    expect(filterSort(rows, q({ watchOnly: true }), new Set(['MTNN'])).map((r) => r.symbol)).toEqual(['MTNN']);
+    expect(filterSort(rows, q({ watchOnly: true }), new Set()).map((r) => r.symbol)).toEqual([]);
   });
   it('sorts numbers either way and always puts missing values last', () => {
     expect(filterSort(rows, q({ sortKey: 'close', sortDir: 'desc' })).map((r) => r.symbol)).toEqual(['MTNN', 'NB']);

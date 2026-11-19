@@ -3,6 +3,7 @@ import type { DividendHistory, History, Summary } from '../../../pipeline/src/ty
 import { loadDividends, loadHistory } from '../api';
 import { formatDate, formatNaira, formatPct, formatVolume } from '../format';
 import { barsInRange, RANGES, stockStats, type Range } from '../stats';
+import { isRowStale } from '../stale';
 import { HORIZON_TABS } from '../horizons';
 import { LARGE_MOVE_TITLE } from './MoversPanel';
 import { PriceChart } from './PriceChart';
@@ -83,6 +84,11 @@ export function StockPage({ summary, symbol }: { summary: Summary; symbol: strin
           ))}
         </div>
         {row.largeMove && <p className="banner" title={LARGE_MOVE_TITLE}>⚠ Moved more than ±10% on the day: possibly a bonus issue or split, since prices are not adjusted.</p>}
+        {isRowStale(row.lastDate, summary.asOf) && (
+          <p className="banner" role="status">
+            No trading data since {formatDate(row.lastDate)} — this stock's last bar is older than the summary date ({formatDate(summary.asOf)}).
+          </p>
+        )}
         <p className="muted">History starts {formatDate(row.historyStart)}. <a href={financialsUrl(row.symbol)} target="_blank" rel="noreferrer">Financials on StockAnalysis ↗</a></p>
       </section>
 

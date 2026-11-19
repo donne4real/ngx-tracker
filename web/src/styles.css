@@ -44,6 +44,10 @@ th, td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: l
 th button { background: none; border: 0; color: var(--muted); font: inherit; font-weight: 600; cursor: pointer; padding: 0; }
 td.num, th.num { text-align: right; }
 tr.inactive td { opacity: 0.55; }
+.star-col { width: 28px; }
+.star { background: none; border: 0; padding: 0; cursor: pointer; font-size: 15px; line-height: 1; color: var(--muted); }
+.star[aria-pressed="true"] { color: var(--accent); }
+.stale-mark { display: block; font-size: 11px; color: var(--warn-text); }
 .chart { height: 320px; }
 .range { display: flex; gap: 6px; margin-bottom: 8px; }
 /* Sector has its own filter above the table, so it goes first when space is short. */

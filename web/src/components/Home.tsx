@@ -8,7 +8,7 @@ export function Home({ summary }: { summary: Summary }) {
     <>
       <MarketSummary market={summary.market} />
       <MoversPanel movers={summary.movers} coverage={summary.coverage} />
-      <StockTable rows={summary.stocks} />
+      <StockTable rows={summary.stocks} asOf={summary.asOf} />
     </>
   );
 }

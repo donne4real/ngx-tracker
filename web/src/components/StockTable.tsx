@@ -1,8 +1,10 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { SummaryRow } from '../../../pipeline/src/types';
 import { filterSort, sectorsOf, TEXT_KEYS, type SortKey, type TableQuery } from '../filterSort';
-import { formatNaira, formatPct, formatVolume } from '../format';
+import { formatDate, formatNaira, formatPct, formatVolume } from '../format';
 import { stockHref } from '../route';
+import { isRowStale } from '../stale';
+import { loadWatchlist, saveWatchlist } from '../watchlist';
 
 const COLUMNS: Array<{ key: SortKey; label: string; num?: boolean; hideSm?: boolean; hideMd?: boolean }> = [
   { key: 'symbol', label: 'Symbol' },
@@ -22,10 +24,23 @@ const COLUMNS: Array<{ key: SortKey; label: string; num?: boolean; hideSm?: bool
 
 const pctClass = (n: number | null | undefined) => (n == null ? 'num muted' : n > 0 ? 'num up' : n < 0 ? 'num down' : 'num');
 
-export function StockTable({ rows }: { rows: SummaryRow[] }) {
-  const [q, setQ] = useState<TableQuery>({ search: '', sector: '', sortKey: 'symbol', sortDir: 'asc', showInactive: false });
-  const shown = useMemo(() => filterSort(rows, q), [rows, q]);
+export function StockTable({ rows, asOf }: { rows: SummaryRow[]; asOf: string }) {
+  const [q, setQ] = useState<TableQuery>({ search: '', sector: '', sortKey: 'symbol', sortDir: 'asc', showInactive: false, watchOnly: false });
+  const [watch, setWatch] = useState<ReadonlySet<string>>(() => new Set(loadWatchlist()));
+  const shown = useMemo(() => filterSort(rows, q, watch), [rows, q, watch]);
   const sectors = useMemo(() => sectorsOf(rows), [rows]);
+
+  useEffect(() => {
+    saveWatchlist([...watch]);
+  }, [watch]);
+
+  const toggleWatch = (symbol: string) =>
+    setWatch((prev) => {
+      const next = new Set(prev);
+      if (next.has(symbol)) next.delete(symbol);
+      else next.add(symbol);
+      return next;
+    });
 
   const sortBy = (key: SortKey) =>
     setQ((p) =>
@@ -34,6 +49,7 @@ export function StockTable({ rows }: { rows: SummaryRow[] }) {
         : { ...p, sortKey: key, sortDir: TEXT_KEYS.includes(key) ? 'asc' : 'desc' },
     );
   const arrow = (key: SortKey) => (q.sortKey === key ? (q.sortDir === 'asc' ? ' ▲' : ' ▼') : '');
+  const staleCount = shown.filter((r) => isRowStale(r.lastDate, asOf)).length;
 
   return (
     <section className="card">
@@ -55,12 +71,16 @@ export function StockTable({ rows }: { rows: SummaryRow[] }) {
         <label>
           <input type="checkbox" checked={q.showInactive} onChange={(e) => setQ((p) => ({ ...p, showInactive: e.target.checked }))} /> Show inactive
         </label>
+        <label>
+          <input type="checkbox" checked={q.watchOnly} onChange={(e) => setQ((p) => ({ ...p, watchOnly: e.target.checked }))} /> Watchlist only
+        </label>
         <span className="muted">{shown.length} stocks</span>
       </div>
       <div className="table-wrap">
         <table>
           <thead>
             <tr>
+              <th className="star-col" aria-label="Watchlist" />
               {COLUMNS.map((c) => (
                 <th
                   key={c.key}
@@ -75,10 +95,28 @@ export function StockTable({ rows }: { rows: SummaryRow[] }) {
           <tbody>
             {shown.map((r) => (
               <tr key={r.symbol} className={r.status === 'inactive' ? 'inactive' : undefined}>
+                <td className="star-col">
+                  <button
+                    type="button"
+                    className="star"
+                    aria-pressed={watch.has(r.symbol)}
+                    aria-label={`${watch.has(r.symbol) ? 'Remove' : 'Add'} ${r.symbol} ${watch.has(r.symbol) ? 'from' : 'to'} watchlist`}
+                    onClick={() => toggleWatch(r.symbol)}
+                  >
+                    {watch.has(r.symbol) ? '★' : '☆'}
+                  </button>
+                </td>
                 <td><a href={stockHref(r.symbol)}>{r.symbol}</a></td>
                 <td className="hide-sm">{r.name}</td>
                 <td className="hide-sm hide-md">{r.sector}</td>
-                <td className="num">{formatNaira(r.close)}</td>
+                <td className="num">
+                  {formatNaira(r.close)}
+                  {isRowStale(r.lastDate, asOf) && (
+                    <span className="stale-mark" title={`Last trading data ${formatDate(r.lastDate)}; summary is for ${formatDate(asOf)}`}>
+                      as of {formatDate(r.lastDate)}
+                    </span>
+                  )}
+                </td>
                 <td className={pctClass(r.changes.day)}>{formatPct(r.changes.day)}</td>
                 <td className={`${pctClass(r.changes.week)} hide-sm`}>{formatPct(r.changes.week)}</td>
                 <td className={`${pctClass(r.changes.month)} hide-sm`}>{formatPct(r.changes.month)}</td>
@@ -93,6 +131,18 @@ export function StockTable({ rows }: { rows: SummaryRow[] }) {
           </tbody>
         </table>
       </div>
+      {shown.length === 0 && (
+        <p className="small muted">
+          {q.watchOnly && watch.size === 0
+            ? 'No watched stocks yet — tap ☆ next to a stock to watch it.'
+            : 'No stocks match the current filters.'}
+        </p>
+      )}
+      {staleCount > 0 && (
+        <p className="small muted">
+          “as of …” marks {staleCount === 1 ? 'a stock' : `${staleCount} stocks`} whose last trading data is older than {formatDate(asOf)}.
+        </p>
+      )}
     </section>
   );
 }

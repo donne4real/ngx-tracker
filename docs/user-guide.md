@@ -10,7 +10,8 @@ NGX Tracker shows the stocks listed on the **Nigerian Exchange (NGX)**:
 - how much each stock has **gone up or down** over several periods;
 - the **biggest gainers and losers**;
 - each stock's **dividend yield** (yearly payouts ÷ price);
-- a **price chart** for each stock, plus a link to its **full financial statements** (free, on StockAnalysis).
+- a **price chart** for each stock, plus a link to its **full financial statements** (free, on StockAnalysis);
+- a **watchlist** — star the stocks you care about and filter the table down to just those.
 
 It is for information only — it isn't investment advice, and prices are end-of-day, not live.
 
@@ -60,6 +61,8 @@ If you see **"Based on N of M stocks that traded: price history for the rest is 
 - **Filter** by sector with the drop-down.
 - **Sort** by clicking any column heading; click again to reverse. The **Yield** column sorts by dividend yield (highest first).
 - **Show inactive** reveals stocks that haven't appeared on the exchange for 2+ weeks (suspended or delisted).
+- **☆ / ★ star** (first column) adds or removes a stock from **your watchlist** — tap **Watchlist only** to see just your starred stocks. Your watchlist is saved in your browser on that device (signing out doesn't clear it; a different phone or computer has its own list).
+- **"as of &lt;date&gt;"** under a price means that stock has **no trading data newer than that date**, even though the rest of the table is current (a footnote below the table explains this). Hover it to see both dates.
 - **"—"** means that figure isn't available yet — for Yield, the stock has no dividend records (it pays no dividend, or none is on file; newly listed stocks show "—" until their dividend history is collected). **"no trades"** in Volume means nothing traded that day.
 - Click a **symbol** to open that stock's page.
 
@@ -73,6 +76,7 @@ On a phone, some columns are hidden to save space; open a stock to see all of it
 - **52-week high / low** and **average daily volume**. If the stock has less than a year of history, these read "High/Low **since** <date>" instead.
 - **Dividends** — yearly payout (TTM), yield, latest ex-date and the last few payouts with their type (interim/final/special) and pay dates. Only shown once the stock's dividend history has been collected.
 - **"History starts <date>"** — how far back the data goes — plus a **Financials on StockAnalysis ↗** link opening that stock's full income statement, balance sheet, cash flow and ratios (free, on stockanalysis.com; big companies have full data, small ones may have less).
+- **"No trading data since &lt;date&gt;"** — that stock's own data is older than the header date; the price shown is its last trade, not a fresh close.
 - **"History not available"** means the stock is tracked but its price file is missing — go back and tell the owner.
 
 ## 5. Warning signs
@@ -81,6 +85,7 @@ On a phone, some columns are hidden to save space; open a stock to see all of it
 |---|---|
 | **⚠** next to a mover, or a yellow "Moved more than ±10%" note | The price moved more than NGX's usual daily limit of 10%. Often this is a **bonus issue or share split**, which changes the price without anyone gaining or losing money. Treat that figure with caution. |
 | "Data may be out of date" banner | The prices haven't updated for over 4 working days — the owner has probably been emailed about a problem. |
+| **"as of &lt;date&gt;"** under a price, or "No trading data since …" on a stock page | Only **that stock's** data is behind (suspended, newly listed, or history still loading) — the date is its last actual trade. |
 | "Stock not found" | That symbol isn't tracked (check the spelling, or go back to All stocks). |
 
 ## 6. Good to know
@@ -98,4 +103,5 @@ On a phone, some columns are hidden to save space; open a stock to see all of it
 | It asks me to sign in again | Normal — sign-in lasts 24 hours. |
 | The prices look old | Check the date in the header. Prices update once each weekday afternoon; refresh the page. |
 | A stock is missing | It may have been suspended or delisted — tick **Show inactive**. |
+| My stars disappeared | The watchlist lives in your browser on that device — check you're on the same device/browser, and that you haven't cleared browser data. |
 | Is this advice on what to buy? | No. It's information only. |

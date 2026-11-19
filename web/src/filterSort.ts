@@ -10,6 +10,7 @@ export interface TableQuery {
   sortKey: SortKey;
   sortDir: 'asc' | 'desc';
   showInactive: boolean;
+  watchOnly: boolean;
 }
 
 function valueOf(r: SummaryRow, k: SortKey): string | number | null {
@@ -37,7 +38,7 @@ function valueOf(r: SummaryRow, k: SortKey): string | number | null {
   }
 }
 
-export function filterSort(rows: SummaryRow[], q: TableQuery): SummaryRow[] {
+export function filterSort(rows: SummaryRow[], q: TableQuery, watch: ReadonlySet<string> = new Set()): SummaryRow[] {
   const needle = q.search.trim().toLowerCase();
   const dir = q.sortDir === 'asc' ? 1 : -1;
   return rows
@@ -45,6 +46,7 @@ export function filterSort(rows: SummaryRow[], q: TableQuery): SummaryRow[] {
       (r) =>
         (q.showInactive || r.status === 'active') &&
         (!q.sector || r.sector === q.sector) &&
+        (!q.watchOnly || watch.has(r.symbol)) &&
         (!needle || r.symbol.toLowerCase().includes(needle) || r.name.toLowerCase().includes(needle)),
     )
     .sort((a, b) => {

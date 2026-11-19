@@ -47,4 +47,4 @@ Every weekday, ~16:30 Lagos time                 Weekends, 13:00 Lagos time
 - Original implementation plan: [`superpowers/plans/2026-09-25-ngx-tracker.md`](superpowers/plans/2026-09-25-ngx-tracker.md)
 - Project README (quick setup): [`../README.md`](../README.md)
 
-*Documentation written September 25, 2026, last updated November 2026 (robustness hardening, dividend yields + dividend history, financials link-out, dividend fill-up complete).*
+*Documentation written September 25, 2026, last updated November 2026 (robustness hardening, dividend yields + dividend history, financials link-out, dividend fill-up complete, watchlist, per-stock staleness markers).*

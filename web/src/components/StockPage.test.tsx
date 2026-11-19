@@ -60,4 +60,14 @@ describe('StockPage', () => {
     expect(await screen.findByTestId('chart')).toBeInTheDocument();
     expect(screen.getByText(/high since/i)).toBeInTheDocument();
   });
+
+  it('warns when the last bar is older than the summary date', async () => {
+    respondWith({ symbol: 'MTNN', bars: [
+      { date: '2026-09-10', close: 90, volume: 5, traded: true, source: 'kobo' },
+    ] });
+    const row = makeRow({ symbol: 'MTNN', lastDate: '2026-09-10' });
+    render(<StockPage summary={makeSummary([row])} symbol="MTNN" />);
+    expect(await screen.findByText(/no trading data since 10 Sept 2026/i)).toBeInTheDocument();
+    expect(screen.getByText(/older than the summary date/i)).toBeInTheDocument();
+  });
 });
