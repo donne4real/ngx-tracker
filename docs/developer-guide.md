@@ -57,7 +57,7 @@ ngx-tracker/
 ## 3. Data sources
 
 ### Kobo Terminal — daily closes + dividends
-- `GET https://koboterminal.com/api/ngxdata/stocks`, header `X-API-Key`. One call returns all ~146 equities.
+- `GET https://koboterminal.com/api/ngxdata/stocks`, header `X-API-Key`. One call returns all ~147 equities (146 active + 1 inactive as of Nov 2026).
 - Response: `{ stocks[], total, total_stocks, as_of, stale_after, market }`.
   - Stock: `symbol, name, current_price, previous_close, change_percent, official_change_percent, pct_change_7d, volume, market_cap, shares_outstanding, sector, market (board), trade_date ("YYYY-MM-DDT00:00:00")`. **No open/high/low. No `pe_ratio`** (documented but absent from all live rows as of Oct 2026).
   - `market`: `asi, pct_change, advancers, decliners, unchanged, trade_date, market_status ("open"|"closed"), updated_at, …`.

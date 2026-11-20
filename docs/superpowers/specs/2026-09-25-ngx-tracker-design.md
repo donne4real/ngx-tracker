@@ -19,8 +19,10 @@ close, and the day / week / month top gainers and losers are correct.
 - Website only; no installable desktop app.
 - The existing `ngx-screener` project is left untouched.
 
-**Out of scope for v1:** watchlists, alerts, news, company financials, user
+**Out of scope for v1:** alerts, news, company financials, user
 accounts, intraday prices, adjusting for corporate actions.
+*(Watchlist was originally out of scope but was added in Nov 2026 as a
+client-side localStorage feature — see developer guide §8.)*
 
 ## 2. Architecture
 

@@ -23,7 +23,7 @@ Everything you need to run, look after and change NGX Tracker. Day to day, **you
 
 GitHub sometimes starts scheduled jobs 5–20 minutes late; that's normal. Kobo reports the market closed at about **15:26 UTC**, so the 15:30 run occasionally lands too early — it then saves nothing and the 18:00 run does the day's work.
 
-**History fill-up (first ~9 runs):** 18 stocks per run, largest companies first. Tracking started Fri Sep 25, 2026, so all ~146 stocks have their year by about **Sun Oct 4, 2026**. After that, EODHD isn't used again unless a new stock lists.
+**History fill-up (first ~9 runs):** 18 stocks per run, largest companies first. Tracking started Fri Sep 25, 2026, so all ~147 stocks have their year by about **Sun Oct 4, 2026**. After that, EODHD isn't used again unless a new stock lists.
 
 **Dividend fill-up (Oct–early Nov 2026):** ~20 stocks per run (daily + weekends). Finished in the first week of November 2026 — every stock now refreshes when its data is 30+ days old. The site shows "—" for yield when a stock has no payout records (it pays no dividend, or Kobo has none on file).
 
@@ -114,7 +114,7 @@ GitHub emails you whenever a run **fails**. Most failures are one-offs and the n
 ## 9. Maintenance to-do
 
 - **GitHub Actions versions:** GitHub warns that `actions/checkout@v4` and `actions/setup-node@v4` run on a deprecated Node version. Update both workflows to the current major versions before GitHub's deadline.
-- **Local branches** `build/v1` and `feat/longer-periods` are merged into `main` and can be deleted.
+- **Local branches** `build/v1` and `feat/longer-periods` are merged into `main` and can be deleted (OneDrive file locks may block `git branch -D` — try from a WSL2 terminal if needed).
 - Once a year, check dependency updates: `npm outdated`, update, run `npm test`, push.
 
 ## 10. Making changes
