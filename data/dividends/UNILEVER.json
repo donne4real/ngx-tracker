@@ -1,7 +1,7 @@
 {
   "symbol": "UNILEVER",
-  "fetchedAt": "2026-10-21",
-  "latestExDate": "2026-08-03",
+  "fetchedAt": "2026-11-20",
+  "latestExDate": "2026-11-02",
   "records": [
     {
       "exDate": "2022-04-19",
@@ -49,6 +49,13 @@
       "exDate": "2026-08-03",
       "recordDate": "2026-08-03",
       "payDate": "2026-08-14",
+      "dps": 2,
+      "kind": null
+    },
+    {
+      "exDate": "2026-11-02",
+      "recordDate": "2026-11-02",
+      "payDate": "2026-11-18",
       "dps": 2,
       "kind": null
     }

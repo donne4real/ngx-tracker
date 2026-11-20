@@ -285,6 +285,7 @@
     {"date":"2026-11-16","close":3.89,"volume":3331847,"traded":true,"source":"kobo"},
     {"date":"2026-11-17","close":3.89,"volume":2936849,"traded":true,"source":"kobo"},
     {"date":"2026-11-18","close":3.76,"volume":2650691,"traded":true,"source":"kobo"},
-    {"date":"2026-11-19","close":3.97,"volume":10539770,"traded":true,"source":"kobo"}
+    {"date":"2026-11-19","close":3.97,"volume":10539770,"traded":true,"source":"kobo"},
+    {"date":"2026-11-20","close":3.95,"volume":11177665,"traded":true,"source":"kobo"}
   ]
 }
