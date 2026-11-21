@@ -1,6 +1,6 @@
 {
-  "runAt": "2026-11-20T23:29:00.473Z",
-  "outcome": "duplicate-date",
+  "runAt": "2026-11-21T18:21:43.210Z",
+  "outcome": "backfill-only",
   "tradeDate": "2026-11-20",
   "backfill": {
     "ok": [],
@@ -8,10 +8,16 @@
     "stoppedEarly": null
   },
   "dividends": {
-    "ok": [],
+    "ok": [
+      "VERITASKAP",
+      "VFDGROUP",
+      "VITAFOAM",
+      "WAPIC",
+      "WEMABANK",
+      "ZENITHBANK",
+      "ZICHIS"
+    ],
     "failed": []
   },
-  "warnings": [
-    "UHREIT: non-numeric market_cap coerced"
-  ]
+  "warnings": []
 }
