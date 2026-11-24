@@ -1,7 +1,7 @@
 {
-  "runAt": "2026-11-24T03:37:16.295Z",
-  "outcome": "duplicate-date",
-  "tradeDate": "2026-11-23",
+  "runAt": "2026-11-24T23:58:10.933Z",
+  "outcome": "appended",
+  "tradeDate": "2026-11-24",
   "backfill": {
     "ok": [],
     "failed": [],
